@@ -1,12 +1,11 @@
 import React from 'react';
 import styles from './styles.module.css';
-import location from '../../../assets/location.png';
-import data from '../../../assets/data.png';
-import contacts from '../../../assets/contacts.png';
+import location from '../../../assets/excursions/location.png';
+import data from '../../../assets/excursions/data.png';
+import contacts from '../../../assets/excursions/contacts.png';
 
 const Excursions = () => {
   return (
-    // Турко
     <div className={styles.mainExcursions}>
       <div className={styles.menuExcursions}>
         <div className={styles.typeExcursions}>
