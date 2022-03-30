@@ -6,6 +6,17 @@ import styles from './styles.module.css';
 const SignupPage = () => {
   const dispatch = useDispatch();
 
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+
+  const [firstNameError, setFirstNameError] = useState('Имя не может быть пустым');
+  const [lastNameError, setLastNameError] = useState(
+    'Имя не может быть пустым',
+  );
+
+  const [firstNameDirty, setFirstNameDirty] = useState(false);
+  const [lastNameDirty, setLastNameDirty] = useState(false);
+
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
 
@@ -18,6 +29,30 @@ const SignupPage = () => {
   );
 
   const [formValid, setFormValid] = useState(false);
+
+  const handleChangeFirstName = (e) => {
+    setFirstName(e.target.value);
+    if (typeof e.target.value === 'number') {
+      setFirstNameError('Имя не может иметь числа');
+    } else {
+      setFirstNameError('');
+    }
+    if (!e.target.value) {
+      setFirstNameError('Имя не может быть пустым');
+    }
+  };
+
+  const handleChangeLastName = (e) => {
+    setLastName(e.target.value);
+    if (typeof e.target.value === 'number') {
+      setLastNameError('Фамилия не может иметь числа');
+    } else {
+      setLastNameError('');
+    }
+    if (!e.target.value) {
+      setLastNameError('Фамилия не может быть пустым');
+    }
+  };
 
   const handleChangeLogin = (e) => {
     setLogin(e.target.value);
@@ -46,6 +81,7 @@ const SignupPage = () => {
   };
   const handleBlur = (e) => {
     switch (e.target.name) {
+
       case 'login':
         setLoginDirty(true);
         break;
@@ -56,16 +92,16 @@ const SignupPage = () => {
   };
 
   const handleClickRegistration = () => {
-    dispatch(registration(login, password));
+    dispatch(registration(login, password, firstName, lastName));
   };
 
   useEffect(() => {
-    if (loginError || passwordError) {
-      setFormValid(false);
-    } else {
+    if (loginError || passwordError || firstNameError || lastNameError) {
       setFormValid(true);
+    } else {
+      setFormValid(false);
     }
-  }, [loginError, passwordError]);
+  }, [loginError, passwordError, firstNameError, lastNameError]);
 
   return (
     <div>
@@ -73,6 +109,28 @@ const SignupPage = () => {
         <div className={styles.signUp}>
           <form>
             <h1>Регистрация</h1>
+            <input
+              name="firstName"
+              type="text"
+              value={firstName}
+              onChange={handleChangeFirstName}
+              placeholder="Enter your name.."
+              onBlur={handleBlur}
+            />
+            {firstNameDirty && firstNameError && (
+              <div style={{ color: 'red' }}>{firstNameError}</div>
+            )}
+            <input
+              name="lastName"
+              type="text"
+              value={lastName}
+              onChange={handleChangeLastName}
+              placeholder="Enter your lastname.."
+              onBlur={handleBlur}
+            />
+            {lastNameDirty && lastNameError && (
+              <div style={{ color: 'red' }}>{lastNameError}</div>
+            )}
             <input
               name="login"
               type="text"
@@ -98,7 +156,7 @@ const SignupPage = () => {
             <Link to="/signin">
               <button
                 onClick={handleClickRegistration}
-                disabled={!formValid}
+                disabled={formValid}
                 type="submit"
               >
                 Регистрация
