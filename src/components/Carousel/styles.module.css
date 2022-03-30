@@ -1,21 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Smooch+Sans:wght@500&display=swap');
 
-.carouselGround {
+.firstBlockBg {
   background: url('../../assets/homepage/Rectangle-1.jpg');
   background-size: 100%;
   width: 100%;
   height: 790px;
-  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
-    url('../../assets/homepage/Rectangle-1.jpg');
-  filter: blur(1px); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.carouselMain {
+.firstBlockContent {
   width: 1200px;
   margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.carouselTextOne {
+.firstBlockLeft {
+  position: relative;
+}
+
+.firstTitle {
+  font-size: 72px;
+  font-weight: 700;
+  color: white;
+  line-height: 60px;
+}
+
+.middleTitle {
+  color: #FFC700;
+  font-size: 54px;
+  position: absolute;
+  top: 27px;
+  right: 27px;
+}
+
+.secondTitle {
+  font-size: 96px;
+  font-weight: 900;
+}
+
+.firstBlockRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+}
+
+.firstBlockRight img {
+  height: 30px;
+  max-width: 30px;
+}
+
+.carouselButton button {
+  border: none;
+  width: 105px;
+  height: 17px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  width: 230px;
+  height: 50px;
+  background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
+  border-radius: 60px;
+  margin-top: 20px;
+}
+
+/* .carouselTextOne {
   position: absolute;
   width: 592px;
   height: 88px;
@@ -87,4 +143,4 @@
   right: 100%;
   top: 330px;
   bottom: 21.84%;
-}
+} */
