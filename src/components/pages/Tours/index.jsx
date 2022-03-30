@@ -1,9 +1,10 @@
 import React from 'react'
+import CalendarPage from './CalendarPage'
 
 const Tours = () => {
   return (
     <div>
-      tours
+      <CalendarPage/>
     </div>
   )
 }

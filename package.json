@@ -15,7 +15,8 @@
     "react-router-dom": "^6.2.2",
     "redux": "^4.1.2",
     "redux-devtools-extension": "^2.13.9",
-    "redux-thunk": "^2.4.1"
+    "redux-thunk": "^2.4.1",
+    "@syncfusion/ej2-react-calendars": "^19.4.56"
   },
   "scripts": {
     "start": "react-scripts start",

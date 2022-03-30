@@ -54,6 +54,7 @@
       <change afterPath="$PROJECT_DIR$/src/components/pages/SigninPage/styles.module.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/pages/SignupPage/index.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/pages/SignupPage/styles.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pages/Tours/CalendarPage.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/pages/Tours/index.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/components/pages/Tours/styles.module.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/redux/configureStore.js" afterDir="false" />
