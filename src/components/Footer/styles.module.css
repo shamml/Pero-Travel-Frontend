@@ -1,0 +1,53 @@
+footer {
+  margin-top: 25px;
+  background-color: #EDEDED;
+}
+.footerContainer {
+  width: 1200px;
+  margin: auto;
+}
+.footerBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footerLeftSide {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+.footerNavigate {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100px;
+  margin-left: 100px;
+}
+.footerNavigate div {
+    width: 250px;
+}
+.footerImage img {
+  width: 80px;
+  height: 100px;
+}
+.footerRightSide {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.contacts span {
+  width: 240px;
+}
+.round .email  {
+  width: 250px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.rounds span {
+    margin: 20px 10px 0 0;
+}
