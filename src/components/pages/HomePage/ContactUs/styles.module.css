@@ -1,0 +1,61 @@
+.contactUsContent {
+  width: 100%;
+  margin-top: 170px;
+}
+
+.natureImgContactUs {
+  background: url('../../../../assets/homepage/nature.jpg');
+  background-size: 100%;
+  width: 100%;
+  height: 640px;
+  position: relative;
+}
+
+.contentContactUs {
+  width: 560px;
+  height: 640px;
+  margin-left: 780px;
+  backdrop-filter: blur(3px);
+  padding: 132px 0 0 105px;
+}
+
+.titleContactUs {
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+.subtitleContactUs {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #ffc700;
+}
+
+.inputsContactUs {
+  margin-top: 45px;
+}
+
+.inputTypeContactUs input {
+  width: 360px;
+  margin-top: 40px;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  cursor: pointer;
+}
+
+.buttonApplicationContactUs {
+  margin-top: 85px;
+  width: 230px;
+  background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  border-radius: 60px;
+  padding: 15px 0;
+  cursor: pointer;
+}
