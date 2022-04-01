@@ -9,7 +9,9 @@ const SignupPage = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
 
-  const [firstNameError, setFirstNameError] = useState('Имя не может быть пустым');
+  const [firstNameError, setFirstNameError] = useState(
+    'Имя не может быть пустым',
+  );
   const [lastNameError, setLastNameError] = useState(
     'Имя не может быть пустым',
   );
@@ -81,7 +83,6 @@ const SignupPage = () => {
   };
   const handleBlur = (e) => {
     switch (e.target.name) {
-
       case 'login':
         setLoginDirty(true);
         break;

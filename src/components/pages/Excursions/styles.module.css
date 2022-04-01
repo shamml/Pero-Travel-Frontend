@@ -234,84 +234,80 @@
 }
 
 .descriptionExcursion {
-    margin: 27px 0 0 40px;
+  margin: 27px 0 0 40px;
 }
 
 .typeOfTourExcursion {
-    color: #daaa00;
-    font-size: 14px;
+  color: #daaa00;
+  font-size: 14px;
 }
 
 .placeTourExcursion {
-    font-size: 18px;
-    font-weight: bold;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .tripTourExcursion {
-    width: 350px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
+  width: 350px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .onePriceTrip {
-    display: flex;
+  display: flex;
 }
 
 .ageBilet {
-    font-size: 12px;
-    font-weight: bold;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .priceBiletTour {
-    color: #0499DD;
-    font-size: 18px;
-    font-weight: bold;
+  color: #0499dd;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .timeDescriptionTour {
-    color: #0499DD;
-    font-size: 18px;
-    font-weight: bold;
+  color: #0499dd;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .descriptionPlaceTour {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .verticalLine {
-    border-left: 3px solid #0499DD;
-  
+  border-left: 3px solid #0499dd;
 }
 
 .textPlaceTour {
-    font-size: 12px;
-    margin-left: 20px;
+  font-size: 12px;
+  margin-left: 20px;
 }
 
 .buttonsDescriptionTour {
-    width: 220px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
+  width: 220px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .moreTourButton {
-    width: 160px;
-    padding: 10px 0;
-    text-align: center;
-    background: linear-gradient(92.71deg, #0499DD 0%, #17C1BC 100%);
-    color: white;
-    border-radius: 40px;
-    cursor: pointer;
+  width: 160px;
+  padding: 10px 0;
+  text-align: center;
+  background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
+  color: white;
+  border-radius: 40px;
+  cursor: pointer;
 }
 
 .heartTour {
-    width: 40px;
-    border-radius: 50%;
-    border: 0;
-    cursor: pointer;
+  width: 40px;
+  border-radius: 50%;
+  border: 0;
+  cursor: pointer;
 }
-
-
-

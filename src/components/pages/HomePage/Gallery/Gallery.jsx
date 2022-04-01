@@ -14,11 +14,11 @@ const Gallery = () => {
     <div className={styles.galleryBlock}>
       <div className={styles.first}>
         <div className={styles.img1}>
-          <img src={img1} alt="img1"/>
+          <img src={img1} alt="img1" />
         </div>
         <div className={styles.firstDown}>
           <div className={styles.img2}>
-            <img src={img2} alt="img2"/>
+            <img src={img2} alt="img2" />
           </div>
           <div className={styles.firstDownRight}>
             <div className={styles.img3}>

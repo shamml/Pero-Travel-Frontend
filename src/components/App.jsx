@@ -8,7 +8,7 @@ import Excursions from './pages/Excursions';
 import Tours from './pages/Tours';
 import Profile from './pages/Profile';
 import Footer from './Footer';
-import "./styles.css";
+import './styles.css';
 
 const App = () => {
   return (
@@ -20,7 +20,7 @@ const App = () => {
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/tours" element={<Tours />} />
         <Route path="/excursions" element={<Excursions />} />
-        <Route path="/profile" element={<Profile /> } />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
       <Footer />
     </div>
