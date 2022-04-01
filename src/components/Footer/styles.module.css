@@ -1,6 +1,6 @@
 footer {
   margin-top: 25px;
-  background-color: #EDEDED;
+  background-color: #ededed;
 }
 .footerContainer {
   width: 1200px;
@@ -24,7 +24,7 @@ footer {
   margin-left: 100px;
 }
 .footerNavigate div {
-    width: 250px;
+  width: 250px;
 }
 .footerImage img {
   width: 80px;
@@ -43,11 +43,11 @@ footer {
 .contacts span {
   width: 240px;
 }
-.round .email  {
+.round .email {
   width: 250px;
   align-items: center;
   margin-bottom: 10px;
 }
 .rounds span {
-    margin: 20px 10px 0 0;
+  margin: 20px 10px 0 0;
 }

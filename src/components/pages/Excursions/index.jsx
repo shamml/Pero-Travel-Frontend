@@ -167,7 +167,7 @@ const Excursions = () => {
               <div className={styles.buttonsDescriptionTour}>
                 <div className={styles.moreTourButton}>Подробнее</div>
                 <button className={styles.heartTour}>
-                  <img src={heart} alt="no"/>
+                  <img src={heart} alt="no" />
                 </button>
               </div>
             </div>
