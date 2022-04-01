@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './styles.module.css';
-import face from '../../assets/homepage/Face.svg';
-import insta from '../../assets/homepage/Insta.svg';
-import vkontakte from '../../assets/homepage/Vector.svg';
-import sceondTitle from "../../assets/homepage/secondTitle.png";
-import middle from "../../assets/homepage/middle.png";
-import arrow from "../../assets/arrow.svg";
+import face from '../../../../assets/homepage/Face.svg';
+import insta from '../../../../assets/homepage/Insta.svg';
+import vkontakte from '../../../../assets/homepage/Vector.svg';
+import sceondTitle from "../../../../assets/homepage/secondTitle.png";
+import middle from "../../../../assets/homepage/middle.png";
+import arrow from "../../../../assets/arrow.svg";
 
 function Carousel() {
   return (
