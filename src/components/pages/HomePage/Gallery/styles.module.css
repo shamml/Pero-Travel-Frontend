@@ -1,0 +1,182 @@
+.galleryBlock {
+  width: 1410px;
+  height: 565px;
+  margin: auto;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.first {
+  width: 503px;
+  height: 565px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.img1 {
+  position: relative;
+  overflow: hidden;
+  width: 503px;
+  height: 280px;
+}
+
+.img1 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 503px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.firstDown {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img2 {
+  position: relative;
+  overflow: hidden;
+  width: 216px;
+  height: 267px;
+}
+
+.img2 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 216px;
+  height: 267px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.firstDownRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.img3 {
+  position: relative;
+  overflow: hidden;
+  width: 267px;
+  height: 123px;
+}
+
+.img3 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 267px;
+  height: 123px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.img4 {
+  position: relative;
+  overflow: hidden;
+  width: 267px;
+  height: 123px;
+}
+
+.img4 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 267px;
+  height: 123px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.img5 {
+  position: relative;
+  overflow: hidden;
+  width: 362px;
+  height: 567px;
+}
+
+.img5 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 362px;
+  height: 565px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.img6 {
+  position: relative;
+  overflow: hidden;
+  width: 267px;
+  height: 264px;
+}
+
+.img6 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 267px;
+  height: 264px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.third {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.thirdUp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img7 {
+  position: relative;
+  overflow: hidden;
+  width: 216px;
+  height: 264px;
+}
+
+.img7 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 216px;
+  height: 264px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.img8 {
+  position: relative;
+  overflow: hidden;
+  width: 503px;
+  height: 280px;
+}
+
+.img8 img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 503px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 7px;
+}

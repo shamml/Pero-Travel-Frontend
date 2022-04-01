@@ -32,8 +32,12 @@ header a {
   text-decoration: none;
 }
 
+header p:hover {
+  color: #FFC700;
+}
+
 :active {
-  color: yellow;
+  color: #FFC700;
 }
 
 

@@ -1,0 +1,48 @@
+.aboutUs {
+  padding: 300px 0;
+  position: relative;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; */
+}
+
+.aboutUs img {
+  position: absolute;
+  top: 160px;
+  left: 0;
+  z-index: -10;
+}
+
+.aboutUsBlock {
+  width: 542px;
+  height: 476px;
+  background: #EDEDED;
+  padding: 60px 75px 105px 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+
+.aboutUsContent {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.aboutUsTitle {
+  font-weight: 700;
+  color: #0499DD;
+  font-size: 24px;
+}
+
+.aboutUsTextPartOne {
+  font-size: 14px;
+}
+
+.aboutUsTextPartTwo {
+  font-size: 14px;
+}
