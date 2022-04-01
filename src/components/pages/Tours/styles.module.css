@@ -18,8 +18,6 @@
 }
 .carouselButton button {
   border: none;
-  width: 105px;
-  height: 17px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
@@ -106,8 +104,6 @@
 }
 .carouselButton button {
   border: none;
-  width: 105px;
-  height: 17px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
