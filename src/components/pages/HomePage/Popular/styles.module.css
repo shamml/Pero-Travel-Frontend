@@ -1,0 +1,110 @@
+.popularBlock {
+  padding: 150px 0;
+}
+
+.popularTitle {
+  color: #0499DD;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 100px;
+  margin-left: 150px;
+}
+
+.carousel {
+  margin-left: 150px;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+}
+
+.carouselItem {
+  min-width: 360px;
+  height: 497px;
+  margin-right: 30px;
+  position: relative;
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 180px 25px 40px;
+}
+
+.cardBg img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 360px;
+  height: 497px;
+  object-fit: cover;
+  border-radius: 7px;
+  z-index: -10;
+}
+
+.cardInfo {
+  margin: auto;
+}
+
+.carouselItemTitle {
+  color: #FFC700;
+  margin-top: 0;
+}
+
+.priceAndTime {
+  width: 160px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.time,
+.price {
+  width: 70px;
+  height: 15px;
+  line-height: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.time img,
+.price img {
+  width: 15px;
+  height: 15px;
+}
+
+.cardInfo p {
+  font-weight: 400;
+}
+
+.moreBtn {
+  border: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  width: 180px;
+  height: 45px;
+  background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
+  border-radius: 60px;
+  margin-top: 20px;
+}
+
+
+/* стилизация скролла */
+.carousel::-webkit-scrollbar {
+  height: 17px;               /* width of the entire scrollbar */
+}
+
+.carousel::-webkit-scrollbar-track {
+  background: transparent;        /* color of the tracking area */
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background-color: #0499DD;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 7px solid white;  /* creates padding around scroll thumb */
+}
