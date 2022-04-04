@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom'
 const Excursions = () => {
   return (
     <div className={styles.mainExcursions}>
+      <div className={styles.ourExcursions}>НАШИ ЭКСКУРСИИ</div>
       <div className={styles.menuExcursions}>
         <div className={styles.typeExcursions}>
           <a href="#">АВТОБУСНЫЙ ТУР</a>
@@ -169,9 +170,6 @@ const Excursions = () => {
                 <Link to="/tours">
                   <div className={styles.moreTourButton}>Подробнее</div>
                 </Link>
-                <button className={styles.heartTour}>
-                  <img src={heart} alt="no" />
-                </button>
               </div>
             </div>
           </div>
