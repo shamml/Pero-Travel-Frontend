@@ -1,10 +1,10 @@
 import React from 'react';
 import styels from './styles.module.css';
-import bus from '../../../../assets/homepage/busTour.svg';
-import jeep from '../../../../assets/homepage/jeepTour.svg';
-import sheep from '../../../../assets/homepage/sheepTour.svg';
-import canyon from '../../../../assets/homepage/canyonTour.svg';
-import { Link } from 'react-router-dom';
+import bus from "../../../../assets/homepage/busTour.svg";
+import jeep from "../../../../assets/homepage/jeepTour.svg";
+import sheep from "../../../../assets/homepage/sheepTour.svg"
+import canyon from "../../../../assets/homepage/canyonTour.svg"
+import { Link } from 'react-router-dom'
 
 const TypesOf = () => {
   return (
