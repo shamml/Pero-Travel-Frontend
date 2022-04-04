@@ -1,17 +1,31 @@
 .mainExcursions {
-  width: 1120px;
+  background: url("../../../assets/excursions/Rectangle1.jpg") no-repeat;
+  background-size: 100%;
+  padding-top: 180px;
+}
+
+.ourExcursions {
+  width: 1200px;
   margin: auto;
+  font-size: 60px;
+  font-weight: 700;
+  color: white;
 }
 
 .menuExcursions {
-  width: 1120px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  width: 1200px;
+  margin: auto;
+  margin-top: 120px;
   border-radius: 10px;
-  padding: 60px 0;
+  margin-bottom: 100px;
+}
+
+.menuExcursions a {
+  margin: 0 20px;
 }
 
 .typeExcursions {
-  width: 475px;
+  width: 550px;
   margin: auto;
 }
 
@@ -19,7 +33,6 @@
   color: #0499dd;
   text-decoration: none;
   font-size: 14px;
-  padding-left: 20px;
 }
 
 .buttonsExcursions {
@@ -60,8 +73,9 @@
 }
 
 .contentExcursions {
+  width: 1120px;
   display: flex;
-  margin-top: 40px;
+  margin: auto;
 }
 
 .filterExcursions {

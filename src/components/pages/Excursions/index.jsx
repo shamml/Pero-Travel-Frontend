@@ -12,6 +12,7 @@ import heart from '../../../assets/excursions/heart.svg';
 const Excursions = () => {
   return (
     <div className={styles.mainExcursions}>
+      <div className={styles.ourExcursions}>НАШИ ЭКСКУРСИИ</div>
       <div className={styles.menuExcursions}>
         <div className={styles.typeExcursions}>
           <a href="#">АВТОБУСНЫЙ ТУР</a>
@@ -166,9 +167,6 @@ const Excursions = () => {
               </div>
               <div className={styles.buttonsDescriptionTour}>
                 <div className={styles.moreTourButton}>Подробнее</div>
-                <button className={styles.heartTour}>
-                  <img src={heart} alt="no" />
-                </button>
               </div>
             </div>
           </div>
