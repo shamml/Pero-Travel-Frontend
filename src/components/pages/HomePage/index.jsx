@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 import TypesOf from './TypesOfExcursions/TypesOf';
 import ContactUs from './ContactUs/ContactUs';
 import Popular from './Popular/Popular';
-import Reviews from './Reviews/Reviews';
+import Reviews from '../Tours/Reviews/Reviews';
 
 const HomePage = () => {
   return (

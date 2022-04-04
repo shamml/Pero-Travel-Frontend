@@ -8,6 +8,7 @@ import adlerTour from '../../../assets/excursions/adlerTour.jpg';
 import price from '../../../assets/excursions/price.svg';
 import time from '../../../assets/excursions/time.svg';
 import heart from '../../../assets/excursions/heart.svg';
+import { Link } from 'react-router-dom'
 
 const Excursions = () => {
   return (
@@ -165,7 +166,9 @@ const Excursions = () => {
                 </div>
               </div>
               <div className={styles.buttonsDescriptionTour}>
-                <div className={styles.moreTourButton}>Подробнее</div>
+                <Link to="/tours">
+                  <div className={styles.moreTourButton}>Подробнее</div>
+                </Link>
                 <button className={styles.heartTour}>
                   <img src={heart} alt="no" />
                 </button>
