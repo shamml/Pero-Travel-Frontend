@@ -39,7 +39,6 @@
       <change afterPath="$PROJECT_DIR$/../news-site/src/redux/features/application.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site/src/redux/features/comments.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site/src/redux/features/news.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/features/tours.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/.prettierrc" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/src/components/cards/Card.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/src/components/cards/Cards.jsx" afterDir="false" />
@@ -537,9 +536,17 @@
       <change beforePath="$PROJECT_DIR$/../ntro-dom/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ntro-dom/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/BookingTour.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/BookingTour.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/styles.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Excursions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Excursions/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/HomePage/Reviews/Reviews.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/Reviews/Reviews.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/HomePage/Reviews/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/Reviews/styles.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/HomePage/TypesOfExcursions/TypesOf.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/HomePage/TypesOfExcursions/TypesOf.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/HomePage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/HomePage/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/CalendarPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/CalendarPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/configureStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/configureStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/ReviewsTour.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/ReviewsTour.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/controllers/categories.controller.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/controllers/clients.controllers.js" beforeDir="false" />
@@ -715,6 +722,7 @@
       <recent name="C:\Users\Admin\Desktop\pero-travel\src\components\pages\Tours" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\pero-travel\src\components\pages\Tours" />
       <recent name="C:\Users\Admin\Desktop\pero-travel\src\assets\excursions" />
       <recent name="C:\Users\Admin\Desktop\pero-travel\src\components\pages\HomePage" />
       <recent name="C:\Users\Admin\Desktop\pero-travel\src\components" />

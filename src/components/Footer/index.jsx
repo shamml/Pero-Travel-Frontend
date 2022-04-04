@@ -7,6 +7,7 @@ import inst from '../../assets/footer/inst.svg';
 import face from '../../assets/footer/face.svg';
 import message from '../../assets/footer/message.svg';
 import tg from '../../assets/footer/tg.svg';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -18,9 +19,15 @@ const Footer = () => {
               <img src={logo} alt="#" />
             </div>
             <div className={styles.footerNavigate}>
-              <div>Главная</div>
-              <div>Экскурсии</div>
-              <div>Личный кабинет</div>
+              <Link to="/">
+                <div>Главная</div>
+              </Link>
+              <Link to="/excursions">
+                <div>Экскурсии</div>
+              </Link>
+              <Link to="/profile">
+                <div>Личный кабинет</div>
+              </Link>
             </div>
           </div>
           <div className={styles.footerRightSide}>

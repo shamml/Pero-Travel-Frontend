@@ -4,6 +4,7 @@ import bus from "../../../../assets/homepage/busTour.svg";
 import jeep from "../../../../assets/homepage/jeepTour.svg";
 import sheep from "../../../../assets/homepage/sheepTour.svg"
 import canyon from "../../../../assets/homepage/canyonTour.svg"
+import { Link } from 'react-router-dom'
 
 const TypesOf = () => {
   return (
@@ -78,9 +79,11 @@ const TypesOf = () => {
               Выбирайте на нашем сайте экскурсию, которая подходит именно вам и
               записывайтесь онлайн без очередей, просто и быстро!
             </div>
-            <button className={styels.buttonSelectionTour}>
-              К экскурсиям →
-            </button>
+            <Link to="/excursions">
+              <button className={styels.buttonSelectionTour}>
+                К экскурсиям →
+              </button>
+            </Link>
           </div>
         </div>
       </div>
