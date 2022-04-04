@@ -39,7 +39,7 @@
       <change afterPath="$PROJECT_DIR$/../news-site/src/redux/features/application.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site/src/redux/features/comments.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site/src/redux/features/news.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/Tours/RouteDescription.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/features/tours.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/.prettierrc" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/src/components/cards/Card.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/src/components/cards/Cards.jsx" afterDir="false" />
@@ -536,29 +536,10 @@
       <change beforePath="$PROJECT_DIR$/../news" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ntro-dom/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ntro-dom/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/headerTours/1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Tours/1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/headerTours/cal.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Tours/cal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/headerTours/calImg.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Tours/calImg.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/headerTours/child.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Tours/child.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/headerTours/old.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Tours/old.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/headerTours/reserve.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Tours/reserve.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/headerTours/rocks.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Tours/rocks.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/headerTours/time.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Tours/time.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/headerTours/two.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Tours/two.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/headerTours/yellow.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Tours/yellow.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/headerTours/изобр.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Tours/изобр.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/headerTours/изобр2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Tours/изобр2.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/headerTours/описание.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Tours/описание.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/BookingTour.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/BookingTour.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/CalendarPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/CalendarPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/CalendarTravel.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/CalendarTravel.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/DescriptionTours.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/DescriptionTours.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/Gallery/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/Gallery/styles.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/HeaderTours.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/HeaderTours.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/styles.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/configureStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/configureStore.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/controllers/categories.controller.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/controllers/clients.controllers.js" beforeDir="false" />
