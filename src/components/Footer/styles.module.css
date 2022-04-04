@@ -26,6 +26,10 @@ footer {
 .footerNavigate div {
   width: 250px;
 }
+.footerNavigate a {
+  text-decoration: none;
+  color: #282828;
+}
 .footerImage img {
   width: 80px;
   height: 100px;

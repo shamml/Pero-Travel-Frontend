@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './styles.module.css';
 
 const ContactUs = () => {
+  const [sendMessage, setSendMessage] = useState(false);
+
+  const handleClickApplication = () => {
+    setSendMessage(!sendMessage);
+  };
   return (
     <div className={styles.contactUsContent}>
       <div className={styles.natureImgContactUs}>
@@ -15,13 +20,17 @@ const ContactUs = () => {
               <input type="text" name="name" placeholder="Имя" />
             </div>
             <div className={styles.inputTypeContactUs}>
-              <input type="text" name="number"  placeholder="Телефон" />
+              <input type="text" name="number" placeholder="Телефон" />
             </div>
             <div className={styles.inputTypeContactUs}>
               <input type="text" name="email" placeholder="Почта" />
             </div>
           </div>
-          <div className={styles.buttonApplicationContactUs}>Оставить заявку</div>
+          <div className={styles.buttonApplicationContactUs}>
+            <button onClick={handleClickApplication} disabled={sendMessage}>
+              {sendMessage ? 'Заказ оформлен' : 'Оформить заказ'}
+            </button>
+          </div>
         </div>
       </div>
     </div>
