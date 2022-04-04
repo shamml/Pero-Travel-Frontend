@@ -1,7 +1,7 @@
 .galleryBlock {
   width: 1410px;
   height: 565px;
-  margin: auto;
+  margin: 0 auto 150px;
   color: white;
   display: flex;
   justify-content: space-between;
