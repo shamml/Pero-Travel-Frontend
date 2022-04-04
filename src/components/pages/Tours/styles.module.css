@@ -1,0 +1,198 @@
+@import url('https://cdn.syncfusion.com/ej2/material.css');
+
+/*HeaderTours*/
+.headerTours {
+  background: url('../../../assets/Tours/изобр.svg');
+  background-size: 100%;
+  width: 100%;
+  height: 670px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 150px;
+}
+.headerToursBlock {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.typeTour {
+  width: 240px;
+  height: 29px;
+  color: #ffc700;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+}
+.tourTitle {
+  width: 761px;
+  height: 118px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  color: #ffffff;
+  margin-bottom: 55px;
+}
+.carouselButton button {
+  border: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  width: 230px;
+  height: 50px;
+  background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
+  border-radius: 60px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+/*DescriptionTours*/
+.deskTripMain {
+  margin: auto;
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 150px;
+}
+.deskBlock {
+  width: 380px;
+}
+.deskBlock h2 {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #0499dd;
+}
+.deskBlock p {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #282828;
+}
+.tripCount {
+  width: 650px;
+  display: flex;
+}
+.personCount {
+  width: 200px;
+  position: relative;
+}
+.coinImage {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+}
+.frame {
+  width: 300px;
+  position: absolute;
+  bottom: 50px;
+  left: 25px;
+}
+.frame span {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #0499dd;
+}
+/*CalendarTravel*/
+.calendar {
+  position: relative;
+  width: 100%;
+  margin: 0 0 150px 0;
+}
+.calendarBlock {
+  display: flex;
+  justify-content: space-between;
+}
+.calendarImage {
+  width: 100%;
+  height: 870px;
+}
+.calendarTrip {
+  width: 100%;
+  padding: 70px 0 0 150px;
+}
+.getCalendarName {
+  margin: 50px 170px 50px 0;
+}
+.getCalendarName h2 {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0;
+  color: #0499dd;
+}
+.mainCalendar {
+  /*position: absolute;*/
+  /*left: 720px;*/
+  /*top: 127px;*/
+  /*z-index: 1;*/
+}
+/*additionalExpenses*/
+.additionalExpenses {
+  width: 1200px;
+  margin: 0 auto 200px;
+}
+.additionalExpenses h1 {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  color: #0499dd;
+  margin-bottom: 70px;
+}
+.additionalBlock {
+  display: flex;
+}
+.additionalPrice {
+  width: 300px;
+  position: relative;
+}
+
+.reserveBlock {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+.actuallyReserv {
+  margin: 150px 0 70px 0;
+}
+.terms {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+  position: relative;
+}
+.calendarComponent {
+  position: absolute;
+  left: 270px;
+  top: 10px;
+}
+.selectComponent {
+  position: absolute;
+  left: 250px;
+  bottom: 25px;
+}
+.mainReserve {
+  margin: 0 0 150px 0;
+}
+.reviewsTour {
+  margin: 0 0 150px 0;
+}

@@ -32,8 +32,10 @@ header a {
   text-decoration: none;
 }
 
-:active {
-  color: yellow;
+header p:hover {
+  color: #ffc700;
 }
 
-
+active {
+  color: #ffc700;
+}

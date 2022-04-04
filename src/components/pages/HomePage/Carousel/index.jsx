@@ -1,20 +1,18 @@
 import React from 'react';
 import styles from './styles.module.css';
-import face from '../../assets/homepage/Face.svg';
-import insta from '../../assets/homepage/Insta.svg';
-import vkontakte from '../../assets/homepage/Vector.svg';
-import sceondTitle from "../../assets/homepage/secondTitle.png";
-import middle from "../../assets/homepage/middle.png";
-import arrow from "../../assets/arrow.svg";
+import face from '../../../../assets/homepage/Face.svg';
+import insta from '../../../../assets/homepage/Insta.svg';
+import vkontakte from '../../../../assets/homepage/Vector.svg';
+import sceondTitle from '../../../../assets/homepage/secondTitle.png';
+import middle from '../../../../assets/homepage/middle.png';
+import arrow from '../../../../assets/arrow.svg';
 
 function Carousel() {
   return (
     <div className={styles.firstBlockBg}>
       <div className={styles.firstBlockContent}>
         <div className={styles.firstBlockLeft}>
-          <div className={styles.firstTitle}>
-            ПУТЕШЕСТВУЙ
-          </div>
+          <div className={styles.firstTitle}>ПУТЕШЕСТВУЙ</div>
           <div className={styles.middleTitle}>
             <img src={middle} alt="middleTitle" />
           </div>
@@ -22,7 +20,9 @@ function Carousel() {
             <img src={sceondTitle} alt="secontdTitle" />
           </div>
           <div className={styles.carouselButton}>
-            <button>К экскурсиям <img src={arrow} alt="arrow" /></button>
+            <button>
+              К экскурсиям <img src={arrow} alt="arrow" />
+            </button>
           </div>
         </div>
         <div className={styles.firstBlockRight}>

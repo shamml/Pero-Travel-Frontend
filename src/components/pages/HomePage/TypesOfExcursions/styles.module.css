@@ -1,0 +1,62 @@
+.TypesOfContent {
+  width: 1200px;
+  /* background-color: rgb(179, 153, 153); */
+  margin: auto;
+  padding-bottom: 150px;
+}
+
+.contentViewExcursions {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.titleExcursionViews {
+  color: #0499DD;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.titleTourP {
+  font-size: 18px;
+  color: #0499DD;
+}
+
+.viewTourExcursion {
+  width: 550px;
+  margin-top: 90px;
+  display: flex;
+}
+
+.tourViewDescription {
+  margin-left: 20px;
+}
+
+.tourViewDescriptionText {
+  font-size: 14px;
+}
+
+.selectionTourView {
+  width: 550px;
+  margin: auto;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.descriptionTextTour {
+  font-size: 14px;
+}
+
+.buttonSelectionTour {
+  width: 230px;
+  margin-top: 20px;
+  padding: 15px 0;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 60px;
+  background: linear-gradient(92.71deg, #0499DD 0%, #17C1BC 100%);
+  color: white;
+}
+

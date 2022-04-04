@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { authorization } from '../../../redux/features/application';
 import { useDispatch } from 'react-redux';
-import styles from './styles.module.css'
+import styles from './styles.module.css';
 import { Link } from 'react-router-dom';
 
 const SigninPage = () => {
-
   const dispatch = useDispatch();
 
   const [login, setLogin] = useState('');
