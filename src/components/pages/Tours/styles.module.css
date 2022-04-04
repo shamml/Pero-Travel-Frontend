@@ -196,3 +196,70 @@
 .reviewsTour {
   margin: 0 0 150px 0;
 }
+.routeDesk {
+  border-radius: 8px;
+  width: 600px;
+  margin: auto;
+  height: 570px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.slide {
+  width: 450px;
+  transition: all 0.4s ease;
+}
+.deskTitle {
+  margin-bottom: 40px;
+}
+.onePoint {
+  width: 457px;
+  display: flex;
+  justify-content: space-between;
+}
+.subTitlePoint {
+  margin-bottom: 10px;
+}
+.secondPoint {
+  width: 480px;
+  display: flex;
+  justify-content: space-between;
+}
+.thirdPoint {
+  width: 510px;
+  display: flex;
+  justify-content: space-between;
+}
+.deskTour {
+  width: 1200px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.anotherPoint {
+  width: 314px;
+  display: flex;
+  justify-content: space-between;
+}
+.anotherTermsBlock {
+  width: 1200px;
+  margin: 40px auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+.routeDeskBlock {
+  width: 1200px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.yellowRound {
+  padding-right: 8px;
+}
+.carouselImage  {
+  width: 600px;
+}
+.carousel-item img {
+  width: 100%;
+}

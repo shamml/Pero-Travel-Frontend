@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 const TypesOf = () => {
   return (
     <div className={styels.TypesOf}>
-            <div className={styels.TypesOfContent}>
+      <div className={styels.TypesOfContent}>
         <div className={styels.titleExcursionViews}>Виды экскурсий</div>
         <div>
           <div className={styels.contentViewExcursions}>
@@ -80,7 +80,7 @@ const TypesOf = () => {
               записывайтесь онлайн без очередей, просто и быстро!
             </div>
             <Link to="/excursions">
-              <button className={styels.buttonSelectionTour}>
+              <button style={{cursor: "pointer"}} className={styels.buttonSelectionTour}>
                 К экскурсиям →
               </button>
             </Link>
