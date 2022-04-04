@@ -17,7 +17,7 @@ const CalendarPage = () => {
 
   return (
     <div className={styles.calendar}>
-      <CalendarComponent value={booking}/>
+      <CalendarComponent/>
     </div>
   );
 };

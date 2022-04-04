@@ -1,14 +1,15 @@
 import React from 'react';
 import styels from './styles.module.css';
-import bus from "../../../../assets/homepage/busTour.svg";
-import jeep from "../../../../assets/homepage/jeepTour.svg";
-import sheep from "../../../../assets/homepage/sheepTour.svg"
-import canyon from "../../../../assets/homepage/canyonTour.svg"
+import bus from '../../../../assets/homepage/busTour.svg';
+import jeep from '../../../../assets/homepage/jeepTour.svg';
+import sheep from '../../../../assets/homepage/sheepTour.svg';
+import canyon from '../../../../assets/homepage/canyonTour.svg';
+import { Link } from 'react-router-dom';
 
 const TypesOf = () => {
   return (
     <div className={styels.TypesOf}>
-            <div className={styels.TypesOfContent}>
+      <div className={styels.TypesOfContent}>
         <div className={styels.titleExcursionViews}>Виды экскурсий</div>
         <div>
           <div className={styels.contentViewExcursions}>
@@ -78,9 +79,11 @@ const TypesOf = () => {
               Выбирайте на нашем сайте экскурсию, которая подходит именно вам и
               записывайтесь онлайн без очередей, просто и быстро!
             </div>
-            <button className={styels.buttonSelectionTour}>
-              К экскурсиям →
-            </button>
+            <Link to="/excursions">
+              <button style={{cursor: "pointer"}} className={styels.buttonSelectionTour}>
+                К экскурсиям →
+              </button>
+            </Link>
           </div>
         </div>
       </div>
