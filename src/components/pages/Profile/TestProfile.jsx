@@ -13,7 +13,8 @@ const TestProfile = () => {
   const dispatch = useDispatch()
 
   const role = useSelector(state => state.application.role)
-
+  console.log(role);
+  
   if(role === 'admin') {
     return <Admin/>
   }

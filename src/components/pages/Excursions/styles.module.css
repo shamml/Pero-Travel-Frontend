@@ -93,6 +93,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 31px;
+  margin-bottom: 30px;
   font-style: 14px;
   font-weight: bold;
 }
@@ -105,9 +106,8 @@
 .inputsPriceExcursion {
   width: 240px;
   display: flex;
+  margin-bottom: 20px;
   justify-content: space-between;
-  margin-top: 20px;
-  margin-bottom: 30px;
 }
 
 .inputPriceExcursion {
@@ -121,6 +121,21 @@
   outline: none;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  background-image: url('../../../assets/excursions/rubl.svg'),
+    linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.8em auto, 100%;
+  font-weight: 500;
+}
+
 .inputTypeRangeExcursion {
   text-align: center;
   margin-top: 30px;
@@ -129,17 +144,18 @@
 .lineBorder {
   width: 240px;
   align-items: center;
-  margin-top: 45px;
   border-bottom: 1px solid #ededed;
 }
 
 .amountPeople {
   width: 266px;
+  /* padding-bottom: 20px; */
 }
 
 .amountButtons {
   width: 240px;
   margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -241,97 +257,6 @@
   color: #0499dd;
   font-size: 24px;
   font-weight: bold;
-}
-
-.ourToursCard {
-  width: 780px;
-  margin-top: 40px;
-  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
-  display: flex;
-}
-
-.descriptionExcursion {
-  margin: 27px 0 0 40px;
-}
-
-.typeOfTourExcursion {
-  color: #daaa00;
-  font-size: 14px;
-}
-
-.placeTourExcursion {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.tripTourExcursion {
-  width: 350px;
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.onePriceTrip {
-  display: flex;
-}
-
-.ageBilet {
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.priceBiletTour {
-  color: #0499dd;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.timeDescriptionTour {
-  color: #0499dd;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.descriptionPlaceTour {
-  margin-top: 20px;
-}
-
-.verticalLine {
-  border-left: 3px solid #0499dd;
-}
-
-.textPlaceTour {
-  font-size: 12px;
-  margin-left: 20px;
-}
-
-.buttonsDescriptionTour {
-  width: 220px;
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.buttonsDescriptionTour a {
-  text-decoration: none;
-}
-
-.moreTourButton {
-  width: 160px;
-  padding: 10px 0;
-  text-align: center;
-  background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
-  color: white;
-  border-radius: 40px;
-  cursor: pointer;
-}
-
-.heartTour {
-  width: 40px;
-  border-radius: 50%;
-  border: 0;
-  cursor: pointer;
 }
 
 .selectPlace {

@@ -3,38 +3,51 @@ import styles from './styles.module.css';
 import data from '../../../assets/excursions/data.png';
 import plus from '../../../assets/excursions/plus.svg';
 import minus from '../../../assets/excursions/minus.svg';
-import adlerTour from '../../../assets/excursions/adlerTour.jpg';
-import price from '../../../assets/excursions/price.svg';
-import time from '../../../assets/excursions/time.svg';
-import { Link } from 'react-router-dom';
 import Slider from '@mui/material/Slider';
+import { CSSTransition } from 'react-transition-group';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import OurTour from './OurTours/OurTour';
 
 const Excursions = () => {
+  const theme = createTheme({
+    status: {
+      danger: '#e53e3e',
+    },
+    palette: {
+      primary: {
+        main: '#0971f1',
+        darker: '#053e85',
+      },
+      neutral: {
+        main: '#64748B',
+        contrastText: '#fff',
+      },
+      pero: {
+        main: '#0499dd',
+        contrastText: '#fff',
+      },
+    },
+  });
+
   const [priceBlock, setPriceBlock] = useState(false);
-  const handlePriceBlock = () => {
-    setPriceBlock(!priceBlock);
-  };
-
   const [amountBlock, setAmountBlock] = useState(false);
-  const handleAmountBlock = () => {
-    setAmountBlock(!amountBlock);
-  };
-
   const [placeBlock, setPlaceBlock] = useState(false);
-  const handlePlaceBlock = () => {
-    setPlaceBlock(!placeBlock);
-  };
-
   const [durationBlock, setDurationBlock] = useState(false);
-  const handleDurationBlock = () => {
-    setDurationBlock(!durationBlock);
-  };
-
   const [dateBlock, setDateBlock] = useState(false);
-  const handleDateBlock = () => {
-    setDateBlock(!dateBlock);
+
+  const [minPrice, setMinPrice] = useState(1000);
+  const handleMinimum = (e) => {
+    setMinPrice(e.target.value);
+  };
+  const [maxPrice, setMaxPrice] = useState(2500);
+  const handleMaximum = (e) => {
+    setMaxPrice(e.target.value);
   };
 
+  const handleChangeRange = (e) => {
+    setMinPrice(e.target.value[0]);
+    setMaxPrice(e.target.value[1]);
+  };
   return (
     <div className={styles.mainExcursions}>
       <div className={styles.ourExcursions}>НАШИ ЭКСКУРСИИ</div>
@@ -87,40 +100,61 @@ const Excursions = () => {
               Стоимость
               {priceBlock ? (
                 <div
-                  onClick={handlePriceBlock}
+                  onClick={() => setPriceBlock(!priceBlock)}
                   className={styles.incrementExcursion}
                 >
                   <img src={minus} alt="no" />
                 </div>
               ) : (
                 <div
-                  onClick={handlePriceBlock}
+                  onClick={() => setPriceBlock(!priceBlock)}
                   className={styles.incrementExcursion}
                 >
                   <img src={plus} alt="no" />
                 </div>
               )}
             </div>
-            {priceBlock && (
-              <>
+
+            <CSSTransition
+              in={priceBlock}
+              classNames="alert"
+              timeout={300}
+              unmountOnExit
+            >
+              <div>
                 <div className={styles.inputsPriceExcursion}>
-                  <input className={styles.inputPriceExcursion} />
-                  <input className={styles.inputPriceExcursion} />
+                  <input
+                    type="number"
+                    className={styles.inputPriceExcursion}
+                    value={minPrice}
+                    onChange={handleMinimum}
+                  />
+                  <input
+                    type="number"
+                    className={styles.inputPriceExcursion}
+                    value={maxPrice}
+                    onChange={handleMaximum}
+                  />
                 </div>
                 {/* <div className={styles.inputTypeRangeExcursion}>
               <input type="range" min="0" max="100" step="1" value="50"></input>
             </div> */}
+              <ThemeProvider theme={theme}>
                 <Slider
-                  getAriaLabel={() => 'Temperature range'}
-                  // value={value}
-                  // onChange={handleChange}
-                  valueLabelDisplay="auto"
-                  // getAriaValueText={valuetext}
-                  max={10000}
-                  min={0}
-                />
-              </>
-            )}
+                    getAriaLabel={() => 'Temperature range'}
+                    value={[minPrice, maxPrice]}
+                    onChange={handleChangeRange}
+                    valueLabelDisplay="auto"
+                    // getAriaValueText={valuetext}
+                    max={10000}
+                    min={0}
+                    defaultValue={[1000, 2500]}
+                    color="pero"
+                    range
+                  />
+              </ThemeProvider>
+              </div>
+            </CSSTransition>
           </div>
           <div className={styles.lineBorder}></div>
 
@@ -131,22 +165,27 @@ const Excursions = () => {
               Количество человек
               {amountBlock ? (
                 <div
-                  onClick={handleAmountBlock}
+                  onClick={() => setAmountBlock(!amountBlock)}
                   className={styles.incrementExcursion}
                 >
                   <img src={minus} alt="no" />
                 </div>
               ) : (
                 <div
-                  onClick={handleAmountBlock}
+                  onClick={() => setAmountBlock(!amountBlock)}
                   className={styles.incrementExcursion}
                 >
                   <img src={plus} alt="no" />
                 </div>
               )}
             </div>
-            {amountBlock && (
-              <>
+            <CSSTransition
+              in={amountBlock}
+              classNames="alert"
+              timeout={300}
+              unmountOnExit
+            >
+              <div>
                 <div className={styles.amountButtons}>
                   <div className={styles.buttonMan}>1 чел.</div>
                   <div className={styles.buttonMan}>2 чел.</div>
@@ -160,8 +199,8 @@ const Excursions = () => {
                   <div className={styles.buttonMan}>10 чел.</div>
                   <div className={styles.buttonMan10}>Больше 10 чел.</div>
                 </div>
-              </>
-            )}
+              </div>
+            </CSSTransition>
           </div>
           <div className={styles.lineBorder}></div>
 
@@ -172,21 +211,26 @@ const Excursions = () => {
               Место
               {placeBlock ? (
                 <div
-                  onClick={handlePlaceBlock}
+                  onClick={() => setPlaceBlock(!placeBlock)}
                   className={styles.incrementExcursion}
                 >
                   <img src={minus} alt="no" />
                 </div>
               ) : (
                 <div
-                  onClick={handlePlaceBlock}
+                  onClick={() => setPlaceBlock(!placeBlock)}
                   className={styles.incrementExcursion}
                 >
                   <img src={plus} alt="no" />
                 </div>
               )}
             </div>
-            {placeBlock && (
+            <CSSTransition
+              in={placeBlock}
+              classNames="alert"
+              timeout={300}
+              unmountOnExit
+            >
               <>
                 <div className={styles.inputCountryExcursions}>
                   <input
@@ -230,7 +274,7 @@ const Excursions = () => {
                   </label>
                 </div>
               </>
-            )}
+            </CSSTransition>
           </div>
           <div className={styles.lineBorder}></div>
 
@@ -241,14 +285,14 @@ const Excursions = () => {
               Длительность
               {durationBlock ? (
                 <div
-                  onClick={handleDurationBlock}
+                  onClick={() => setDurationBlock(!durationBlock)}
                   className={styles.incrementExcursion}
                 >
                   <img src={minus} alt="no" />
                 </div>
               ) : (
                 <div
-                  onClick={handleDurationBlock}
+                  onClick={() => setDurationBlock(!durationBlock)}
                   className={styles.incrementExcursion}
                 >
                   <img src={plus} alt="no" />
@@ -265,14 +309,14 @@ const Excursions = () => {
               Дата
               {dateBlock ? (
                 <div
-                  onClick={handleDateBlock}
+                  onClick={() => setDateBlock(!dateBlock)}
                   className={styles.incrementExcursion}
                 >
                   <img src={minus} alt="no" />
                 </div>
               ) : (
                 <div
-                  onClick={handleDateBlock}
+                  onClick={() => setDateBlock(!dateBlock)}
                   className={styles.incrementExcursion}
                 >
                   <img src={plus} alt="no" />
@@ -291,53 +335,10 @@ const Excursions = () => {
         </div>
         <div className={styles.ourToursContent}>
           <div className={styles.toursTitleExcursion}>Наши Туры</div>
-          <div className={styles.ourToursCard}>
-            <img src={adlerTour} alt="no" />
-            <div className={styles.descriptionExcursion}>
-              <div className={styles.typeOfTourExcursion}>Автобусный тур</div>
-              <div className={styles.placeTourExcursion}>
-                Золотое кольцо Абхазии (из Адлера)
-              </div>
-              <div className={styles.tripTourExcursion}>
-                <div className={styles.tripPrice}>
-                  <div className={styles.onePriceTrip}>
-                    <img src={price} alt="no" />
-                    <div className={styles.priceBiletTour}>1 618₽</div>
-                  </div>
-                  <div className={styles.ageBilet}>Взрослый билет</div>
-                </div>
-                <div className={styles.tripPrice}>
-                  <div className={styles.onePriceTrip}>
-                    <img src={price} alt="no" />
-                    <div className={styles.priceBiletTour}>1 418₽</div>
-                  </div>
-                  <div className={styles.ageBilet}>Детский билет</div>
-                </div>
-                <div className={styles.timeTourExcursion}>
-                  <div className={styles.onePriceTrip}>
-                    <img src={time} alt="no" />
-                    <div className={styles.timeDescriptionTour}>2,5 часа</div>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.descriptionPlaceTour}>
-                <div className={styles.verticalLine}>
-                  <div className={styles.textPlaceTour}>
-                    Вас ждет путешествие по "Золотому Кольцу Абхазии" на
-                    Мерседес Спринтер (20 мест). По маршруту вас будет
-                    сопровождать профессиональный гид. Посадка на экскурсию
-                    осуществляется с вашего отеля или ближайшей автобусной
-                    остановки. Пересечение границы без пересадок...
-                  </div>
-                </div>
-              </div>
-              <div className={styles.buttonsDescriptionTour}>
-                <Link to="/tours">
-                  <div className={styles.moreTourButton}>Подробнее</div>
-                </Link>
-              </div>
-            </div>
-          </div>
+          
+          {/* map */}
+          <OurTour />
+
         </div>
       </div>
     </div>

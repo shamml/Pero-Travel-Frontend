@@ -11,6 +11,8 @@ import Profile from './pages/Profile';
 import Footer from './Footer';
 import './styles.css';
 import { useSelector } from 'react-redux';
+import "./transition.css";
+
 
 const App = () => {
   const token = useSelector((state) => state.application.token);

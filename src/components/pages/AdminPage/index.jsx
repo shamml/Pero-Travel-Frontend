@@ -248,7 +248,6 @@ function Admin() {
     setOptionalPrice(e.target.value);
   }
 
-  console.log(idTourOptional);
   function handleClickAddOptionalToTour() {
     dispatch(addOptionalToTour(idTourOptional, optionalTitle, optionalPrice));
     setOptionalTitle('');
