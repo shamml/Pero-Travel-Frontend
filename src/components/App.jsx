@@ -10,6 +10,7 @@ import Tours from './pages/Tours';
 import Profile from './pages/Profile';
 import Footer from './Footer';
 import './styles.css';
+import "./transition.css";
 
 
 const App = () => {

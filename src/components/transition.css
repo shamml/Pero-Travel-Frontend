@@ -1,0 +1,21 @@
+.alert-enter {
+  opacity: 0;
+  max-height: 0;
+  transform: scale(0.1);
+}
+.alert-enter-active {
+  opacity: 1;
+  transform: translate(0);
+  max-height: 100px;
+  transition: 400ms;
+}
+.alert-exit {
+  opacity: 1;
+  max-height: 300px;
+}
+.alert-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  max-height: 0;
+  transition: 400ms;
+}
