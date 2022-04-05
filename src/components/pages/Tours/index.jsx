@@ -12,6 +12,7 @@ import { useParams } from 'react-router-dom';
 import { fetchTours } from '../../../redux/features/tours'
 
 const Tours = () => {
+  
   const dispatch = useDispatch()
 
   const { id } = useParams();
