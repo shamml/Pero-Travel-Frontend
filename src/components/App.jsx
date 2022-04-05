@@ -5,10 +5,12 @@ import HomePage from './pages/HomePage';
 import SigninPage from './pages/SigninPage';
 import SignupPage from './pages/SignupPage';
 import Excursions from './pages/Excursions';
+import Admin from './pages/AdminPage';
 import Tours from './pages/Tours';
 import Profile from './pages/Profile';
 import Footer from './Footer';
 import './styles.css';
+
 
 const App = () => {
   return (
@@ -21,8 +23,9 @@ const App = () => {
         <Route path="/tours" element={<Tours />} />
         <Route path="/excursions" element={<Excursions />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
