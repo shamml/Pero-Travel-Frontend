@@ -1,9 +1,11 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom'
+import { useSelector } from 'react-redux';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/homepage/Logo.svg';
 import styles from './styles.module.css';
 
 const Header = () => {
+  const token = useSelector((state) => state.application.token);
   return (
     <header>
       <div className={styles.header}>
@@ -17,9 +19,15 @@ const Header = () => {
           <NavLink to="/excursions">
             <p>Экскурсии</p>
           </NavLink>
-          <NavLink to="/personal">
-            <p>Личный кабинет</p>
-          </NavLink>
+          {token ? (
+            <NavLink to="/profile">
+              <p>Личный кабинет</p>
+            </NavLink>
+          ) : (
+            <NavLink to="/signin">
+              <p>Войти</p>
+            </NavLink>
+          )}
         </nav>{' '}
       </div>
     </header>

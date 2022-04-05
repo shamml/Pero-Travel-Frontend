@@ -196,15 +196,14 @@
 .reviewsTour {
   margin: 0 0 150px 0;
 }
+.routeDeskMain {
+  margin-bottom: 150px;
+}
 .routeDesk {
   border-radius: 8px;
   width: 600px;
   margin: auto;
   height: 570px;
-}
-* {
-  margin: 0;
-  padding: 0;
 }
 .slide {
   width: 450px;
