@@ -1,19 +1,16 @@
 import React from 'react';
 import styles from './styles.module.css';
 import { CalendarComponent } from '@syncfusion/ej2-react-calendars';
+import { useSelector } from 'react-redux';
 
 const CalendarPage = () => {
-  const number = 28;
+  const booking = useSelector((state) => state.tours.booking);
 
-  const dateValue: Date = new Date(
-    new Date().getFullYear(),
-    new Date().getMonth(),
-    number,
-  );
+  const dateValue: Date = new Date(booking);
 
   return (
     <div className={styles.calendar}>
-      <CalendarComponent value={dateValue}></CalendarComponent>
+      <CalendarComponent value={dateValue}/>
     </div>
   );
 };

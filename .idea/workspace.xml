@@ -39,29 +39,6 @@
       <change afterPath="$PROJECT_DIR$/../news-site/src/redux/features/application.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site/src/redux/features/comments.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site/src/redux/features/news.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Footer/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Footer/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/Excursions/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/Excursions/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/HomePage/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/HomePage/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/Profile/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/Profile/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/SigninPage/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/SigninPage/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/SignupPage/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/SignupPage/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/Tours/BookingTour.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/Tours/CalendarPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/Tours/CalendarTravel.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/Tours/DescriptionTours.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/Tours/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/Tours/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/configureStore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/features/application.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/.prettierrc" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/src/components/cards/Card.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/src/components/cards/Cards.jsx" afterDir="false" />
@@ -558,6 +535,18 @@
       <change beforePath="$PROJECT_DIR$/../news" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ntro-dom/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ntro-dom/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/styles.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Excursions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Excursions/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/HomePage/Reviews/Reviews.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/Reviews/Reviews.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/HomePage/Reviews/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/Reviews/styles.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/HomePage/TypesOfExcursions/TypesOf.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/HomePage/TypesOfExcursions/TypesOf.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/HomePage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/HomePage/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/CalendarPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/CalendarPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/ReviewsTour.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/ReviewsTour.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/controllers/categories.controller.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/controllers/clients.controllers.js" beforeDir="false" />
@@ -693,7 +682,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -733,6 +722,7 @@
       <recent name="C:\Users\Admin\Desktop\pero-travel\src\components\pages\Tours" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\pero-travel\src\components\pages\Tours" />
       <recent name="C:\Users\Admin\Desktop\pero-travel\src\assets\excursions" />
       <recent name="C:\Users\Admin\Desktop\pero-travel\src\components\pages\HomePage" />
       <recent name="C:\Users\Admin\Desktop\pero-travel\src\components" />
@@ -763,6 +753,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648566244094</updated>
       <workItem from="1648566247473" duration="4944000" />
+      <workItem from="1648899244226" duration="13590000" />
     </task>
     <servers />
   </component>

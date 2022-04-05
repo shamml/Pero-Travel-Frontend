@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './styles.module.css'
-import pic2 from '../../../assets/headerTours/изобр2.svg'
-import cal from '../../../assets/headerTours/cal.png'
+import pic2 from '../../../assets/Tours/изобр2.svg'
 import CalendarPage from './CalendarPage'
 
 const CalendarTravel = () => {
@@ -13,7 +12,7 @@ const CalendarTravel = () => {
         </div>
         <div className={styles.calendarTrip}>
           <div className={styles.getCalendarName}>
-            <img src={cal} alt="#" />
+            <h2>Календарь путешествий</h2>
           </div>
           <div className={styles.mainCalendar}>
             <CalendarPage />
