@@ -1,0 +1,130 @@
+.adminka {
+  max-width: 1200px;
+  margin: auto;
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.adminka button {
+  padding: 10px;
+  width: 100%;
+}
+
+.addTour {
+  width: 500px;
+  margin-top: 150px;
+}
+
+.addTour input {
+  width: 100%;
+  margin: 10px 0;
+  outline: none;
+  font-size: 20px;
+}
+
+.tour {
+  opacity: 0;
+  transition: 0.5s;
+}
+.tourOpacity {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.toursContainer {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.toursContainerOpacity {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  font-size: 20px;
+}
+
+.fetchTour {
+  width: 500px;
+  margin-top: 150px;
+}
+
+.tourContainer {
+  margin: 10px 0;
+}
+
+.tourContainer span {
+  padding: 7px;
+  font-weight:200;
+  cursor: pointer;
+  background-color: brown;
+  color: black;
+  width: 40px;
+  height: 20px;
+  align-items: center;
+  text-align: center;
+  transition: 0.5s;
+  margin: 0 42px;
+  border-radius: 2px;
+}
+
+.tourContainer span:hover {
+  padding: 10px;
+  background-color: white;
+  color: white;
+  transition: 1s;
+  border-radius: 2px;
+}
+
+.modalWindowEdit {
+    position: absolute;
+    width: 500px;
+    top: 200px;
+    left: 360px;
+}
+
+.modalWindowEdit button {
+    width: 500px;
+}
+
+.modalWindowEdit input {
+  width: 100%;
+  margin: 5px 0;
+  font-size: 20px;
+}
+.modalWindowEdit div img {
+  width: 100%;
+}
+
+.modalOptional {
+  width: 500px;
+}
+
+.modalOptional button {
+  margin: 15px 0 0;
+}
+
+.modalOptional input {
+  width: 100%;
+  font-size: 20px;
+}
+
+.adminImage img {
+ width: 100%;
+ height: 450px;
+ border-top-right-radius: 10px;
+ border-top-left-radius: 10px;
+}
+.exit {
+  width: 50px;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+}
+.exit img {
+  width: 100%;
+}

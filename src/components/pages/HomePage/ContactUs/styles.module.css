@@ -48,7 +48,8 @@
   cursor: pointer;
 }
 
-.buttonApplicationContactUs {
+.buttonApplicationContactUs button {
+  border: none;
   margin-top: 85px;
   width: 230px;
   background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
@@ -59,4 +60,8 @@
   border-radius: 60px;
   padding: 15px 0;
   cursor: pointer;
+}
+.buttonApplicationContactUs button:disabled {
+  opacity: .5;
+  cursor: not-allowed;
 }

@@ -5,13 +5,16 @@ import reserve from '../../../assets/Tours/reserve.png';
 import calImg from '../../../assets/Tours/calImg.svg';
 import two from '../../../assets/Tours/two.svg';
 import { CalendarComponent } from '@syncfusion/ej2-react-calendars';
+import { useDispatch } from 'react-redux'
+import { booking } from '../../../redux/features/tours'
 
 const BookingTour = () => {
+  const dispatch = useDispatch()
+
   const [dataValue, setDataValue] = useState('');
   const [openCalendar, setOpenCalendar] = useState(false);
   const [openSelectAdults, setOpenSelectAdults] = useState(false);
   const [openSelectKids, setOpenSelectKids] = useState(false);
-  console.log(dataValue);
 
   const handleOpenCalendar = () => {
     setOpenCalendar(!openCalendar);
@@ -28,9 +31,10 @@ const BookingTour = () => {
     setOpenSelectAdults(false);
     setOpenCalendar(false);
   };
-  const calendarDataValue = () => {
-    setDataValue();
-  };
+
+  const handleBooking = () => {
+    dispatch(booking(dataValue))
+  }
 
   return (
     <div className={styles.mainReserve}>
@@ -50,8 +54,8 @@ const BookingTour = () => {
                 {openCalendar ? (
                   <div className={styles.calendarComponent}>
                     <CalendarComponent
-                      onChange={calendarDataValue}
-                    ></CalendarComponent>
+                      onChange={(e) => setDataValue(e.target.value)}
+                    />
                   </div>
                 ) : (
                   ''
@@ -97,7 +101,7 @@ const BookingTour = () => {
               </div>
             </div>
             <div className={styles.carouselButton}>
-              <button>Забронировать</button>
+              <button onClick={handleBooking}>Забронировать</button>
             </div>
           </div>
         </div>

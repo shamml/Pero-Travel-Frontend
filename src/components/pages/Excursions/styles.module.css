@@ -1,17 +1,31 @@
 .mainExcursions {
-  width: 1120px;
+  background: url('../../../assets/excursions/Rectangle1.jpg') no-repeat;
+  background-size: 100%;
+  padding-top: 180px;
+}
+
+.ourExcursions {
+  width: 1200px;
   margin: auto;
+  font-size: 60px;
+  font-weight: 700;
+  color: white;
 }
 
 .menuExcursions {
-  width: 1120px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  width: 1200px;
+  margin: auto;
+  margin-top: 120px;
   border-radius: 10px;
-  padding: 60px 0;
+  margin-bottom: 100px;
+}
+
+.menuExcursions a {
+  margin: 0 20px;
 }
 
 .typeExcursions {
-  width: 475px;
+  width: 550px;
   margin: auto;
 }
 
@@ -19,7 +33,6 @@
   color: #0499dd;
   text-decoration: none;
   font-size: 14px;
-  padding-left: 20px;
 }
 
 .buttonsExcursions {
@@ -40,6 +53,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  cursor: pointer;
 }
 
 .buttonExcursion img {
@@ -57,11 +71,13 @@
   line-height: 50px;
   color: white;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .contentExcursions {
+  width: 1120px;
   display: flex;
-  margin-top: 40px;
+  margin: auto;
 }
 
 .filterExcursions {
@@ -91,16 +107,18 @@
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .inputPriceExcursion {
-  width: 115px;
-  height: 25px;
+  width: 105px;
+  height: 30px;
   border: 1px solid #d1d1d1;
   font-size: 12px;
   padding-left: 20px;
   box-sizing: border-box;
   border-radius: 40px;
+  outline: none;
 }
 
 .inputTypeRangeExcursion {
@@ -295,6 +313,10 @@
   justify-content: space-between;
 }
 
+.buttonsDescriptionTour a {
+  text-decoration: none;
+}
+
 .moreTourButton {
   width: 160px;
   padding: 10px 0;
@@ -310,4 +332,57 @@
   border-radius: 50%;
   border: 0;
   cursor: pointer;
+}
+
+.selectPlace {
+  display: block;
+  line-height: 1.3;
+  padding: 0.6em 1.4em 0.5em 1.2em;
+  width: 235px;
+  height: 50px;
+  margin: 0;
+  border: none;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url('../../../assets/excursions/location.png'),
+    linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.9em auto, 100%;
+  outline: none;
+  cursor: pointer;
+}
+
+.selectMansCount {
+  display: block;
+  line-height: 1.3;
+  padding: 0.6em 1.4em 0.5em 1.2em;
+  width: 235px;
+  height: 50px;
+  margin: 0;
+  border: none;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url('../../../assets/excursions/contacts.png'),
+    linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.9em auto, 100%;
+  outline: none;
+  cursor: pointer;
+}
+
+.mainExcursions input,
+.mainExcursions label {
+  cursor: pointer;
+}
+
+.placeExcursions label {
+  margin-bottom: 10px;
 }

@@ -6,6 +6,7 @@ import vkontakte from '../../../../assets/homepage/Vector.svg';
 import sceondTitle from '../../../../assets/homepage/secondTitle.png';
 import middle from '../../../../assets/homepage/middle.png';
 import arrow from '../../../../assets/arrow.svg';
+import { Link } from 'react-router-dom';
 
 function Carousel() {
   return (
@@ -20,9 +21,11 @@ function Carousel() {
             <img src={sceondTitle} alt="secontdTitle" />
           </div>
           <div className={styles.carouselButton}>
-            <button>
-              К экскурсиям <img src={arrow} alt="arrow" />
-            </button>
+            <Link to="excursions">
+              <button style={{cursor:"pointer"}}>
+                К экскурсиям <img src={arrow} alt="arrow" />
+              </button>
+            </Link>
           </div>
         </div>
         <div className={styles.firstBlockRight}>
