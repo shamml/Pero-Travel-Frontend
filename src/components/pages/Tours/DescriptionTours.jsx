@@ -5,16 +5,13 @@ import old from '../../../assets/Tours/Rectangle 41.png';
 import Frame from '../../../assets/Tours/Frame 1.png';
 import time from '../../../assets/Tours/Layer 15.png';
 
-const DescriptionTours = () => {
+const DescriptionTours = ({tour}) => {
   return (
     <div className={styles.deskTripMain}>
       <div className={styles.deskBlock}>
         <h2>Описание экскурсии</h2>
         <p>
-          Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер
-          (20 мест). По маршруту вас будет сопровождать профессиональный гид.
-          Посадка на экскурсию осуществляется с вашего отеля или ближайшей
-          автобусной остановки. Пересечение границы без пересадок.
+          {tour.desc}
         </p>
       </div>
       <div className={styles.tripCount}>
@@ -27,7 +24,7 @@ const DescriptionTours = () => {
               <img src={old} alt="#" />
             </div>
             <div className={styles.frame}>
-              <img src={Frame} alt="#" /> <span>2 000 ₽</span>
+              <img src={Frame} alt="#" /> <span>{tour.price} ₽</span>
               <div>Взрослый билет</div>
             </div>
           </div>
@@ -41,7 +38,7 @@ const DescriptionTours = () => {
               <img src={old} alt="#" />
             </div>
             <div className={styles.frame}>
-              <img src={Frame} alt="#" /> <span>1 500 ₽</span>
+              <img src={Frame} alt="#" /> <span>{tour.priceForChild} ₽</span>
               <div>Детский билет</div>
             </div>
           </div>
@@ -55,7 +52,7 @@ const DescriptionTours = () => {
               <img src={old} alt="#" />
             </div>
             <div className={styles.frame}>
-              <img src={time} alt="#" /> <span>12 часов</span>
+              <img src={time} alt="#" /> <span>{tour.duration} часов</span>
             </div>
           </div>
         </div>

@@ -1,55 +1,69 @@
-import React from 'react';
+import React, { useEffect } from 'react'
 import styles from './styles.module.css';
 import cardBg from '../../../../assets/homepage/popular/cardBgOne.jpg';
 import timeIcon from '../../../../assets/timeIcon.svg';
 import priceIcon from '../../../../assets/priceIcon.svg';
+import { NavLink } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchTours } from '../../../../redux/features/tours'
 
 const Popular = () => {
-  const array = [
-    {
-      type: 'Конный тур',
-      title: 'Конные прогулки',
-      duration: 6,
-      desc: 'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
-    },
-    {
-      type: 'Конный тур',
-      title: 'Конные прогулки',
-      duration: 6,
-      desc: 'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ',
-    },
-    {
-      type: 'Конный тур',
-      title: 'Конные прогулки',
-      duration: 6,
-      desc: 'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
-    },
-    {
-      type: 'Конный тур',
-      title: 'Конные прогулки',
-      duration: 6,
-      desc: 'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ',
-    },
-    {
-      type: 'Конный тур',
-      title: 'Конные прогулки',
-      duration: 6,
-      desc: 'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ',
-    },
-  ];
+  // const array = [
+  //   {
+  //     id: 1,
+  //     type: 'Конный тур',
+  //     title: 'Конные прогулки',
+  //     duration: 6,
+  //     desc: 'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
+  //   },
+  //   {
+  //     id: 2,
+  //     type: 'Конный тур',
+  //     title: 'Конные прогулки',
+  //     duration: 6,
+  //     desc: 'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ',
+  //   },
+  //   {
+  //     id: 3,
+  //     type: 'Конный тур',
+  //     title: 'Конные прогулки',
+  //     duration: 6,
+  //     desc: 'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
+  //   },
+  //   {
+  //     id: 4,
+  //     type: 'Конный тур',
+  //     title: 'Конные прогулки',
+  //     duration: 6,
+  //     desc: 'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ',
+  //   },
+  //   {
+  //     id: 5,
+  //     type: 'Конный тур',
+  //     title: 'Конные прогулки',
+  //     duration: 6,
+  //     desc: 'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ',
+  //   },
+  // ];
+  const dispatch = useDispatch()
 
+  const tours = useSelector(state => state.tours.tours)
+
+  useEffect(() => {
+    dispatch(fetchTours())
+  }, [dispatch])
   return (
     <div className={styles.popularBlock}>
       <div className={styles.popularTitle}>Популярные экскурсии</div>
       <div className={styles.carousel}>
-        {array.map((item) => {
+        {tours.map((item) => {
           return (
             <div className={styles.carouselItem}>
               <div className={styles.cardBg}>
                 <img src={cardBg} alt="pic" />
               </div>
               <div className={styles.cardInfo}>
-                <div className={styles.typeOf}>{item.type}</div>
+                <div className={styles.typeOf}>{item.typeTour}</div>
                 <h2 className={styles.carouselItemTitle}>{item.title}</h2>
                 <div className={styles.priceAndTime}>
                   <div className={styles.time}>
@@ -58,12 +72,14 @@ const Popular = () => {
                   </div>
                   <div className={styles.price}>
                     <img src={priceIcon} alt="price" />
-                    2000 ₽
+                    {item.price} ₽
                   </div>
                 </div>
-                <p>{item.desc.substr(0, 300) + "..."}</p>
+                <p>{item.desc.substr(0, 300) + '...'}</p>
               </div>
-              <button className={styles.moreBtn}>Подробнее</button>
+              <NavLink to={`/tours/${item._id}`}>
+                <button className={styles.moreBtn}>Подробнее</button>
+              </NavLink>
             </div>
           );
         })}

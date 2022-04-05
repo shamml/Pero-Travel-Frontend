@@ -45,6 +45,9 @@
 
 .cardInfo {
   margin: auto;
+  width: 350px;
+  height: 100%;
+  padding: 10px;
 }
 
 .carouselItemTitle {

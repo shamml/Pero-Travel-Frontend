@@ -94,6 +94,7 @@
       <change beforePath="$PROJECT_DIR$/../Gift Finder/vector4.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gift Finder/vector5.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gift Finder/work.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Postman.lnk" beforeDir="false" afterPath="$PROJECT_DIR$/../Postman.lnk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Premium/Bitmap-10.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Premium/Bitmap-11.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Premium/Bitmap-12.jpg" beforeDir="false" />
@@ -536,17 +537,14 @@
       <change beforePath="$PROJECT_DIR$/../ntro-dom/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ntro-dom/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/styles.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Excursions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Excursions/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/HomePage/Reviews/Reviews.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/Reviews/Reviews.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/HomePage/Reviews/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/Reviews/styles.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/HomePage/TypesOfExcursions/TypesOf.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/HomePage/TypesOfExcursions/TypesOf.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/HomePage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/HomePage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/CalendarPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/CalendarPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/ReviewsTour.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/ReviewsTour.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/HomePage/Popular/Popular.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/HomePage/Popular/Popular.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/HomePage/Popular/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/HomePage/Popular/styles.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/DescriptionTours.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/DescriptionTours.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/HeaderTours.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/HeaderTours.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/features/tours.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/tours.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/controllers/categories.controller.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/controllers/clients.controllers.js" beforeDir="false" />
@@ -683,6 +681,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -754,6 +753,7 @@
       <updated>1648566244094</updated>
       <workItem from="1648566247473" duration="4944000" />
       <workItem from="1648899244226" duration="13590000" />
+      <workItem from="1649139939617" duration="12338000" />
     </task>
     <servers />
   </component>
