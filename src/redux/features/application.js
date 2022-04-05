@@ -3,8 +3,9 @@ const initialState = {
   signinUp: false,
   error: null,
   token: localStorage.getItem('token'),
-  id: localStorage.getItem('id'),
+  role: localStorage.getItem('role'),
 };
+
 
 export default function application(state = initialState, action) {
   switch (action.type) {
@@ -36,7 +37,7 @@ export default function application(state = initialState, action) {
         ...state,
         signinIn: false,
         token: action.payload.token,
-        id: action.payload.id,
+        role: action.payload.role,
       };
     case 'application/login/rejected':
       return {
@@ -90,9 +91,10 @@ export const authorization = (login, password) => {
         body: JSON.stringify({ login, password }),
       });
       const json = await res.json();
+      console.log(json.role);
       dispatch({ type: 'application/login/fulfilled', payload: json });
       localStorage.setItem('token', json.token);
-      localStorage.setItem('id', json.id);
+      localStorage.setItem('role', json.role);
     } catch (e) {
       dispatch({ type: 'application/login/rejected' });
     }

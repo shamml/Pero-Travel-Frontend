@@ -141,7 +141,7 @@ export function addTour(
 export function fetchTours() {
   return function (dispatch) {
     dispatch({ type: 'admin/fetchtour/pending' });
-    fetch('http://localhost:3030/admin/tours')
+    fetch('http://localhost:3030/tours')
       .then((responce) => responce.json())
       .then((tours) => {
         dispatch({ type: 'admin/fetchtour/fulfilled', payload: tours });

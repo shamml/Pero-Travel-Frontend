@@ -6,6 +6,7 @@ import styles from './styles.module.css';
 
 const Header = () => {
   const token = useSelector((state) => state.application.token);
+  const role = useSelector((state) => state.application.role);
   return (
     <header>
       <div className={styles.header}>
