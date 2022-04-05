@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import styles from './styles.module.css';
 import cardBg from '../../../../assets/homepage/popular/cardBgOne.jpg';
+import drakon from '../../../../assets/another/drakon.png'
 import timeIcon from '../../../../assets/timeIcon.svg';
 import priceIcon from '../../../../assets/priceIcon.svg';
 import { NavLink } from 'react-router-dom'
@@ -61,7 +62,7 @@ const Popular = () => {
           return (
             <div className={styles.carouselItem}>
               <div className={styles.cardBg}>
-                <img src={cardBg} alt="pic" />
+                <img src={drakon} alt="pic" />
               </div>
               <div className={styles.cardInfo}>
                 <div className={styles.typeOf}>{item.typeTour}</div>

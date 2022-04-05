@@ -10,11 +10,14 @@ import Tours from './pages/Tours';
 import Profile from './pages/Profile';
 import Footer from './Footer';
 import './styles.css';
+import { useSelector } from 'react-redux';
 import "./transition.css";
 
 
 const App = () => {
-  return (
+  const token = useSelector((state) => state.application.token);
+  const role = useSelector((state) => state.application.role);
+  return token && role === 'admin' ? (
     <div>
       <Header />
       <Routes>
@@ -25,6 +28,19 @@ const App = () => {
         <Route path="/excursions" element={<Excursions />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/admin" element={<Admin />} />
+      </Routes>
+      {/* <Footer /> */}
+    </div>
+  ) : (
+    <div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/signin" element={<SigninPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/tours/:id" element={<Tours />} />
+        <Route path="/excursions" element={<Excursions />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
       {/* <Footer /> */}
     </div>

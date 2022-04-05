@@ -1,15 +1,26 @@
 import React from 'react';
 import styles from './styles.module.css';
 import photo from '../../../assets/profile/1.jpg';
-import { useSelector } from 'react-redux';
+import exitLogo from '../../../assets/another/exit.png'
+import { useDispatch, useSelector } from 'react-redux';
 import Admin from '../AdminPage';
+import { exit } from '../../../redux/features/application';
+import { Link } from 'react-router-dom';
+
+
 const TestProfile = () => {
+
+  const dispatch = useDispatch()
 
   const role = useSelector(state => state.application.role)
   console.log(role);
   
   if(role === 'admin') {
     return <Admin/>
+  }
+
+  const exitUser = () => {
+    dispatch(exit())
   }
   return (
     <div className={styles.profileMain}>
@@ -50,6 +61,12 @@ const TestProfile = () => {
           </div>
         </div>
       </div>
+      <Link to="/">
+      <div style={{cursor:"pointer"}} onClick={exitUser} className={styles.exit}>
+          <img src={exitLogo} alt="" />
+      </div>
+      </Link>
+      
     </div>
   );
 };

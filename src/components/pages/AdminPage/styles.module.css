@@ -119,3 +119,12 @@ textarea {
  border-top-right-radius: 10px;
  border-top-left-radius: 10px;
 }
+.exit {
+  width: 50px;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+}
+.exit img {
+  width: 100%;
+}
