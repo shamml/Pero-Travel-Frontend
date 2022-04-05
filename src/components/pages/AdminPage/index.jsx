@@ -7,11 +7,19 @@ import {
   editTour,
   fetchTours,
 } from '../../../redux/features/admin';
+import { Link } from 'react-router-dom';
+import exitLogo from '../../../assets/another/exit.png';
+
 import styles from './styles.module.css';
+import { exit } from '../../../redux/features/application';
 
 function Admin() {
   const dispatch = useDispatch();
 
+  // ---------------------------- Фунция выхода
+  const exitUser = () => {
+    dispatch(exit())
+  }
   {
     /* // { *===================== Добавление туров =========================* } // */
   }
@@ -426,6 +434,15 @@ function Admin() {
           )}
         </div>
       </div>
+      <Link to="/">
+        <div
+          style={{ cursor: 'pointer' }}
+          onClick={exitUser}
+          className={styles.exit}
+        >
+          <img src={exitLogo} alt="" />
+        </div>
+      </Link>
     </div>
   );
 }

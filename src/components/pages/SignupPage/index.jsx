@@ -115,7 +115,7 @@ const SignupPage = () => {
               type="text"
               value={firstName}
               onChange={handleChangeFirstName}
-              placeholder="Enter your name.."
+              placeholder="Enter your firstname.."
               onBlur={handleBlur}
             />
             {firstNameDirty && firstNameError && (

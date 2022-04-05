@@ -67,3 +67,12 @@
   padding: 15px;
   border-radius: 7px;
 }
+.exit {
+  width: 50px;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+}
+.exit img {
+  width: 100%;
+}
