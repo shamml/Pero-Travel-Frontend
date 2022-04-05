@@ -4,8 +4,10 @@ import photo from '../../../assets/profile/1.jpg';
 import { useSelector } from 'react-redux';
 import Admin from '../AdminPage';
 const TestProfile = () => {
+
   const role = useSelector(state => state.application.role)
   console.log(role);
+  
   if(role === 'admin') {
     return <Admin/>
   }
