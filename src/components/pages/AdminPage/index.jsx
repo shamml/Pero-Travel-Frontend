@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
+  addOptionalToTour,
   addTour,
   deleteTour,
   editTour,
@@ -211,6 +212,7 @@ function Admin() {
       setPriceEdit(''),
       setPriceForChildEdit(''),
       setDurationEdit(''),
+      setModalEditWindowToChange(false),
     );
   }
 
@@ -218,11 +220,32 @@ function Admin() {
     /* // { *===================== Добавление Optionals к туру =========================* } // */
   }
 
+  const [optionalTitle, setOptionalTitle] = useState('');
+  const [optionalPrice, setOptionalPrice] = useState('');
+  const [idTourOptional, setIdTourOptional] = useState('');
+
   const [modalOptionalWindowToChange, setModalOptionalWindowToChange] =
     useState(false);
 
-  function handleClickOpenAddOptionalToTour() {
+  function handleClickOpenAddOptionalToTour(optionalTourId) {
     setModalOptionalWindowToChange(!modalOptionalWindowToChange);
+    setIdTourOptional(optionalTourId);
+  }
+
+  function handleChangeOptionalTitle(e) {
+    setOptionalTitle(e.target.value);
+  }
+
+  function handleChangeOptionalPrice(e) {
+    setOptionalPrice(e.target.value);
+  }
+
+  console.log(idTourOptional);
+  function handleClickAddOptionalToTour() {
+    dispatch(addOptionalToTour(idTourOptional, optionalTitle, optionalPrice));
+    setOptionalTitle('');
+    setOptionalPrice('');
+    setModalOptionalWindowToChange(false);
   }
 
   return (
@@ -290,16 +313,29 @@ function Admin() {
             <div className={styles.modalOptional}>
               <h1>ADD OPTIONALS</h1>
               <div>Ввести название</div>
-              <input type="text" name="" id="" />
+              <input
+                value={optionalTitle}
+                onChange={handleChangeOptionalTitle}
+                type="text"
+                name=""
+                id=""
+              />
               <div>Ввести цену</div>
-              <input type="text" name="" id="" />
+              <input
+                value={optionalPrice}
+                onChange={handleChangeOptionalPrice}
+                type="text"
+                name=""
+                id=""
+              />
+              <button onClick={handleClickAddOptionalToTour}>Add</button>
             </div>
           )}
           {tours.map((tour) => {
             console.log(tours);
             return (
               <div key={tour._id} className={styles.tourContainer}>
-                <div>
+                <div className={styles.adminImage}>
                   <img src={`http://localhost:3030/${tour.bgImage}`} alt="" />
                 </div>
                 <div>Категория тура: {tour.typeTour}</div>
@@ -325,7 +361,7 @@ function Admin() {
                   EDIT
                 </span>
                 <span
-                  onClick={handleClickOpenAddOptionalToTour}
+                  onClick={(e) => handleClickOpenAddOptionalToTour(tour._id)}
                   style={{ background: 'green' }}
                 >
                   ADD OPTIONAL

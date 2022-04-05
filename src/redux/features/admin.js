@@ -218,3 +218,36 @@ export function editTour(
       });
   };
 }
+
+export function addOptionalToTour(
+  idTourOptional,
+  optionalTitle,
+  optionalPrice,
+) {
+  return function (dispatch) {
+    console.log(idTourOptional, optionalTitle, optionalPrice);
+    dispatch({ type: 'admin/addoptional/pending' });
+    fetch('http://localhost:3030/admin/optionals', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        tour: idTourOptional,
+        title: optionalTitle,
+        price: optionalPrice,
+      }),
+    })
+      .then((responce) => responce.json())
+      .then((optional) => {
+        dispatch({ type: 'admin/addoptional/fulfilled', payload: optional });
+      })
+      .catch((error) => {
+        dispatch({
+          type: 'admin/addoptional/rejected',
+          error: error.toString(),
+        });
+      });
+  };
+}
