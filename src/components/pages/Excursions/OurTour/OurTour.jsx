@@ -1,51 +1,46 @@
 import React from 'react';
 import styles from './styles.module.css';
-import adlerTour from '../../../../assets/excursions/adlerTour.jpg';
-import price from '../../../../assets/excursions/price.svg';
-import time from '../../../../assets/excursions/time.svg';
+import priceIcon from '../../../../assets/excursions/price.svg';
+import timeIcon from '../../../../assets/excursions/time.svg';
 import { Link } from 'react-router-dom';
 
-const OurTour = () => {
+const OurTour = ({ type, title, verticalBG, desc, duration, price, priceForChild }) => {
   return (
     <div className={styles.ourToursCard}>
       <div className={styles.adlerTourBg}>
-        <img src={adlerTour} alt="no" />
+        <img src={verticalBG} alt="no" />
       </div>
       <div className={styles.descriptionExcursion}>
-        <div className={styles.typeOfTourExcursion}>Автобусный тур</div>
+        <div className={styles.typeOfTourExcursion}>{type}</div>
         <div className={styles.placeTourExcursion}>
-          Золотое кольцо Абхазии (из Адлера)
+          {title}
         </div>
         <div className={styles.tripTourExcursion}>
           <div className={styles.tripPrice}>
             <div className={styles.onePriceTrip}>
-              <img src={price} alt="no" />
-              <div className={styles.priceBiletTour}>1 618₽</div>
+              <img src={priceIcon} alt="no" />
+              <div className={styles.priceBiletTour}>{price}₽</div>
             </div>
             <div className={styles.ageBilet}>Взрослый билет</div>
           </div>
           <div className={styles.tripPrice}>
             <div className={styles.onePriceTrip}>
-              <img src={price} alt="no" />
-              <div className={styles.priceBiletTour}>1 418₽</div>
+              <img src={priceIcon} alt="no" />
+              <div className={styles.priceBiletTour}>{priceForChild}₽</div>
             </div>
             <div className={styles.ageBilet}>Детский билет</div>
           </div>
           <div className={styles.timeTourExcursion}>
             <div className={styles.onePriceTrip}>
-              <img src={time} alt="no" />
-              <div className={styles.timeDescriptionTour}>2,5 часа</div>
+              <img src={timeIcon} alt="no" />
+              <div className={styles.timeDescriptionTour}>{duration} часов</div>
             </div>
           </div>
         </div>
         <div className={styles.descriptionPlaceTour}>
           <div className={styles.verticalLine}>
             <div className={styles.textPlaceTour}>
-              Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес
-              Спринтер (20 мест). По маршруту вас будет сопровождать
-              профессиональный гид. Посадка на экскурсию осуществляется с вашего
-              отеля или ближайшей автобусной остановки. Пересечение границы без
-              пересадок...
+              {desc.substr(0, 300) + '...'}
             </div>
           </div>
         </div>

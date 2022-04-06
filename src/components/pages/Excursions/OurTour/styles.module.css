@@ -52,6 +52,10 @@
   justify-content: space-between;
 }
 
+.tripTourExcursion img {
+  margin-right: 5px;
+}
+
 .onePriceTrip {
   display: flex;
 }

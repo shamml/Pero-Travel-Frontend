@@ -82,7 +82,7 @@
 
 .filterExcursions {
   width: 300px;
-  padding: 25px 30px 0 35px;
+  padding: 25px 30px 0 30px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
@@ -210,11 +210,11 @@ input[type="number"] {
 }
 
 .durationExcursion {
-  display: flex;
+  /* display: flex; */
 }
 
 .dataExcursions {
-  display: flex;
+  /* display: flex; */
 }
 
 .incrementExcursion {
@@ -230,15 +230,19 @@ input[type="number"] {
   border-radius: 10px;
   color: white;
   font-size: 14px;
+  margin: auto;
+  margin-top: 30px;
+  cursor: pointer;
 }
 
 .resetFilters {
-  width: 300px;
+  width: 140px;
   margin: auto;
   margin-top: 15px;
   font-size: 12px;
   display: flex;
   padding: 0 0 30px 0;
+  cursor: pointer;
 }
 
 .resetX {
@@ -310,4 +314,8 @@ input[type="number"] {
 
 .placeExcursions label {
   margin-bottom: 10px;
+}
+
+.selected {
+  color: red;
 }
