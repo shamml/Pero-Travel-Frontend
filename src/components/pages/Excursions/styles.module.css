@@ -194,7 +194,7 @@ input[type="number"] {
   background-color: #0499dd;
 }
 
-.buttonMan10:hover {
+.selected {
   color: white;
   background-color: #0499dd;
 }
@@ -314,8 +314,4 @@ input[type="number"] {
 
 .placeExcursions label {
   margin-bottom: 10px;
-}
-
-.selected {
-  color: red;
 }
