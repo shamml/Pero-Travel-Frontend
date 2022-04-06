@@ -1,18 +1,18 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 import styles from './styles.module.css';
 import avatar from '../../../../assets/homepage/reviews/Rectangle26.jpg';
-import kov from "../../../../assets/homepage/reviews/kov.png";
-import { useDispatch, useSelector } from 'react-redux'
-import { fetchReview } from '../../../../redux/features/review'
+import kov from '../../../../assets/homepage/reviews/kov.png';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchReview } from '../../../../redux/features/review';
 
 const Reviews = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchReview())
-  }, [dispatch])
+    dispatch(fetchReview());
+  }, [dispatch]);
 
-  const array = useSelector(state => state.review.review)
+  const array = useSelector((state) => state.review.review);
 
   return (
     <div className={styles.reviewsBlock}>

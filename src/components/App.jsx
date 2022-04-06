@@ -11,43 +11,42 @@ import Profile from './pages/Profile';
 import Footer from './Footer';
 import './styles.css';
 import { useSelector } from 'react-redux';
-import "./transition.css";
-
+import './transition.css';
 
 const App = () => {
   const items = [
     {
-      text: "1 чел."
+      text: '1 чел.',
     },
     {
-      text: "2 чел."
+      text: '2 чел.',
     },
     {
-      text: "3 чел."
+      text: '3 чел.',
     },
     {
-      text: "4 чел.",
+      text: '4 чел.',
     },
     {
-      text: "5 чел."
+      text: '5 чел.',
     },
     {
-      text: "6 чел."
+      text: '6 чел.',
     },
     {
-      text: "7 чел."
+      text: '7 чел.',
     },
     {
-      text: "8 чел."
+      text: '8 чел.',
     },
     {
-      text: "9 чел."
+      text: '9 чел.',
     },
     {
-      text: "10 чел."
+      text: '10 чел.',
     },
     {
-      text: "10+ чел."
+      text: '10+ чел.',
     },
   ];
 

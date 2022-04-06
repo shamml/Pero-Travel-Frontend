@@ -1,20 +1,19 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 import styles from './styles.module.css';
 import timeIcon from '../../../../assets/timeIcon.svg';
 import priceIcon from '../../../../assets/priceIcon.svg';
-import { NavLink } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
-import { fetchTours } from '../../../../redux/features/tours'
+import { NavLink } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchTours } from '../../../../redux/features/tours';
 
 const Popular = () => {
+  const dispatch = useDispatch();
 
-  const dispatch = useDispatch()
-
-  const tours = useSelector(state => state.tours.tours)
+  const tours = useSelector((state) => state.tours.tours);
 
   useEffect(() => {
-    dispatch(fetchTours())
-  }, [dispatch])
+    dispatch(fetchTours());
+  }, [dispatch]);
   return (
     <div className={styles.popularBlock}>
       <div className={styles.popularTitle}>Популярные экскурсии</div>

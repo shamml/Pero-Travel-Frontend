@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css';
-import photo from '../../../assets/profile/1.jpg';
 import exitLogo from '../../../assets/another/exit.png';
 import { useDispatch, useSelector } from 'react-redux';
 import Admin from '../AdminPage';
@@ -11,17 +10,11 @@ import { editAvatar, fetchIdUser } from '../../../redux/features/user';
 const TestProfile = () => {
   const dispatch = useDispatch();
 
-  const [image, setImage] = React.useState('');
+  const [image, setImage] = useState('');
 
-  React.useEffect(() => {
+  useEffect(() => {
     dispatch(fetchIdUser());
   }, [dispatch]);
-
-  const role = useSelector(state => state.application.role)
-  const id = useSelector(state => state.application.id)
-
-  if(role === 'admin') {
-    return <Admin/>
 
   const dataUser = useSelector((state) => state.user.data);
   const role = useSelector((state) => state.application.role);
@@ -29,7 +22,6 @@ const TestProfile = () => {
   if (role === 'admin') {
     return <Admin />;
   }
-
 
   const exitUser = () => {
     dispatch(exit());
@@ -53,7 +45,9 @@ const TestProfile = () => {
                 onChange={(e) => setImage(e.target.files[0])}
                 type="file"
               />
-              <button disabled={!image} onClick={handleClickEditAvatar}>add</button>
+              <button disabled={!image} onClick={handleClickEditAvatar}>
+                add
+              </button>
             </div>
           </div>
         );

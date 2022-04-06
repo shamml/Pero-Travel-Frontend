@@ -41,7 +41,7 @@ export const fetchTours = () => {
       const json = await res.json();
       dispatch({ type: 'tours/fetch/fulfilled', payload: json });
     } catch (e) {
-      dispatch({ type: 'tours/fetch/rejected'});
+      dispatch({ type: 'tours/fetch/rejected' });
     }
   };
 };

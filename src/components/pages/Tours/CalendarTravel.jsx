@@ -1,7 +1,7 @@
-import React from 'react'
-import styles from './styles.module.css'
-import pic2 from '../../../assets/Tours/изобр2.svg'
-import CalendarPage from './CalendarPage'
+import React from 'react';
+import styles from './styles.module.css';
+import pic2 from '../../../assets/Tours/изобр2.svg';
+import CalendarPage from './CalendarPage';
 
 const CalendarTravel = () => {
   return (
@@ -20,7 +20,7 @@ const CalendarTravel = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CalendarTravel
+export default CalendarTravel;
