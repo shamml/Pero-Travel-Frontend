@@ -13,11 +13,14 @@ const TestProfile = () => {
   const dispatch = useDispatch()
 
   const role = useSelector(state => state.application.role)
-  console.log(role);
-  
+
+  const id = useSelector(state => state.application.id)
+  console.log(id);
+
   if(role === 'admin') {
     return <Admin/>
   }
+
 
   const exitUser = () => {
     dispatch(exit())
@@ -66,7 +69,7 @@ const TestProfile = () => {
           <img src={exitLogo} alt="" />
       </div>
       </Link>
-      
+
     </div>
   );
 };

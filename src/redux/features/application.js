@@ -4,6 +4,7 @@ const initialState = {
   error: null,
   token: localStorage.getItem('token'),
   role: localStorage.getItem('role'),
+  id: null
 };
 
 
@@ -38,6 +39,7 @@ export default function application(state = initialState, action) {
         signinIn: false,
         token: action.payload.token,
         role: action.payload.role,
+        id: action.payload.id
       };
     case 'application/login/rejected':
       return {
@@ -91,7 +93,7 @@ export const authorization = (login, password) => {
         body: JSON.stringify({ login, password }),
       });
       const json = await res.json();
-      console.log(json.role);
+      console.log(json.id);
       dispatch({ type: 'application/login/fulfilled', payload: json });
       localStorage.setItem('token', json.token);
       localStorage.setItem('role', json.role);

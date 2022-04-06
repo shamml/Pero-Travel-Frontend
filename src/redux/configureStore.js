@@ -4,12 +4,14 @@ import thunk from 'redux-thunk';
 import application from './features/application';
 import admin from './features/admin';
 import tours from './features/tours'
+import review from './features/review'
 
 export const store = createStore(
   combineReducers({
     application,
     admin,
-    tours
+    tours,
+    review
   }),
   composeWithDevTools(applyMiddleware(thunk)),
 );

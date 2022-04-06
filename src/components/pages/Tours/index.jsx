@@ -31,7 +31,7 @@ const Tours = () => {
     <>
       {tour.map(item => {
         return (
-          <div>
+          <div key={item._id}>
             <HeaderTours tour={item}/>
             <DescriptionTours tour={item} />
             <CalendarTravel />
