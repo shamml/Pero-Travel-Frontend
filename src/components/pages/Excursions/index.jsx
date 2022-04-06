@@ -8,7 +8,7 @@ import { CSSTransition } from 'react-transition-group';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import OurTour from './OurTour/OurTour';
 
-const Excursions = () => {
+const Excursions = ({ items }) => {
   const theme = createTheme({
     status: {
       danger: '#e53e3e',
@@ -86,8 +86,8 @@ const Excursions = () => {
   };
 
   const [amount, setAmount] = useState(0);
-  const selectCount = (count, e) => {
-    setAmount(count);
+  const selectCount = (index) => {
+    setAmount(index);
   };
 
   const [place, setPlace] = useState('');
@@ -243,13 +243,21 @@ const Excursions = () => {
             >
               <div>
                 <div className={styles.amountButtons}>
-                  <div
-                    className={styles.buttonMan}
-                    onClick={() => selectCount(1)}
-                  >
-                    1 чел.
-                  </div>
-                  <div
+                  {items.map((item, index) => {
+                    return (
+                      <div
+                        className={
+                          amount - 1 === index
+                            ? `${styles.buttonMan} ${styles.selected}`
+                            : styles.buttonMan
+                        }
+                        onClick={() => selectCount(index + 1)}
+                      >
+                        {item.text}
+                      </div>
+                    );
+                  })}
+                  {/* <div
                     className={styles.buttonMan}
                     onClick={() => selectCount(2)}
                   >
@@ -308,7 +316,7 @@ const Excursions = () => {
                     onClick={() => selectCount(11)}
                   >
                     Больше 10 чел.
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </CSSTransition>
