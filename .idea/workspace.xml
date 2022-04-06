@@ -43,10 +43,6 @@
       <change afterPath="$PROJECT_DIR$/../news-site/src/redux/features/application.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site/src/redux/features/comments.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site/src/redux/features/news.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/HomePage/Reviews/Reviews.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/HomePage/Reviews/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/features/review.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/.idea/react-live-search.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/.prettierrc" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/src/components/cards/Card.jsx" afterDir="false" />
@@ -554,15 +550,8 @@
       <change beforePath="$PROJECT_DIR$/../ntro-dom/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ntro-dom/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/HomePage/Popular/Popular.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/HomePage/Popular/Popular.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/HomePage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/HomePage/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Profile/TestProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Profile/TestProfile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/Reviews/Reviews.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/Reviews/Reviews.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/RouteDescription.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/RouteDescription.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/configureStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/configureStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/features/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/application.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/controllers/categories.controller.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/controllers/clients.controllers.js" beforeDir="false" />
@@ -799,7 +788,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/pages/Tours/Reviews/Reviews.jsx</url>
           <line>29</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

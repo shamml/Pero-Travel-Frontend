@@ -1,8 +1,8 @@
-import React from 'react'
-import styles from './styles.module.css'
-import circle from '../../../assets/Tours/Ellipse 17.png'
-import old from '../../../assets/Tours/Rectangle 41.png'
-import Frame from '../../../assets/Tours/Frame 1.png'
+import React from 'react';
+import styles from './styles.module.css';
+import circle from '../../../assets/Tours/Ellipse 17.png';
+import old from '../../../assets/Tours/Rectangle 41.png';
+import Frame from '../../../assets/Tours/Frame 1.png';
 
 const AdditionalExpenses = () => {
   return (
@@ -81,7 +81,7 @@ const AdditionalExpenses = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AdditionalExpenses
+export default AdditionalExpenses;

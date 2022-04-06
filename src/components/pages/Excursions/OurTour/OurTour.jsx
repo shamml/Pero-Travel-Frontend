@@ -4,7 +4,15 @@ import priceIcon from '../../../../assets/excursions/price.svg';
 import timeIcon from '../../../../assets/excursions/time.svg';
 import { Link } from 'react-router-dom';
 
-const OurTour = ({ typeTour, title, verticalBG, desc, duration, price, priceForChild }) => {
+const OurTour = ({
+  typeTour,
+  title,
+  verticalBG,
+  desc,
+  duration,
+  price,
+  priceForChild,
+}) => {
   return (
     <div className={styles.ourToursCard}>
       <div className={styles.adlerTourBg}>
@@ -12,9 +20,7 @@ const OurTour = ({ typeTour, title, verticalBG, desc, duration, price, priceForC
       </div>
       <div className={styles.descriptionExcursion}>
         <div className={styles.typeOfTourExcursion}>{typeTour}</div>
-        <div className={styles.placeTourExcursion}>
-          {title}
-        </div>
+        <div className={styles.placeTourExcursion}>{title}</div>
         <div className={styles.tripTourExcursion}>
           <div className={styles.tripPrice}>
             <div className={styles.onePriceTrip}>

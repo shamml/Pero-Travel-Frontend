@@ -12,14 +12,14 @@
 }
 
 .titleExcursionViews {
-  color: #0499DD;
+  color: #0499dd;
   font-size: 24px;
   font-weight: 700;
 }
 
 .titleTourP {
   font-size: 18px;
-  color: #0499DD;
+  color: #0499dd;
 }
 
 .viewTourExcursion {
@@ -56,7 +56,6 @@
   cursor: pointer;
   font-weight: bold;
   border-radius: 60px;
-  background: linear-gradient(92.71deg, #0499DD 0%, #17C1BC 100%);
+  background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
   color: white;
 }
-

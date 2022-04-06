@@ -22,7 +22,7 @@ function Carousel() {
           </div>
           <div className={styles.carouselButton}>
             <Link to="excursions">
-              <button style={{cursor:"pointer"}}>
+              <button style={{ cursor: 'pointer' }}>
                 К экскурсиям <img src={arrow} alt="arrow" />
               </button>
             </Link>

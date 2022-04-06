@@ -4,9 +4,8 @@ const initialState = {
   error: null,
   token: localStorage.getItem('token'),
   role: localStorage.getItem('role'),
-  id: null
+  id: null,
 };
-
 
 export default function application(state = initialState, action) {
   switch (action.type) {
@@ -39,7 +38,7 @@ export default function application(state = initialState, action) {
         signinIn: false,
         token: action.payload.token,
         role: action.payload.role,
-        id: action.payload.id
+        id: action.payload.id,
       };
     case 'application/login/rejected':
       return {

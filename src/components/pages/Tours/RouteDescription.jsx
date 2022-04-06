@@ -49,7 +49,7 @@ const RouteDescription = () => {
             <h4
               style={{
                 'font-weight': '700',
-                'fontSize': '22px',
+                fontSize: '22px',
                 'margin-top': '20px',
                 'margin-bottom': '20px',
               }}

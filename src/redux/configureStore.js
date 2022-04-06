@@ -3,8 +3,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import application from './features/application';
 import admin from './features/admin';
-import tours from './features/tours'
-import review from './features/review'
+import review from './features/review';
 import tours from './features/tours';
 import user from './features/user';
 
@@ -13,7 +12,7 @@ export const store = createStore(
     application,
     admin,
     tours,
-    review
+    review,
     user,
   }),
   composeWithDevTools(applyMiddleware(thunk)),

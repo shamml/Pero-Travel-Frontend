@@ -5,14 +5,12 @@ import old from '../../../assets/Tours/Rectangle 41.png';
 import Frame from '../../../assets/Tours/Frame 1.png';
 import time from '../../../assets/Tours/Layer 15.png';
 
-const DescriptionTours = ({tour}) => {
+const DescriptionTours = ({ tour }) => {
   return (
     <div className={styles.deskTripMain}>
       <div className={styles.deskBlock}>
         <h2>Описание экскурсии</h2>
-        <p>
-          {tour.desc}
-        </p>
+        <p>{tour.desc}</p>
       </div>
       <div className={styles.tripCount}>
         <div className={styles.personCount}>

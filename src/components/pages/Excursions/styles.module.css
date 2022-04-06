@@ -121,13 +121,13 @@
   outline: none;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-input[type="number"] {
+input[type='number'] {
   background-image: url('../../../assets/excursions/rubl.svg'),
     linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
   background-repeat: no-repeat, repeat;

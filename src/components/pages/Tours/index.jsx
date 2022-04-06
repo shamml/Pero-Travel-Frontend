@@ -7,32 +7,32 @@ import Gallery from './Gallery/Gallery';
 import ReviewsTour from './ReviewsTour';
 import AdditionalExpenses from './AdditionalExpenses';
 import RouteDescription from './RouteDescription';
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { fetchTours } from '../../../redux/features/tours'
+import { fetchTours } from '../../../redux/features/tours';
 
 const Tours = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const { id } = useParams();
 
   useEffect(() => {
-    dispatch(fetchTours())
-  }, [dispatch])
+    dispatch(fetchTours());
+  }, [dispatch]);
 
   const tour = useSelector((state) =>
     state.tours.tours.filter((tour) => {
-      if (!id) return true
-      return tour._id === id
+      if (!id) return true;
+      return tour._id === id;
     }),
   );
 
   return (
     <>
-      {tour.map(item => {
+      {tour.map((item) => {
         return (
           <div key={item._id}>
-            <HeaderTours tour={item}/>
+            <HeaderTours tour={item} />
             <DescriptionTours tour={item} />
             <CalendarTravel />
             <RouteDescription />
@@ -41,7 +41,7 @@ const Tours = () => {
             <ReviewsTour />
             <BookingTour />
           </div>
-        )
+        );
       })}
     </>
   );

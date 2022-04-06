@@ -20,7 +20,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 238px;
   height: 303px;
   object-fit: cover;
@@ -36,7 +36,7 @@
 }
 
 .typeOfTourExcursion {
-  color: #FFC700;
+  color: #ffc700;
   font-size: 14px;
 }
 
