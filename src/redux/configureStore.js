@@ -3,13 +3,15 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import application from './features/application';
 import admin from './features/admin';
-import tours from './features/tours'
+import tours from './features/tours';
+import user from './features/user';
 
 export const store = createStore(
   combineReducers({
     application,
     admin,
-    tours
+    tours,
+    user,
   }),
   composeWithDevTools(applyMiddleware(thunk)),
 );
