@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d5d8684-0521-412c-b859-fbeae4c6f882" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../advertising-agency-frontend/.idea/advertising-agency-frontend.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../advertising-agency-frontend/.prettierrc" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../advertising-agency-frontend/src/components/footer/Footer.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../advertising-agency-frontend/src/components/header/Header.jsx" afterDir="false" />
@@ -12,6 +13,8 @@
       <change afterPath="$PROJECT_DIR$/../advertising-agency-frontend/src/components/pages/Signup.Page/styles.module.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../advertising-agency-frontend/src/redux/configureStore.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../advertising-agency-frontend/src/redux/features/application.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../intocode/drill-eslint-challenge/.idea/drill-eslint-challenge.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../intocode/react-intro-jsx-challenge/.idea/react-intro-jsx-challenge.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site-beckend/.env" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site-beckend/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site-beckend/.prettierrc" afterDir="false" />
@@ -27,6 +30,7 @@
       <change afterPath="$PROJECT_DIR$/../news-site-beckend/routes/index.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site-beckend/routes/news.route.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site-beckend/routes/users.route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../news-site/.idea/news-site.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site/.prettierrc" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site/src/components/Header.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site/src/components/News/Block-news.jsx" afterDir="false" />
@@ -39,12 +43,19 @@
       <change afterPath="$PROJECT_DIR$/../news-site/src/redux/features/application.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site/src/redux/features/comments.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site/src/redux/features/news.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pages/HomePage/Reviews/Reviews.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pages/HomePage/Reviews/styles.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/features/review.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-live-search/.idea/react-live-search.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/.prettierrc" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/src/components/cards/Card.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/src/components/cards/Cards.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/src/components/cards/card.module.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/src/components/forms/Forms.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/src/components/forms/forms.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-project-1/.idea/react-project-1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-router-dom-1/.idea/react-router-dom-1.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-router-dom-1/src/components/content/Contact.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-router-dom-1/src/components/content/Features.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-router-dom-1/src/components/content/Homepage.jsx" afterDir="false" />
@@ -53,14 +64,18 @@
       <change afterPath="$PROJECT_DIR$/../react-router-dom-1/src/components/header/Header.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-router-dom-1/src/components/header/Logo.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-router-dom-1/src/components/header/Nav.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-state-adding-tags/.idea/react-state-adding-tags.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-state-adding-tags/.prettierrc" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-state-adding-tags/src/components/app.module.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-state-adding-tags/src/components/forms/Forms.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-state-adding-tags/src/components/forms/forms.module.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-state-adding-tags/src/components/tags/Tags.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-state-adding-tags/src/components/tags/tags.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../react-state-product-card/.idea/react-state-product-card.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux-counter/.idea/redux-counter.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../redux-counter/src/Buttons.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../redux-counter/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../redux-todos/.idea/redux-todos.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../redux-todos/src/components/forms/Forms.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../redux-todos/src/index.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../todos-beckend/.gitignore" afterDir="false" />
@@ -69,6 +84,7 @@
       <change afterPath="$PROJECT_DIR$/../todos-beckend/models/Todo.model.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../todos-beckend/routes/index.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../todos-beckend/routes/todos.route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../todos-frontend/.idea/todos-frontend.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../todos-frontend/src/components/forms/Forms.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../todos-frontend/src/components/forms/forms.module.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../todos-frontend/src/components/todos/Todo.jsx" afterDir="false" />
@@ -76,6 +92,7 @@
       <change afterPath="$PROJECT_DIR$/../todos-frontend/src/components/todos/todos.module.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../todos-frontend/src/redux/configureStore.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../todos-frontend/src/redux/features/todos.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../type-script-project/.idea/type-script-project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Discord.lnk" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gift Finder/Gift Finder.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gift Finder/debug.log" beforeDir="false" />
@@ -537,14 +554,15 @@
       <change beforePath="$PROJECT_DIR$/../ntro-dom/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ntro-dom/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/HomePage/Popular/Popular.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/HomePage/Popular/Popular.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/HomePage/Popular/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/HomePage/Popular/styles.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/DescriptionTours.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/DescriptionTours.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/HeaderTours.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/HeaderTours.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/HomePage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/HomePage/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Profile/TestProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Profile/TestProfile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/Reviews/Reviews.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/Reviews/Reviews.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/RouteDescription.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/RouteDescription.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/features/tours.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/tours.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/configureStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/configureStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/features/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/application.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/controllers/categories.controller.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/controllers/clients.controllers.js" beforeDir="false" />
@@ -700,8 +718,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/pages/Tours" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/pages/HomePage" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -718,6 +737,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\pero-travel\src\components\pages\HomePage" />
       <recent name="C:\Users\Admin\Desktop\pero-travel\src\components\pages\Tours" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -754,6 +774,7 @@
       <workItem from="1648566247473" duration="4944000" />
       <workItem from="1648899244226" duration="13590000" />
       <workItem from="1649139939617" duration="12338000" />
+      <workItem from="1649226996105" duration="15375000" />
     </task>
     <servers />
   </component>
@@ -771,5 +792,17 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/pages/Tours/Reviews/Reviews.jsx</url>
+          <line>29</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

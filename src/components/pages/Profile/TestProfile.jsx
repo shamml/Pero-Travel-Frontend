@@ -17,12 +17,19 @@ const TestProfile = () => {
     dispatch(fetchIdUser());
   }, [dispatch]);
 
+  const role = useSelector(state => state.application.role)
+  const id = useSelector(state => state.application.id)
+
+  if(role === 'admin') {
+    return <Admin/>
+
   const dataUser = useSelector((state) => state.user.data);
   const role = useSelector((state) => state.application.role);
 
   if (role === 'admin') {
     return <Admin />;
   }
+
 
   const exitUser = () => {
     dispatch(exit());

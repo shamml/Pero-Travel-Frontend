@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react'
 import styles from './styles.module.css';
-import cardBg from '../../../../assets/homepage/popular/cardBgOne.jpg';
-import drakon from '../../../../assets/another/drakon.png'
 import timeIcon from '../../../../assets/timeIcon.svg';
 import priceIcon from '../../../../assets/priceIcon.svg';
 import { NavLink } from 'react-router-dom'
@@ -9,47 +7,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchTours } from '../../../../redux/features/tours'
 
 const Popular = () => {
-  // const array = [
-  //   {
-  //     id: 1,
-  //     type: 'Конный тур',
-  //     title: 'Конные прогулки',
-  //     duration: 6,
-  //     desc: 'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
-  //   },
-  //   {
-  //     id: 2,
-  //     type: 'Конный тур',
-  //     title: 'Конные прогулки',
-  //     duration: 6,
-  //     desc: 'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ',
-  //   },
-  //   {
-  //     id: 3,
-  //     type: 'Конный тур',
-  //     title: 'Конные прогулки',
-  //     duration: 6,
-  //     desc: 'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
-  //   },
-  //   {
-  //     id: 4,
-  //     type: 'Конный тур',
-  //     title: 'Конные прогулки',
-  //     duration: 6,
-  //     desc: 'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ',
-  //   },
-  //   {
-  //     id: 5,
-  //     type: 'Конный тур',
-  //     title: 'Конные прогулки',
-  //     duration: 6,
-  //     desc: 'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ',
-  //   },
-  // ];
+
   const dispatch = useDispatch()
 
   const tours = useSelector(state => state.tours.tours)
-  // console.log(tours);
 
   useEffect(() => {
     dispatch(fetchTours())
@@ -60,9 +21,9 @@ const Popular = () => {
       <div className={styles.carousel}>
         {tours.map((item) => {
           return (
-            <div className={styles.carouselItem}>
+            <div className={styles.carouselItem} key={item._id}>
               <div className={styles.cardBg}>
-                <img src={drakon} alt="pic" />
+                <img src={`http://localhost:3030/${item.bgImage}`} alt="pic" />
               </div>
               <div className={styles.cardInfo}>
                 <div className={styles.typeOf}>{item.typeTour}</div>
