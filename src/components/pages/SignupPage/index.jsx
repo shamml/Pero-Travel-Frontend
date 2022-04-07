@@ -9,6 +9,9 @@ const SignupPage = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
 
+  const [age, setAge] = useState('');
+  const [ageError, setAgeError] = useState('Введите пожалуйста возраст');
+  const [ageDirty, setAgeDirty] = useState(false);
   const [firstNameError, setFirstNameError] = useState(
     'Имя не может быть пустым',
   );
@@ -92,12 +95,20 @@ const SignupPage = () => {
     }
   };
 
+  const handleChangeAge = (e) => {
+    setAge(e.target.value);
+  };
   const handleClickRegistration = () => {
-    dispatch(registration(login, password, firstName, lastName));
+    dispatch(registration(login, password, firstName, lastName, age));
   };
 
   useEffect(() => {
-    if (loginError || passwordError || firstNameError || lastNameError) {
+    if (
+      loginError ||
+      passwordError ||
+      firstNameError ||
+      lastNameError
+    ) {
       setFormValid(true);
     } else {
       setFormValid(false);
@@ -153,6 +164,17 @@ const SignupPage = () => {
             />
             {passwordDirty && passwordError && (
               <div style={{ color: 'red' }}>{passwordError}</div>
+            )}
+            <input
+              name="age"
+              type="number"
+              value={age}
+              onChange={handleChangeAge}
+              placeholder="Enter your age.."
+              onBlur={handleBlur}
+            />
+            {ageDirty && ageError && (
+              <div style={{ color: 'red' }}>{ageError}</div>
             )}
             <Link to="/signin">
               <button

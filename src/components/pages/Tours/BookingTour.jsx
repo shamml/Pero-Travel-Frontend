@@ -5,11 +5,20 @@ import reserve from '../../../assets/Tours/reserve.png';
 import calImg from '../../../assets/Tours/calImg.svg';
 import two from '../../../assets/Tours/two.svg';
 import { CalendarComponent } from '@syncfusion/ej2-react-calendars';
-import { useDispatch } from 'react-redux';
-import { booking } from '../../../redux/features/tours';
+import { useDispatch, useSelector } from 'react-redux';
+import { addBooking } from '../../../redux/features/booking';
+import { useParams } from 'react-router-dom';
 
 const BookingTour = () => {
   const dispatch = useDispatch();
+
+  const token = useSelector(state => state.application.token)
+
+  const { id } = useParams();
+
+  const [child, setChild] = useState('');
+  const [day, setDay] = useState('');
+  const [people, setPeople] = useState('');
 
   const [dataValue, setDataValue] = useState('');
   const [openCalendar, setOpenCalendar] = useState(false);
@@ -32,8 +41,9 @@ const BookingTour = () => {
     setOpenCalendar(false);
   };
 
-  const handleBooking = () => {
-    dispatch(booking(dataValue));
+  //ДОРАБОТАТЬ
+  const handleBookingAdd = () => {
+    dispatch(addBooking(id, day, people + child));
   };
 
   return (
@@ -54,6 +64,7 @@ const BookingTour = () => {
                 {openCalendar ? (
                   <div className={styles.calendarComponent}>
                     <CalendarComponent
+                    value={dataValue}
                       onChange={(e) => setDataValue(e.target.value)}
                     />
                   </div>
@@ -101,7 +112,7 @@ const BookingTour = () => {
               </div>
             </div>
             <div className={styles.carouselButton}>
-              <button onClick={handleBooking}>Забронировать</button>
+              <button disabled={!token} onClick={handleBookingAdd}>{token ? "Забронировать" : "Зарегистрируйтесь"}</button>
             </div>
           </div>
         </div>

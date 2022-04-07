@@ -6,6 +6,7 @@ import admin from './features/admin';
 import review from './features/review';
 import tours from './features/tours';
 import user from './features/user';
+import {booking} from './features/booking';
 
 export const store = createStore(
   combineReducers({
@@ -14,6 +15,7 @@ export const store = createStore(
     tours,
     review,
     user,
+    booking,
   }),
   composeWithDevTools(applyMiddleware(thunk)),
 );

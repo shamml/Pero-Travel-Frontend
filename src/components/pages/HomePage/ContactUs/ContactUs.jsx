@@ -28,7 +28,7 @@ const ContactUs = () => {
           </div>
           <div className={styles.buttonApplicationContactUs}>
             <button onClick={handleClickApplication} disabled={sendMessage}>
-              {sendMessage ? 'Заказ оформлен' : 'Оформить заказ'}
+              {sendMessage ? 'Заявка оформлена' : 'Оформить заявку'}
             </button>
           </div>
         </div>
