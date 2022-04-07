@@ -7,10 +7,29 @@
 .exit img {
   width: 100%;
 }
-
+/* .......................Стилизация профиля */
 .profileUser {
-  width: 500px;
+  background: #ffffff;
+  background: -webkit-linear-gradient(bottom, #ffffff, #049add);
+  background: -moz-linear-gradient(bottom, #ffffff, #049add);
+  background: linear-gradient(to top, #ffffff, #049add);
+  background-size: 100%;
+  height: 1200px;
+}
+.profileBlock {
+  width: 1200px;
   margin: auto;
+  padding-top: 150px;
+}
+.profileDesk {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.profileMain {
+  padding: 13px;
+  border-radius: 10px;
+  background-color: white;
 }
 
 .profileUser img {
@@ -18,6 +37,103 @@
 }
 
 .avatarImg {
-  width: 250px;
-  height: 300px;
+  width: 300px;
+}
+.avatarImg img {
+  border-radius: 10px;
+}
+input[type='file'] {
+  color: transparent;
+  width: 150px;
+}
+.choose {
+  width: 300px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.profileId {
+  width: 300px;
+  background-color: #049add;
+  padding: 10px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.profileName {
+  border-bottom: 2px solid rgb(47, 49, 122);
+}
+.profileLastName {
+  border-bottom: 2px solid rgb(10, 13, 157);
+}
+.profileAge {
+  border-bottom: 2px solid rgb(10, 13, 157);
+}
+/* ..........................Стилизация брони */
+.profileOrder {
+  border-radius: 10px;
+  width: 850px;
+  height: 270px;
+  background-color: white;
+  position: relative;
+}
+.profileDatas {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.orderImg {
+  width: 190px;
+  padding: 5px 5px;
+}
+.orderImg img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+.orderDesk {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.orderWpar {
+  width: 550px;
+}
+.tourTitle {
+  width: 300px;
+}
+.peopleAndPrice {
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+}
+.carouselButton button {
+  border: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  width: 190px;
+  height: 50px;
+  background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
+  border-radius: 60px;
+  margin-top: 20px;
+}
+.deleteTour {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #0499dd;
+  width: 45px;
+  border-radius: 50%;
+  text-align: center;
+  height: 25px;
+  line-height: 25px;
+}
+.deleteTour img {
+  width: 15px;
+  cursor: pointer;
 }

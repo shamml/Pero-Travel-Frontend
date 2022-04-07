@@ -58,7 +58,7 @@ export default function application(state = initialState, action) {
   }
 }
 
-export const registration = (login, password, firstName, lastName) => {
+export const registration = (login, password, firstName, lastName, age) => {
   return async (dispatch) => {
     dispatch({ type: 'application/registration/pending' });
     try {
@@ -67,7 +67,7 @@ export const registration = (login, password, firstName, lastName) => {
         headers: {
           'Content-type': 'application/json',
         },
-        body: JSON.stringify({ login, password, firstName, lastName }),
+        body: JSON.stringify({ login, password, firstName, lastName, age }),
       });
       const json = await res.json();
       dispatch({ type: 'application/registration/fulfilled', payload: json });

@@ -90,7 +90,6 @@ export function editAvatar(image) {
       .then((responce) => responce.json())
       .then((user) => {
         dispatch({ type: 'user/editavatar/fulfilled', payload: user });
-        console.log(user);
       })
       .catch((error) => {
         dispatch({ type: 'user/editavatar/rejected', error: error.toString() });

@@ -38,7 +38,7 @@ const Popular = () => {
                     {item.price} ₽
                   </div>
                 </div>
-                <p>{item.desc.substr(0, 300) + '...'}</p>
+                <p>{item.desc?.substr(0, 300) + '...'}</p>
               </div>
               <NavLink to={`/tours/${item._id}`}>
                 <button className={styles.moreBtn}>Подробнее</button>
