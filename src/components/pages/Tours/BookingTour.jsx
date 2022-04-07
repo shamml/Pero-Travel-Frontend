@@ -7,7 +7,8 @@ import two from '../../../assets/Tours/two.svg';
 import { CalendarComponent } from '@syncfusion/ej2-react-calendars';
 import { useDispatch, useSelector } from 'react-redux';
 import { booking } from '../../../redux/features/tours';
-
+import { addBooking } from '../../../redux/features/booking';
+import { useParams } from 'react-router-dom';
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
@@ -33,6 +34,14 @@ const BookingTour = () => {
     p: 4,
   };
 
+  const token = useSelector(state => state.application.token)
+
+  const { id } = useParams();
+
+  const [child, setChild] = useState('');
+  const [day, setDay] = useState('');
+  const [people, setPeople] = useState('');
+
   const [dataValue, setDataValue] = useState('');
   const [openCalendar, setOpenCalendar] = useState(false);
   const [openSelectAdults, setOpenSelectAdults] = useState(false);
@@ -54,8 +63,9 @@ const BookingTour = () => {
     setOpenCalendar(false);
   };
 
-  const handleBooking = () => {
-    dispatch(booking(dataValue));
+  //ДОРАБОТАТЬ
+  const handleBookingAdd = () => {
+    dispatch(addBooking(id, day, people + child));
   };
 
   const token = useSelector(state => state.application.token);
@@ -78,6 +88,7 @@ const BookingTour = () => {
                 {openCalendar ? (
                   <div className={styles.calendarComponent}>
                     <CalendarComponent
+                    value={dataValue}
                       onChange={(e) => setDataValue(e.target.value)}
                     />
                   </div>
@@ -157,6 +168,7 @@ const BookingTour = () => {
                   </Fade>
                 </Modal>
               </div>
+//               <button disabled={!token} onClick={handleBookingAdd}>{token ? "Забронировать" : "Зарегистрируйтесь"}</button>
             </div>
           </div>
         </div>

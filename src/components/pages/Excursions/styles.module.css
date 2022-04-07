@@ -27,12 +27,31 @@
 .typeExcursions {
   width: 550px;
   margin: auto;
+  display: flex;
 }
 
-.typeExcursions a {
-  color: #0499dd;
-  text-decoration: none;
+.typeWrapper {
+  border-bottom: 3px solid gray;
+  margin: 50px 0 0 0;
   font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0em;
+  cursor: pointer;
+  margin-top: 70px;
+}
+
+.typeWrapper:hover {
+  border-bottom: 3px solid #0499DD;
+}
+
+.typeTour {
+  padding:  0 10px;
+  margin-bottom: 10px;
+}
+
+.typeTour:hover {
+  color: #0499DD;
 }
 
 .buttonsExcursions {
