@@ -6,11 +6,33 @@ import calImg from '../../../assets/Tours/calImg.svg';
 import two from '../../../assets/Tours/two.svg';
 import { CalendarComponent } from '@syncfusion/ej2-react-calendars';
 import { useDispatch, useSelector } from 'react-redux';
+import { booking } from '../../../redux/features/tours';
 import { addBooking } from '../../../redux/features/booking';
 import { useParams } from 'react-router-dom';
+import Backdrop from '@mui/material/Backdrop';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import Fade from '@mui/material/Fade';
+import Typography from '@mui/material/Typography';
 
 const BookingTour = () => {
   const dispatch = useDispatch();
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #049add',
+    borderRadius: 3,
+    boxShadow: 24,
+    p: 4,
+  };
 
   const token = useSelector(state => state.application.token)
 
@@ -45,6 +67,8 @@ const BookingTour = () => {
   const handleBookingAdd = () => {
     dispatch(addBooking(id, day, people + child));
   };
+
+  const token = useSelector(state => state.application.token);
 
   return (
     <div className={styles.mainReserve}>
@@ -112,7 +136,39 @@ const BookingTour = () => {
               </div>
             </div>
             <div className={styles.carouselButton}>
-              <button disabled={!token} onClick={handleBookingAdd}>{token ? "Забронировать" : "Зарегистрируйтесь"}</button>
+              <button onClick={token ? handleBooking : handleOpen}>Забронировать</button>
+              <div>
+                <Modal
+                  aria-labelledby="transition-modal-title"
+                  aria-describedby="transition-modal-description"
+                  open={open}
+                  onClose={handleClose}
+                  closeAfterTransition
+                  BackdropComponent={Backdrop}
+                  BackdropProps={{
+                    timeout: 500,
+                  }}
+                >
+                  <Fade in={open}>
+                    <Box sx={style}>
+                      <Typography
+                        id="transition-modal-title"
+                        variant="h6"
+                        component="h2"
+                      >
+                        Войдите или зарегестрируйтесь!
+                      </Typography>
+                      <Typography
+                        id="transition-modal-description"
+                        sx={{ mt: 2 }}
+                      >
+                        Прежде, чем бронировать тур необходимо зарегестрироваться.
+                      </Typography>
+                    </Box>
+                  </Fade>
+                </Modal>
+              </div>
+//               <button disabled={!token} onClick={handleBookingAdd}>{token ? "Забронировать" : "Зарегистрируйтесь"}</button>
             </div>
           </div>
         </div>
