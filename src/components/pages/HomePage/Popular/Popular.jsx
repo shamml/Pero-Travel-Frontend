@@ -9,11 +9,12 @@ import { fetchTours } from '../../../../redux/features/tours';
 const Popular = () => {
   const dispatch = useDispatch();
 
-  const tours = useSelector((state) => state.tours.tours);
-
   useEffect(() => {
     dispatch(fetchTours());
   }, [dispatch]);
+
+  const tours = useSelector((state) => state.tours.tours);
+
   return (
     <div className={styles.popularBlock}>
       <div className={styles.popularTitle}>Популярные экскурсии</div>
