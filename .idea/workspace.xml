@@ -553,6 +553,7 @@
       <change beforePath="$PROJECT_DIR$/../ntro-dom/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ntro-dom/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Excursions/OurTour/OurTour.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Excursions/OurTour/OurTour.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Excursions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Excursions/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Excursions/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Excursions/styles.module.css" afterDir="false" />
@@ -774,7 +775,7 @@
       <workItem from="1649139939617" duration="12338000" />
       <workItem from="1649226996105" duration="15375000" />
       <workItem from="1649265191627" duration="322000" />
-      <workItem from="1649266137074" duration="7996000" />
+      <workItem from="1649266137074" duration="8727000" />
     </task>
     <servers />
   </component>
