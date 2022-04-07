@@ -1,7 +1,15 @@
+.adminPage {
+  /* Created with https://www.css-gradient.com */
+  background: #ffffff;
+  background: -webkit-linear-gradient(bottom, #ffffff, #049add);
+  background: -moz-linear-gradient(bottom, #ffffff, #049add);
+  background: linear-gradient(to top, #ffffff, #049add);
+  /* height: 100%; */
+}
+
 .adminka {
   max-width: 1200px;
   margin: auto;
-  height: 90vh;
   display: flex;
   justify-content: space-between;
 }
