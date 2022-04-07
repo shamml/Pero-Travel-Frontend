@@ -14,6 +14,7 @@ const Popular = () => {
   useEffect(() => {
     dispatch(fetchTours());
   }, [dispatch]);
+
   return (
     <div className={styles.popularBlock}>
       <div className={styles.popularTitle}>Популярные экскурсии</div>
