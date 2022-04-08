@@ -1,0 +1,39 @@
+.addTourMain {
+  background: #ffffff;
+  background: -webkit-linear-gradient(bottom, #ffffff, #049add);
+  background: -moz-linear-gradient(bottom, #ffffff, #049add);
+  background: linear-gradient(to top, #fff);
+}
+.addTour {
+  width: 500px;
+  margin: 120px auto 0;
+}
+
+.addTour input {
+  width: 100%;
+  margin: 10px 0;
+  outline: none;
+  font-size: 20px;
+}
+h4 {
+  width: 350px;
+}
+.backgroundImage {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+.carouselButton button {
+  border: none;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  width: 150px;
+  height: 50px;
+  background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
+  border-radius: 60px;
+  margin-top: 20px;
+}

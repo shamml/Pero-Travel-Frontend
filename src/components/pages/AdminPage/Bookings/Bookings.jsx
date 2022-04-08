@@ -1,12 +1,21 @@
-import React from 'react';
-import styles from "./styles.module.css";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchBookings } from '../../../../redux/features/admin';
+import styles from './styles.module.css';
 
 const Bookings = () => {
-  return (
-    <div className={styles.bookingsPage}>
-      BOOKING
-    </div>
-  );
+  const dispatch = useDispatch();
+
+  const bookings = useSelector((state) => state.admin.bookings);
+
+  useEffect(() => {
+    dispatch(fetchBookings());
+  }, [dispatch]);
+  
+
+  return <div className={styles.bookingsPage}>BOOKING</div>;
+
 };
+
 
 export default Bookings;
