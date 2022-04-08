@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="2d5d8684-0521-412c-b859-fbeae4c6f882" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../advertising-agency-frontend/.idea/advertising-agency-frontend.iml" afterDir="false" />
@@ -43,6 +46,7 @@
       <change afterPath="$PROJECT_DIR$/../news-site/src/redux/features/application.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site/src/redux/features/comments.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site/src/redux/features/news.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/pages/Excursions/FilterTour.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/.idea/react-live-search.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/.prettierrc" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/src/components/cards/Card.jsx" afterDir="false" />
@@ -550,8 +554,9 @@
       <change beforePath="$PROJECT_DIR$/../ntro-dom/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ntro-dom/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Profile/TestProfile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Profile/TestProfile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/configureStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/configureStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Excursions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Excursions/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Excursions/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Excursions/styles.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/BookingTour.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/BookingTour.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/controllers/categories.controller.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/controllers/clients.controllers.js" beforeDir="false" />
@@ -780,7 +785,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

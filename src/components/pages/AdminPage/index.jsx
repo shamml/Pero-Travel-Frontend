@@ -305,6 +305,10 @@ function Admin() {
   }
 
   return (
+    <div className={styles.adminPage}>
+      <div className={styles.adminProfile}>
+        ПРОФИЛЬ АДМИНА
+      </div>
     <div className={styles.adminka}>
       <div className={styles.booking}></div>
       {/* // { *===================================================================* } // */}
@@ -548,6 +552,7 @@ function Admin() {
           <img src={exitLogo} alt="" />
         </div>
       </Link>
+    </div>
     </div>
   );
 }

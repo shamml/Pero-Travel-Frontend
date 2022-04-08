@@ -64,7 +64,7 @@ const App = () => {
         <Route path="/profile" element={<Profile />} />
         <Route path="/admin" element={<Admin />} />
       </Routes>
-      {/*<Footer />*/}
+      <Footer />
     </div>
   ) : (
     <div>
@@ -77,7 +77,7 @@ const App = () => {
         <Route path="/excursions" element={<Excursions items={items} />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

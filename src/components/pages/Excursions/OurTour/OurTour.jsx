@@ -10,17 +10,19 @@ const OurTour = ({
   verticalBG,
   desc,
   duration,
+  place,
   price,
   priceForChild,
+  id,
 }) => {
   return (
     <div className={styles.ourToursCard}>
       <div className={styles.adlerTourBg}>
-        <img src={verticalBG} alt="no" />
+        <img src={`http://localhost:3030/${verticalBG}`} alt="no" />
       </div>
       <div className={styles.descriptionExcursion}>
         <div className={styles.typeOfTourExcursion}>{typeTour}</div>
-        <div className={styles.placeTourExcursion}>{title}</div>
+        <div className={styles.placeTourExcursion}>{title} ({place})</div>
         <div className={styles.tripTourExcursion}>
           <div className={styles.tripPrice}>
             <div className={styles.onePriceTrip}>
@@ -51,7 +53,7 @@ const OurTour = ({
           </div>
         </div>
         <div className={styles.buttonsDescriptionTour}>
-          <Link to="/tours">
+          <Link to={`/tours/${id}`}>
             <div className={styles.moreTourButton}>Подробнее</div>
           </Link>
         </div>
