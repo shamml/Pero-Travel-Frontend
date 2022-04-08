@@ -9,6 +9,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import OurTour from './OurTour/OurTour';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchTours } from '../../../redux/features/tours';
+import { CalendarComponent } from '@syncfusion/ej2-react-calendars';
 
 const Excursions = ({ items }) => {
   const theme = createTheme({
@@ -36,6 +37,7 @@ const Excursions = ({ items }) => {
   const [placeBlock, setPlaceBlock] = useState(false);
   const [durationBlock, setDurationBlock] = useState(false);
   const [dateBlock, setDateBlock] = useState(false);
+  const [dataValue, setDataValue] = useState('');
 
   const [minPrice, setMinPrice] = useState(1000);
   const handleMinimum = (e) => {
@@ -73,10 +75,8 @@ const Excursions = ({ items }) => {
   }, [dispatch]);
 
   const tours = useSelector((state) => state.tours.tours);
-  console.log('tours', tours);
 
   const [filtered, setFiltered] = useState(tours);
-  console.log('filtered', filtered);
 
   const handleFilter = () => {
     const result = filtered.filter((tour) => {
@@ -139,8 +139,12 @@ const Excursions = ({ items }) => {
             <option value="">Сочи</option>
             <option value="">Адлер</option>
           </select>
-          <div className={styles.buttonExcursion}>
-            10 ноября 2021 <img src={data} alt="no" />
+          <div className={styles.buttonExcursions}>
+            <select className={styles.selectCalendar} name="place" id="place">
+              <option value="">
+                <input id="date" type="date" value="2017-06-01"/>
+              </option>
+            </select>
           </div>
           <select className={styles.selectMansCount} name="place" id="place">
             <option value={1}>1 человек</option>
@@ -424,6 +428,25 @@ const Excursions = ({ items }) => {
                 </div>
               )}
             </div>
+            <CSSTransition
+              in={dateBlock}
+              classNames="alert"
+              timeout={300}
+              unmountOnExit
+            >
+              <div>
+                <div className={styles.amountCalendar}>
+                  <div className={styles.buttonCalendar}>
+                    <div>
+                      <CalendarComponent
+                        value={dataValue}
+                        onChange={(e) => setDataValue(e.target.value)}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </CSSTransition>
           </div>
           <div className={styles.lineBorder} />
           <div className={styles.showFilterExcursions}>

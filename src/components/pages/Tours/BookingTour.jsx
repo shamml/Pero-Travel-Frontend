@@ -6,7 +6,6 @@ import calImg from '../../../assets/Tours/calImg.svg';
 import two from '../../../assets/Tours/two.svg';
 import { CalendarComponent } from '@syncfusion/ej2-react-calendars';
 import { useDispatch, useSelector } from 'react-redux';
-import { booking } from '../../../redux/features/tours';
 import { addBooking } from '../../../redux/features/booking';
 import { useParams } from 'react-router-dom';
 import Backdrop from '@mui/material/Backdrop';
@@ -34,7 +33,7 @@ const BookingTour = () => {
     p: 4,
   };
 
-  const token = useSelector(state => state.application.token)
+  const token = useSelector((state) => state.application.token);
 
   const { id } = useParams();
 
@@ -68,7 +67,6 @@ const BookingTour = () => {
     dispatch(addBooking(id, day, people + child));
   };
 
-  const token = useSelector(state => state.application.token);
 
   return (
     <div className={styles.mainReserve}>
@@ -88,7 +86,7 @@ const BookingTour = () => {
                 {openCalendar ? (
                   <div className={styles.calendarComponent}>
                     <CalendarComponent
-                    value={dataValue}
+                      value={dataValue}
                       onChange={(e) => setDataValue(e.target.value)}
                     />
                   </div>
@@ -136,7 +134,9 @@ const BookingTour = () => {
               </div>
             </div>
             <div className={styles.carouselButton}>
-              <button onClick={token ? handleBooking : handleOpen}>Забронировать</button>
+              <button onClick={token ? handleBookingAdd : handleOpen}>
+                Забронировать
+              </button>
               <div>
                 <Modal
                   aria-labelledby="transition-modal-title"
@@ -162,13 +162,13 @@ const BookingTour = () => {
                         id="transition-modal-description"
                         sx={{ mt: 2 }}
                       >
-                        Прежде, чем бронировать тур необходимо зарегестрироваться.
+                        Прежде, чем бронировать тур необходимо
+                        зарегестрироваться.
                       </Typography>
                     </Box>
                   </Fade>
                 </Modal>
               </div>
-//               <button disabled={!token} onClick={handleBookingAdd}>{token ? "Забронировать" : "Зарегистрируйтесь"}</button>
             </div>
           </div>
         </div>
