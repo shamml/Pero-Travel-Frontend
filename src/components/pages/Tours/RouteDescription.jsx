@@ -18,7 +18,7 @@ const RouteDescription = () => {
             <div className={styles.wayPoint}>
               <div className={styles.onePoint}>
                 <div className={styles.yellowRound}>
-                  <img src={yellow} alt="" srcset="" />
+                  <img src={yellow} alt="#" />
                 </div>
                 <div className={styles.subTitlePoint}>
                   Город Гагра, Колоннада, ресторан "Гагрипш", Парк принца <br />{' '}
@@ -27,7 +27,7 @@ const RouteDescription = () => {
               </div>
               <div className={styles.secondPoint}>
                 <div className={styles.yellowRound}>
-                  <img src={yellow} alt="" srcset="" />
+                  <img src={yellow} alt="#" />
                 </div>
                 <div className={styles.subTitlePoint}>
                   Смотровая площадка "Прощай Родина", "Чабгарский" карниз,
@@ -36,7 +36,7 @@ const RouteDescription = () => {
               </div>
               <div className={styles.thirdPoint}>
                 <div className={styles.yellowRound}>
-                  <img src={yellow} alt="" srcset="" />
+                  <img src={yellow} alt="#" />
                 </div>
                 <div className={styles.subTitlePoint}>
                   Дегустация сыра, меда, вина, чачи (входит в стоимость
@@ -58,7 +58,7 @@ const RouteDescription = () => {
             </h4>
             <div className={styles.thirdPoint}>
               <div className={styles.yellowRound}>
-                <img src={yellow} alt="" srcset="" />
+                <img src={yellow} alt="#" />
               </div>
               <div className={styles.subTitlePoint}>
                 Монастырь "Новый Афон", Новоафонская Пещера, "Рукотворный"{' '}
@@ -67,7 +67,7 @@ const RouteDescription = () => {
             </div>
             <div className={styles.anotherPoint}>
               <div className={styles.yellowRound}>
-                <img src={yellow} alt="" srcset="" />
+                <img src={yellow} alt="#" />
               </div>
               <div className={styles.subTitlePoint}>
                 Термальный источник в с. Приморское.
@@ -85,13 +85,13 @@ const RouteDescription = () => {
                 class="active"
                 aria-current="true"
                 aria-label="Slide 1"
-              ></button>
+              />
               <button
                 type="button"
                 data-bs-target="#slider"
                 data-bs-slide-to="1"
                 aria-label="Slide 2"
-              ></button>
+              />
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -117,10 +117,7 @@ const RouteDescription = () => {
               data-bs-target="#slider"
               data-bs-slide="prev"
             >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
+              <span class="carousel-control-prev-icon" aria-hidden="true" />
               <span class="visually-hidden">Previous</span>
             </button>
             <button
@@ -129,10 +126,7 @@ const RouteDescription = () => {
               data-bs-target="#slider"
               data-bs-slide="next"
             >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
+              <span class="carousel-control-next-icon" aria-hidden="true" />
               <span class="visually-hidden">Next</span>
             </button>
           </div>

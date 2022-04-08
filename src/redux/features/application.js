@@ -4,8 +4,8 @@ const initialState = {
   error: null,
   token: localStorage.getItem('token'),
   role: localStorage.getItem('role'),
+  id: null,
 };
-
 
 export default function application(state = initialState, action) {
   switch (action.type) {
@@ -38,6 +38,7 @@ export default function application(state = initialState, action) {
         signinIn: false,
         token: action.payload.token,
         role: action.payload.role,
+        id: action.payload.id,
       };
     case 'application/login/rejected':
       return {
@@ -57,7 +58,7 @@ export default function application(state = initialState, action) {
   }
 }
 
-export const registration = (login, password, firstName, lastName) => {
+export const registration = (login, password, firstName, lastName, age) => {
   return async (dispatch) => {
     dispatch({ type: 'application/registration/pending' });
     try {
@@ -66,7 +67,7 @@ export const registration = (login, password, firstName, lastName) => {
         headers: {
           'Content-type': 'application/json',
         },
-        body: JSON.stringify({ login, password, firstName, lastName }),
+        body: JSON.stringify({ login, password, firstName, lastName, age }),
       });
       const json = await res.json();
       dispatch({ type: 'application/registration/fulfilled', payload: json });
@@ -91,7 +92,7 @@ export const authorization = (login, password) => {
         body: JSON.stringify({ login, password }),
       });
       const json = await res.json();
-      console.log(json.role);
+      console.log(json.id);
       dispatch({ type: 'application/login/fulfilled', payload: json });
       localStorage.setItem('token', json.token);
       localStorage.setItem('role', json.role);

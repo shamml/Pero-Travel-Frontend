@@ -3,7 +3,7 @@ import styles from './styles.module.css';
 import face from '../../../../assets/homepage/Face.svg';
 import insta from '../../../../assets/homepage/Insta.svg';
 import vkontakte from '../../../../assets/homepage/Vector.svg';
-import sceondTitle from '../../../../assets/homepage/secondTitle.png';
+import sceondTitle from '../../../../assets/homepage/PERO TRAVEL.svg';
 import middle from '../../../../assets/homepage/middle.png';
 import arrow from '../../../../assets/arrow.svg';
 import { Link } from 'react-router-dom';
@@ -22,7 +22,7 @@ function Carousel() {
           </div>
           <div className={styles.carouselButton}>
             <Link to="excursions">
-              <button style={{cursor:"pointer"}}>
+              <button style={{ cursor: 'pointer' }}>
                 К экскурсиям <img src={arrow} alt="arrow" />
               </button>
             </Link>

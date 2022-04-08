@@ -52,6 +52,10 @@
   margin-top: 20px;
   cursor: pointer;
 }
+.carouselButton button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 /*DescriptionTours*/
 .deskTripMain {
   margin: auto;
@@ -256,7 +260,7 @@
 .yellowRound {
   padding-right: 8px;
 }
-.carouselImage  {
+.carouselImage {
   width: 600px;
 }
 .carousel-item img {

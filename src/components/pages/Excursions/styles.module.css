@@ -27,12 +27,31 @@
 .typeExcursions {
   width: 550px;
   margin: auto;
+  display: flex;
 }
 
-.typeExcursions a {
-  color: #0499dd;
-  text-decoration: none;
+.typeWrapper {
+  border-bottom: 3px solid gray;
+  margin: 50px 0 0 0;
   font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  letter-spacing: 0em;
+  cursor: pointer;
+  margin-top: 70px;
+}
+
+.typeWrapper:hover {
+  border-bottom: 3px solid #0499DD;
+}
+
+.typeTour {
+  padding:  0 10px;
+  margin-bottom: 10px;
+}
+
+.typeTour:hover {
+  color: #0499DD;
 }
 
 .buttonsExcursions {
@@ -82,7 +101,7 @@
 
 .filterExcursions {
   width: 300px;
-  padding: 25px 30px 0 35px;
+  padding: 25px 30px 0 30px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
@@ -93,6 +112,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 31px;
+  margin-bottom: 30px;
   font-style: 14px;
   font-weight: bold;
 }
@@ -105,9 +125,8 @@
 .inputsPriceExcursion {
   width: 240px;
   display: flex;
+  margin-bottom: 20px;
   justify-content: space-between;
-  margin-top: 20px;
-  margin-bottom: 30px;
 }
 
 .inputPriceExcursion {
@@ -121,6 +140,21 @@
   outline: none;
 }
 
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  background-image: url('../../../assets/excursions/rubl.svg'),
+    linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.8em auto, 100%;
+  font-weight: 500;
+}
+
 .inputTypeRangeExcursion {
   text-align: center;
   margin-top: 30px;
@@ -129,17 +163,18 @@
 .lineBorder {
   width: 240px;
   align-items: center;
-  margin-top: 45px;
   border-bottom: 1px solid #ededed;
 }
 
 .amountPeople {
   width: 266px;
+  /* padding-bottom: 20px; */
 }
 
 .amountButtons {
   width: 240px;
   margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -152,6 +187,23 @@
   border: 1px solid #ededed;
   box-sizing: border-box;
   border-radius: 40px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+  margin-top: 7px;
+}
+.amountCalendar {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.buttonCalendar {
+  width: 240px;
+  height: 280px;
+  background: #ffffff;
+  /*border: 1px solid #ededed;*/
+  box-sizing: border-box;
+  border-radius: 5px;
   cursor: pointer;
   text-align: center;
   font-size: 14px;
@@ -178,7 +230,7 @@
   background-color: #0499dd;
 }
 
-.buttonMan10:hover {
+.selected {
   color: white;
   background-color: #0499dd;
 }
@@ -194,11 +246,11 @@
 }
 
 .durationExcursion {
-  display: flex;
+  /* display: flex; */
 }
 
 .dataExcursions {
-  display: flex;
+  /* display: flex; */
 }
 
 .incrementExcursion {
@@ -214,15 +266,19 @@
   border-radius: 10px;
   color: white;
   font-size: 14px;
+  margin: auto;
+  margin-top: 30px;
+  cursor: pointer;
 }
 
 .resetFilters {
-  width: 300px;
+  width: 140px;
   margin: auto;
   margin-top: 15px;
   font-size: 12px;
   display: flex;
   padding: 0 0 30px 0;
+  cursor: pointer;
 }
 
 .resetX {
@@ -243,97 +299,6 @@
   font-weight: bold;
 }
 
-.ourToursCard {
-  width: 780px;
-  margin-top: 40px;
-  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
-  display: flex;
-}
-
-.descriptionExcursion {
-  margin: 27px 0 0 40px;
-}
-
-.typeOfTourExcursion {
-  color: #daaa00;
-  font-size: 14px;
-}
-
-.placeTourExcursion {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.tripTourExcursion {
-  width: 350px;
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.onePriceTrip {
-  display: flex;
-}
-
-.ageBilet {
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.priceBiletTour {
-  color: #0499dd;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.timeDescriptionTour {
-  color: #0499dd;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.descriptionPlaceTour {
-  margin-top: 20px;
-}
-
-.verticalLine {
-  border-left: 3px solid #0499dd;
-}
-
-.textPlaceTour {
-  font-size: 12px;
-  margin-left: 20px;
-}
-
-.buttonsDescriptionTour {
-  width: 220px;
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.buttonsDescriptionTour a {
-  text-decoration: none;
-}
-
-.moreTourButton {
-  width: 160px;
-  padding: 10px 0;
-  text-align: center;
-  background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
-  color: white;
-  border-radius: 40px;
-  cursor: pointer;
-}
-
-.heartTour {
-  width: 40px;
-  border-radius: 50%;
-  border: 0;
-  cursor: pointer;
-}
-
 .selectPlace {
   display: block;
   line-height: 1.3;
@@ -349,6 +314,28 @@
   appearance: none;
   background-image: url('../../../assets/excursions/location.png'),
     linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.9em auto, 100%;
+  outline: none;
+  cursor: pointer;
+}
+
+.selectCalendar {
+  display: block;
+  line-height: 1.3;
+  padding: 0.6em 1.4em 0.5em 1.2em;
+  width: 235px;
+  height: 50px;
+  margin: 0;
+  border: none;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url('../../../assets/excursions/data.png'),
+  linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
   background-repeat: no-repeat, repeat;
   background-position: right 0.7em top 50%, 0 0;
   background-size: 0.9em auto, 100%;

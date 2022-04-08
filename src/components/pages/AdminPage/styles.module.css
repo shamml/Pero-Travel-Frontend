@@ -1,14 +1,30 @@
+.adminPage {
+  /* Created with https://www.css-gradient.com */
+  background: #ffffff;
+  background: -webkit-linear-gradient(bottom, #ffffff, #049add);
+  background: -moz-linear-gradient(bottom, #ffffff, #049add);
+  background: linear-gradient(to top, #ffffff, #049add);
+  /* height: 100%; */
+}
+
 .adminka {
   max-width: 1200px;
   margin: auto;
-  height: 90vh;
+  background-color: aliceblue;
+  height: auto;
   display: flex;
   justify-content: space-between;
+}
+
+.adminka input {
+  outline: none;
 }
 
 .adminka button {
   padding: 10px;
   width: 100%;
+  background-color: black;
+  color: white;
 }
 
 .addTour {
@@ -55,21 +71,22 @@ textarea {
 
 .tourContainer {
   margin: 10px 0;
+  background-color: white;
 }
 
 .tourContainer span {
   padding: 7px;
-  font-weight:200;
+  font-weight: 200;
   cursor: pointer;
   background-color: brown;
-  color: black;
+  color: white;
   width: 40px;
   height: 20px;
   align-items: center;
   text-align: center;
   transition: 0.5s;
-  margin: 0 42px;
-  border-radius: 2px;
+  margin: 0 10px;
+  border-radius: 5px;
 }
 
 .tourContainer span:hover {
@@ -81,14 +98,14 @@ textarea {
 }
 
 .modalWindowEdit {
-    position: absolute;
-    width: 500px;
-    top: 200px;
-    left: 360px;
+  position: absolute;
+  width: 500px;
+  top: 200px;
+  left: 310px;
 }
 
 .modalWindowEdit button {
-    width: 500px;
+  width: 500px;
 }
 
 .modalWindowEdit input {
@@ -114,10 +131,10 @@ textarea {
 }
 
 .adminImage img {
- width: 100%;
- height: 450px;
- border-top-right-radius: 10px;
- border-top-left-radius: 10px;
+  width: 100%;
+  height: 450px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 .exit {
   width: 50px;
@@ -127,4 +144,35 @@ textarea {
 }
 .exit img {
   width: 100%;
+}
+
+.backgroundImage {
+  border: 1px solid silver;
+  text-align: center;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  background-color: white;
+}
+
+.tourContainer {
+  border: 2px solid silver;
+  border-radius: 15px;
+  padding-bottom: 15px;
+}
+
+.dropArea {
+  align-items: center;
+  width: 500px;
+  height: 250px;
+  border: 5px dashed black;
+  justify-content: center;
+  margin: 15px 0;
+  text-align: center;
+  padding: 45% 0;
+}
+
+.gallery {
+  position: absolute;
+  top: 950px;
+  left: 310px;
 }

@@ -3,7 +3,7 @@
 }
 
 .popularTitle {
-  color: #0499DD;
+  color: #0499dd;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 100px;
@@ -14,7 +14,7 @@
   margin-left: 150px;
   display: flex;
   justify-content: space-between;
-  /* overflow-x: scroll; */
+  overflow-x: scroll;
 }
 
 .carouselItem {
@@ -35,7 +35,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   width: 360px;
   height: 497px;
   object-fit: cover;
@@ -50,7 +50,7 @@
 }
 
 .carouselItemTitle {
-  color: #FFC700;
+  color: #ffc700;
   margin-top: 0;
 }
 .typeOf {
@@ -69,16 +69,16 @@
   line-height: 15px;
   text-align: center;
   display: flex;
-  justify-content: space-between; 
- }
- .price {
+  justify-content: space-between;
+}
+.price {
   width: 65px;
   height: 15px;
   line-height: 15px;
   text-align: center;
   display: flex;
   justify-content: space-between;
- }
+}
 
 .time img,
 .price img {
@@ -105,18 +105,17 @@
   margin-top: 20px;
 }
 
-
 /* стилизация скролла */
 .carousel::-webkit-scrollbar {
-  height: 17px;               /* width of the entire scrollbar */
+  height: 17px; /* width of the entire scrollbar */
 }
 
 .carousel::-webkit-scrollbar-track {
-  background: transparent;        /* color of the tracking area */
+  background: transparent; /* color of the tracking area */
 }
 
 .carousel::-webkit-scrollbar-thumb {
-  background-color: #0499DD;    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 7px solid white;  /* creates padding around scroll thumb */
+  background-color: #0499dd; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 7px solid white; /* creates padding around scroll thumb */
 }

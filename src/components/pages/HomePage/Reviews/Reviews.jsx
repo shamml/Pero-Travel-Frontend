@@ -3,19 +3,16 @@ import styles from './styles.module.css';
 import avatar from '../../../../assets/homepage/reviews/Rectangle26.jpg';
 import kov from '../../../../assets/homepage/reviews/kov.png';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchByIdReview } from '../../../../redux/features/review';
-import { useParams } from 'react-router-dom';
+import { fetchReview } from '../../../../redux/features/review';
 
 const Reviews = () => {
   const dispatch = useDispatch();
 
-  const { id } = useParams();
-
   useEffect(() => {
-    dispatch(fetchByIdReview(id));
+    dispatch(fetchReview());
   }, [dispatch]);
 
-  const array = useSelector((state) => state.review.reviewById);
+  const array = useSelector((state) => state.review.review);
 
   return (
     <div className={styles.reviewsBlock}>

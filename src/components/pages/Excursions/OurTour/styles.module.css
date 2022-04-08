@@ -1,0 +1,113 @@
+.ourToursCard {
+  width: 780px;
+  margin-top: 40px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.adlerTourBg {
+  position: relative;
+  overflow: hidden;
+  width: 238px;
+  height: 303px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.adlerTourBg img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 238px;
+  height: 303px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.descriptionExcursion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.typeOfTourExcursion {
+  color: #ffc700;
+  font-size: 14px;
+}
+
+.placeTourExcursion {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.tripTourExcursion {
+  width: 350px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tripTourExcursion img {
+  margin-right: 5px;
+}
+
+.onePriceTrip {
+  display: flex;
+}
+
+.ageBilet {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.priceBiletTour {
+  color: #0499dd;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.timeDescriptionTour {
+  color: #0499dd;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.descriptionPlaceTour {
+  margin-top: 10px;
+}
+
+.verticalLine {
+  border-left: 3px solid #0499dd;
+}
+
+.textPlaceTour {
+  font-size: 12px;
+  margin-left: 20px;
+  width: 475px;
+}
+
+.buttonsDescriptionTour {
+  width: 220px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonsDescriptionTour a {
+  text-decoration: none;
+}
+
+.moreTourButton {
+  width: 160px;
+  padding: 10px 0;
+  text-align: center;
+  background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
+  color: white;
+  border-radius: 40px;
+  cursor: pointer;
+}
