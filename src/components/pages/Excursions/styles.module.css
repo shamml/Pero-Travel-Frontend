@@ -193,6 +193,23 @@ input[type='number'] {
   line-height: 30px;
   margin-top: 7px;
 }
+.amountCalendar {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.buttonCalendar {
+  width: 240px;
+  height: 280px;
+  background: #ffffff;
+  /*border: 1px solid #ededed;*/
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  line-height: 30px;
+  margin-top: 7px;
+}
 
 .buttonMan10 {
   width: 150px;
@@ -297,6 +314,28 @@ input[type='number'] {
   appearance: none;
   background-image: url('../../../assets/excursions/location.png'),
     linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.9em auto, 100%;
+  outline: none;
+  cursor: pointer;
+}
+
+.selectCalendar {
+  display: block;
+  line-height: 1.3;
+  padding: 0.6em 1.4em 0.5em 1.2em;
+  width: 235px;
+  height: 50px;
+  margin: 0;
+  border: none;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url('../../../assets/excursions/data.png'),
+  linear-gradient(to bottom, #ffffff 0%, #ffffff 100%);
   background-repeat: no-repeat, repeat;
   background-position: right 0.7em top 50%, 0 0;
   background-size: 0.9em auto, 100%;
