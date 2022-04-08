@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css';
 import rocks from '../../../assets/Tours/rocks.png';
 import reserve from '../../../assets/Tours/reserve.png';
@@ -7,18 +7,18 @@ import two from '../../../assets/Tours/two.svg';
 import { CalendarComponent } from '@syncfusion/ej2-react-calendars';
 import { useDispatch, useSelector } from 'react-redux';
 import { addBooking } from '../../../redux/features/booking';
-import { useParams } from 'react-router-dom';
-import Backdrop from '@mui/material/Backdrop';
-import Box from '@mui/material/Box';
-import Modal from '@mui/material/Modal';
-import Fade from '@mui/material/Fade';
-import Typography from '@mui/material/Typography';
+import { Link, useParams } from 'react-router-dom';
+import { Backdrop, Box, Modal, Fade, Typography } from '@mui/material';
 
 const BookingTour = () => {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  
+  useEffect(() => {
+    window.scrollTo({top: 0});
+  }, [dispatch]);
 
   const style = {
     position: 'absolute',
@@ -30,7 +30,7 @@ const BookingTour = () => {
     border: '2px solid #049add',
     borderRadius: 3,
     boxShadow: 24,
-    p: 4,
+    p: 4
   };
 
   const token = useSelector((state) => state.application.token);
@@ -137,7 +137,7 @@ const BookingTour = () => {
               <button onClick={token ? handleBookingAdd : handleOpen}>
                 Забронировать
               </button>
-              <div>
+              <div className={styles.modal}>
                 <Modal
                   aria-labelledby="transition-modal-title"
                   aria-describedby="transition-modal-description"
@@ -162,8 +162,8 @@ const BookingTour = () => {
                         id="transition-modal-description"
                         sx={{ mt: 2 }}
                       >
-                        Прежде, чем бронировать тур необходимо
-                        зарегестрироваться.
+                        Прежде, чем бронировать тур необходимо <Link to="/signin">войти</Link> или {" "}
+                        <Link to="/signup">зарегистрироваться.</Link>
                       </Typography>
                     </Box>
                   </Fade>

@@ -12,6 +12,12 @@ import { fetchTours } from '../../../redux/features/tours';
 import { CalendarComponent } from '@syncfusion/ej2-react-calendars';
 
 const Excursions = ({ items }) => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchTours());
+    window.scrollTo({top: 0});
+  }, [dispatch]);
+
   const theme = createTheme({
     status: {
       danger: '#e53e3e',
@@ -66,13 +72,7 @@ const Excursions = ({ items }) => {
   const [duration, setDuration] = useState(0);
   const selectDuration = (dur) => {
     setDuration(dur);
-  };
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchTours());
-  }, [dispatch]);
+  };  
 
   const tours = useSelector((state) => state.tours.tours);
 
