@@ -15,18 +15,18 @@ const TestProfile = () => {
   const [image, setImage] = useState('');
 
   useEffect(() => {
+    window.scrollTo({ top: 0 });
     dispatch(fetchIdUser());
   }, [dispatch]);
 
-  const dataUser = useSelector(state => state.user.data)
+  const dataUser = useSelector((state) => state.user.data);
   const id = useSelector((state) => state.application.id);
   const role = useSelector((state) => state.application.role);
   const tours = useSelector((state) => state.tours.tours[0]);
 
-
-  const currentUser = dataUser.length ? dataUser.find((item) => item._id === id) : {};
-
-
+  const currentUser = dataUser.length
+    ? dataUser.find((item) => item._id === id)
+    : {};
 
   if (role === 'admin') {
     return <Admin />;

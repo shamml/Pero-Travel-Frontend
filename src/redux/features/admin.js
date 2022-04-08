@@ -133,6 +133,7 @@ export function addTour(
   priceForChild,
   duration,
   bgImage,
+  tickets,
 ) {
   return function (dispatch) {
     dispatch({ type: 'admin/addtour/pending' });
@@ -142,6 +143,7 @@ export function addTour(
     data.append('title', title);
     data.append('desc', desc);
     data.append('price', price);
+    data.append('tickets', tickets);
     data.append('priceForChild', priceForChild);
     data.append('duration', duration);
     data.append('bgImage', bgImage);
