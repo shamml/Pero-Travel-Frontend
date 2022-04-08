@@ -5,6 +5,8 @@ import {
   addTour,
   deleteTour,
   editTour,
+  editTourGallery,
+  fetchBookings,
   fetchTours,
 } from '../../../redux/features/admin';
 import { Link } from 'react-router-dom';
@@ -255,12 +257,60 @@ function Admin() {
     setModalOptionalWindowToChange(false);
   }
 
+  {
+    /* // { *===================== Просмотр букингов =========================* } // */
+  }
+
+  const bookings = useSelector((state) => state.admin.bookings);
+
+  useEffect(() => {
+    dispatch(fetchBookings());
+  }, [dispatch]);
+
+  {
+    /* // { *===================== Добавление фоток в Gallery =========================* } // */
+  }
+
+  const [galleryModal, setGalleryModal] = useState(false);
+  const [drag, setDrag] = useState(false);
+  const [idEditTour, setIdEditTour] = useState('');
+  const [gallery, setGallery] = useState('');
+
+  function handleGalleryModal(id) {
+    setGalleryModal(!galleryModal);
+    setIdEditTour(id);
+  }
+
+  function dragStartHandler(e) {
+    e.preventDefault();
+    setDrag(true);
+  }
+
+  function dragLeaveHandler(e) {
+    e.preventDefault();
+    setDrag(false);
+  }
+
+  function onDropHandler(e) {
+    e.preventDefault();
+    let array = [...e.dataTransfer.files];
+    setGallery(array);
+  }
+
+  function handleClickSendGallery() {
+    dispatch(editTourGallery(idEditTour, gallery));
+    setIdEditTour('');
+    setGallery('');
+    setGalleryModal(false)
+  }
+
   return (
     <div className={styles.adminPage}>
       <div className={styles.adminProfile}>
         ПРОФИЛЬ АДМИНА
       </div>
     <div className={styles.adminka}>
+      <div className={styles.booking}></div>
       {/* // { *===================================================================* } // */}
       <div className={styles.addTour}>
         <button onClick={handleClickOpenAddTour}>Add Tour</button>
@@ -312,8 +362,17 @@ function Admin() {
             name=""
             placeholder="Enter duration.."
           />
-          <input onChange={handleChangeBgImage} type="file" />
-          <button onClick={handleClickAddTour}>Add</button>
+          <div className={styles.backgroundImage}>
+            Добавление фонового рисунка
+            <input onChange={handleChangeBgImage} type="file" />
+          </div>{' '}
+          <button
+            style={{ background: 'green', border: '1px solid green' }}
+            disabled={!bgImage}
+            onClick={handleClickAddTour}
+          >
+            Add
+          </button>
         </div>
       </div>
       {/* // { *===================================================================* } // */}
@@ -339,11 +398,16 @@ function Admin() {
                 name=""
                 id=""
               />
-              <button onClick={handleClickAddOptionalToTour}>Add</button>
+              <button
+                disabled={!optionalPrice || !optionalPrice}
+                style={{ background: 'green', border: '1px solid green' }}
+                onClick={handleClickAddOptionalToTour}
+              >
+                Add
+              </button>
             </div>
           )}
           {tours.map((tour) => {
-            console.log(tours);
             return (
               <div key={tour._id} className={styles.tourContainer}>
                 <div className={styles.adminImage}>
@@ -377,9 +441,42 @@ function Admin() {
                 >
                   ADD OPTIONAL
                 </span>
+                <span
+                  style={{ background: 'brown' }}
+                  onClick={(e) => handleGalleryModal(tour._id)}
+                >
+                  ADD GALLERY
+                </span>
               </div>
             );
           })}
+          {galleryModal && (
+            <div className={styles.gallery}>
+              <h1>ADD GALLERY</h1>
+              {drag ? (
+                <div
+                  className={styles.dropArea}
+                  onDragStart={(e) => dragStartHandler(e)}
+                  onDragLeave={(e) => dragLeaveHandler(e)}
+                  onDragOver={(e) => dragStartHandler(e)}
+                  onDrop={(e) => onDropHandler(e)}
+                >
+                  Отпустите файлы, чтобы загрузить их
+                </div>
+              ) : (
+                <div
+                  className={styles.dropArea}
+                  onDragStart={(e) => dragStartHandler(e)}
+                  onDragLeave={(e) => dragLeaveHandler(e)}
+                  onDragOver={(e) => dragStartHandler(e)}
+                >
+                  Перетащите файлы, чтобы загрузить их
+                </div>
+              )}
+              <button onClick={handleClickSendGallery}>SEND GALLERY</button>
+            </div>
+          )}
+          {/* // { *===================================================================* } // */}
           {modalEditWindowToChange && (
             <div className={styles.modalWindowEdit}>
               <h1>EDIT TOUR</h1>
@@ -405,7 +502,7 @@ function Admin() {
                 placeholder="Enter title.."
               />
               <textarea
-                style={{ width: '500px' }}
+                style={{ width: '500px', height: '250px' }}
                 value={descEdit}
                 onChange={handleChangeDescEdit}
                 placeholder="Enter desc.."
@@ -431,12 +528,21 @@ function Admin() {
                 name=""
                 placeholder="Enter duration.."
               />
-              <input onChange={handleChangeBgImageEdit} type="file" />
-              <button onClick={handleClickEditTour}>Save Tour Change</button>
+              <div className={styles.backgroundImage}>
+                Изменение фонового рисунка
+                <input onChange={handleChangeBgImageEdit} type="file" />
+              </div>
+              <button
+                style={{ background: 'blue', border: '1px solid blue' }}
+                onClick={handleClickEditTour}
+              >
+                Save Tour Change
+              </button>
             </div>
           )}
         </div>
       </div>
+      {/* // { *===================================================================* } // */}
       <Link to="/">
         <div
           style={{ cursor: 'pointer' }}

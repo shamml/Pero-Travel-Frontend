@@ -1,7 +1,10 @@
 const initialState = {
   tours: [],
+  bookings: [],
   loading: false,
   loadingFetch: false,
+  loadingDelete: false,
+  loadingFetchBookings: false,
   error: null,
 };
 
@@ -97,6 +100,25 @@ export default function admin(state = initialState, action) {
         loadingEdit: false,
         error: action.error,
       };
+    // Просмотр букингов
+    case 'admin/fetchbookings/pending':
+      return {
+        ...state,
+        loadingFetchBookings: true,
+        error: null,
+      };
+    case 'admin/fetchbookings/fulfilled':
+      return {
+        ...state,
+        loadingFetchBookings: false,
+        bookings: action.payload,
+      };
+    case 'admin/fetchbookings/rejected':
+      return {
+        ...state,
+        loadingFetchBookings: false,
+        error: action.error,
+      };
     default:
       return state;
   }
@@ -183,17 +205,6 @@ export function editTour(
   durationEdit,
 ) {
   return function (dispatch) {
-    console.log(
-      id,
-      tourEdit,
-      placeEdit,
-      titleEdit,
-      descEdit,
-      bgImageEdit,
-      priceEdit,
-      priceForChildEdit,
-      durationEdit,
-    );
     dispatch({ type: 'admin/edittour/pending' });
     const data = new FormData();
     data.append('typeTour', tourEdit);
@@ -246,6 +257,52 @@ export function addOptionalToTour(
       .catch((error) => {
         dispatch({
           type: 'admin/addoptional/rejected',
+          error: error.toString(),
+        });
+      });
+  };
+}
+
+export function fetchBookings() {
+  return function (dispatch) {
+    dispatch({ type: 'admin/fetchbookings/pending' });
+    fetch('http://localhost:3030/admin/bookings')
+      .then((responce) => responce.json())
+      .then((bookings) => {
+        dispatch({ type: 'admin/fetchbookings/fulfilled', payload: bookings });
+      })
+      .catch((error) => {
+        dispatch({
+          type: 'admin/fetchbookings/rejected',
+          error: error.toString(),
+        });
+      });
+  };
+}
+
+export function editTourGallery(id, gallery) {
+  return function (dispatch) {
+    console.log(id);
+    console.log(gallery);
+    dispatch({ type: 'admin/editgallery/pending' });
+    const data = new FormData();
+    for (let i = 0; i < gallery.length; i++) {
+      data.append('gallery', gallery[i]);
+    }
+    fetch(`http://localhost:3030/admin/tours/gallery/${id}`, {
+      method: 'PATCH',
+      /* headers: {
+        'Content-Type': 'multipart/form-data',
+      }, */
+      body: data,
+    })
+      .then((responce) => responce.json())
+      .then((tour) => {
+        dispatch({ type: 'admin/editgallery/fulfilled', payload: tour });
+      })
+      .catch((error) => {
+        dispatch({
+          type: 'admin/editgallery/rejected',
           error: error.toString(),
         });
       });
