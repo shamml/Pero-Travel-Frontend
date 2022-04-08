@@ -79,38 +79,63 @@ const Excursions = ({ items }) => {
   const [filtered, setFiltered] = useState(tours);
 
   const handleFilter = () => {
-    const result = filtered.filter((tour) => {
-      return (
-        tour.price >= minPrice &&
-        tour.price <= maxPrice &&
-        (tour.place === place || place === '') &&
-        (tour.duration <= duration || duration === 0)
-      );
-    });
+    const result = !filtered.length
+      ? tours.filter((tour) => {
+          return (
+            tour.price >= minPrice &&
+            tour.price <= maxPrice &&
+            (tour.place === place || place === '') &&
+            (tour.duration <= duration || duration === 0)
+          );
+        })
+      : filtered.filter((tour) => {
+          return (
+            tour.price >= minPrice &&
+            tour.price <= maxPrice &&
+            (tour.place === place || place === '') &&
+            (tour.duration <= duration || duration === 0)
+          );
+        });
     setFiltered(result);
   };
   const handleFilterAutobuoy = () => {
-    const result = filtered.filter((tour) => {
-      return tour.typeTour === 'Автобусный тур';
-    });
+    const result = !filtered.length
+      ? tours.filter((tour) => {
+          return tour.typeTour === 'Автобусный тур';
+        })
+      : filtered.filter((tour) => {
+          return tour.typeTour === 'Автобусный тур';
+        });
     setFiltered(result);
   };
   const handleFilterJeeping = () => {
-    const result = filtered.filter((tour) => {
-      return tour.typeTour === 'Джиппинг';
-    });
+    const result = !filtered.length
+      ? tours.filter((tour) => {
+          return tour.typeTour === 'Джиппинг';
+        })
+      : filtered.filter((tour) => {
+          return tour.typeTour === 'Автобусный тур';
+        });
     setFiltered(result);
   };
   const handleFilterYachting = () => {
-    const result = filtered.filter((tour) => {
-      return tour.typeTour === 'Яхтинг';
-    });
+    const result = !filtered.length
+      ? tours.filter((tour) => {
+          return tour.typeTour === 'Яхтинг';
+        })
+      : filtered.filter((tour) => {
+          return tour.typeTour === 'Автобусный тур';
+        });
     setFiltered(result);
   };
   const handleFilterCanyoning = () => {
-    const result = filtered.filter((tour) => {
-      return tour.typeTour === 'Каньонинг';
-    });
+    const result = !filtered.length
+      ? tours.filter((tour) => {
+          return tour.typeTour === 'Каньонинг';
+        })
+      : filtered.filter((tour) => {
+          return tour.typeTour === 'Автобусный тур';
+        });
     setFiltered(result);
   };
 
@@ -142,7 +167,7 @@ const Excursions = ({ items }) => {
           <div className={styles.buttonExcursions}>
             <select className={styles.selectCalendar} name="place" id="place">
               <option value="">
-                <input id="date" type="date" value="2017-06-01"/>
+                <input id="date" type="date" value="2017-06-01" />
               </option>
             </select>
           </div>
@@ -461,22 +486,39 @@ const Excursions = ({ items }) => {
         </div>
         <div className={styles.ourToursContent}>
           <div className={styles.toursTitleExcursion}>Наши Туры</div>
-          {filtered.map((tour) => {
-            return (
-              <OurTour
-                typeTour={tour.typeTour}
-                title={tour.title}
-                desc={tour.desc}
-                place={tour.place}
-                price={tour.price}
-                priceForChild={tour.priceForChild}
-                verticalBG={tour.bgImage}
-                duration={tour.duration}
-                id={tour._id}
-                key={tour._id}
-              />
-            );
-          })}
+          {!filtered.length
+            ? tours.map((tour) => {
+                return (
+                  <OurTour
+                    typeTour={tour.typeTour}
+                    title={tour.title}
+                    desc={tour.desc}
+                    place={tour.place}
+                    price={tour.price}
+                    priceForChild={tour.priceForChild}
+                    verticalBG={tour.bgImage}
+                    duration={tour.duration}
+                    id={tour._id}
+                    key={tour._id}
+                  />
+                );
+              })
+            : filtered.map((tour) => {
+                return (
+                  <OurTour
+                    typeTour={tour.typeTour}
+                    title={tour.title}
+                    desc={tour.desc}
+                    place={tour.place}
+                    price={tour.price}
+                    priceForChild={tour.priceForChild}
+                    verticalBG={tour.bgImage}
+                    duration={tour.duration}
+                    id={tour._id}
+                    key={tour._id}
+                  />
+                );
+              })}
         </div>
       </div>
     </div>
