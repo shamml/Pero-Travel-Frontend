@@ -1,0 +1,13 @@
+.adminPageMain a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+}
+.adminPageMain a:hover {
+  color: #ffc700;
+}
+.outlet {
+  margin: auto;
+}

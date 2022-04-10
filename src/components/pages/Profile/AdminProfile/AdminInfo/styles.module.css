@@ -1,0 +1,54 @@
+/*.profileUser {*/
+/*    background: #ffffff;*/
+/*    background: -webkit-linear-gradient(bottom, #ffffff, #049add);*/
+/*    background: -moz-linear-gradient(bottom, #ffffff, #049add);*/
+/*    background: linear-gradient(to top, #ffffff, #049add);*/
+/*    background-size: 100%;*/
+/*    height: 1200px;*/
+/*  }*/
+/*  .profileBlock {*/
+/*    width: 1200px;*/
+/*    margin: auto;*/
+/*    padding-top: 150px;*/
+/*  }*/
+/*adminInfo*/
+
+.profileMain {
+  width: 30%;
+  padding: 13px;
+  border-radius: 10px;
+}
+
+.profileUser img {
+  width: 100%;
+}
+
+.avatarImg {
+  width: 300px;
+}
+.avatarImg img {
+  border-radius: 150px;
+}
+.choose {
+  width: 300px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+input[type='file'] {
+  color: transparent;
+  width: 150px;
+}
+.profileId {
+  width: 300px;
+  padding: 10px;
+  font-size: 20px;
+  margin-top: 10px;
+  color: white;
+}
+.profileName {
+  border-bottom: 2px solid white;
+}
+.profileLastName {
+  border-bottom: 2px solid white;
+}

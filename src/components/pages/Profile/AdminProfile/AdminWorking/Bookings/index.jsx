@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchBookings } from '../../../../redux/features/admin';
+import { fetchBookings } from '../../../../../../redux/features/admin';
 import styles from './styles.module.css';
 
 const Bookings = () => {
@@ -11,11 +11,10 @@ const Bookings = () => {
   useEffect(() => {
     dispatch(fetchBookings());
   }, [dispatch]);
-  
 
-  return <div className={styles.bookingsPage}>BOOKING</div>;
-
+  return (
+    <div className={styles.bookingsPage}>Здесь будут забронированные туры</div>
+  );
 };
-
 
 export default Bookings;
