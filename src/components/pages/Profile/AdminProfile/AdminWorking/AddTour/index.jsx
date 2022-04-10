@@ -2,22 +2,22 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import styles from './styles.module.css';
-import { addTour } from '../../../../redux/features/admin';
+import { addTour } from '../../../../../../redux/features/admin';
 
 const AddTour = () => {
   const dispatch = useDispatch();
 
-  const [styleFetchTour, setStyleFetchTour] = useState(styles.toursContainer);
-  const [styleAddTour, setStyleAddTour] = useState(styles.tour);
+  // const [styleFetchTour, setStyleFetchTour] = useState(styles.toursContainer);
+  // const [styleAddTour, setStyleAddTour] = useState(styles.tour);
 
-  function handleClickOpenAddTour() {
-    if (styleAddTour === styles.tour) {
-      setStyleAddTour(styles.tourOpacity);
-    } else {
-      setStyleAddTour(styles.tour);
-    }
-    setStyleFetchTour(styles.toursContainer);
-  }
+  // function handleClickOpenAddTour() {
+  //   if (styleAddTour === styles.tour) {
+  //     setStyleAddTour(styles.tourOpacity);
+  //   } else {
+  //     setStyleAddTour(styles.tour);
+  //   }
+  //   setStyleFetchTour(styles.toursContainer);
+  // }
 
   const [tour, setTour] = useState('');
   const [place, setPlace] = useState('');
@@ -32,41 +32,33 @@ const AddTour = () => {
   function handleChangeTour(e) {
     setTour(e.target.value);
   }
-
   function handleChangePlace(e) {
     setPlace(e.target.value);
   }
-
   function handleChangeTitle(e) {
     setTitle(e.target.value);
   }
-
   function handleChangeDesc(e) {
     setDesc(e.target.value);
   }
-
   function handleChangePrice(e) {
     if (e.target.value >= 0) {
       setPrice(e.target.value);
     }
   }
-
   function handleChangePriceForChild(e) {
     if (e.target.value >= 0) {
       setPriceForChild(e.target.value);
     }
   }
-
   function handleChangeDuration(e) {
     if (e.target.value >= 0) {
       setDuration(e.target.value);
     }
   }
-
   function handleChangeBgImage(e) {
     setBgImage(e.target.files[0]);
   }
-
   function handleChangeTickets(e) {
     setTickets(e.target.value);
   }
@@ -92,9 +84,9 @@ const AddTour = () => {
       setPriceForChild(''),
       setDuration(''),
       setBgImage(''),
-      setStyleAddTour(styles.tour),
-      setStyleFetchTour(styles.toursContainerOpacity),
       setTickets(''),
+      // setStyleAddTour(styles.tour),
+      // setStyleFetchTour(styles.toursContainerOpacity),
     );
   }
 
@@ -103,7 +95,7 @@ const AddTour = () => {
       <div>
         <h4>Добавление тура</h4>
       </div>
-      <div className={styleAddTour}>
+      <div className={styles.AddTour}>
         <input
           value={tour}
           onChange={handleChangeTour}
@@ -136,7 +128,7 @@ const AddTour = () => {
           value={desc}
           onChange={handleChangeDesc}
           placeholder="Enter desc.."
-        ></textarea>
+        />
         <input
           value={price}
           onChange={handleChangePrice}

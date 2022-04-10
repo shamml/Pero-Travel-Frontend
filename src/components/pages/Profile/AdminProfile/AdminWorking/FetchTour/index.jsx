@@ -6,12 +6,12 @@ import {
   editTour,
   editTourGallery,
   fetchTours,
-} from '../../../../redux/features/admin';
+} from '../../../../../../redux/features/admin';
 import styles from './styles.module.css';
 
 const FetchTour = () => {
   const dispatch = useDispatch();
-  
+
   useEffect(() => {
     window.scrollTo({ top: 0 });
     dispatch(fetchTours());
@@ -264,7 +264,7 @@ const FetchTour = () => {
             value={descEdit}
             onChange={handleChangeDescEdit}
             placeholder="Enter desc.."
-          ></textarea>
+          />
           <input
             value={priceEdit}
             onChange={handleChangePriceEdit}
