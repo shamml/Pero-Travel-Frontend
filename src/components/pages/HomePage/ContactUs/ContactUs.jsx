@@ -1,10 +1,20 @@
 import React, { useState } from 'react';
 import styles from './styles.module.css';
+import { useDispatch } from 'react-redux';
+import { addClaims } from '../../../../redux/features/claims';
 
 const ContactUs = () => {
-  const [sendMessage, setSendMessage] = useState(false);
+  const dispatch = useDispatch();
 
-  const handleClickApplication = () => {
+  const [sendMessage, setSendMessage] = useState(false);
+  const [email, setEmail] = useState('');
+
+  const handleChangeEmail = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleClickAddClaims = () => {
+    dispatch(addClaims(email));
     setSendMessage(!sendMessage);
   };
   return (
@@ -16,18 +26,24 @@ const ContactUs = () => {
             Оставь заявку и мы ответим
           </div>
           <div className={styles.inputsContactUs}>
-            <div className={styles.inputTypeContactUs}>
+            {/* <div className={styles.inputTypeContactUs}>
               <input type="text" name="name" placeholder="Имя" />
             </div>
             <div className={styles.inputTypeContactUs}>
               <input type="text" name="number" placeholder="Телефон" />
-            </div>
+            </div> */}
             <div className={styles.inputTypeContactUs}>
-              <input type="text" name="email" placeholder="Почта" />
+              <input
+                value={email}
+                onChange={handleChangeEmail}
+                type="text"
+                name="email"
+                placeholder="Почта"
+              />
             </div>
           </div>
           <div className={styles.buttonApplicationContactUs}>
-            <button onClick={handleClickApplication} disabled={sendMessage}>
+            <button onClick={handleClickAddClaims} disabled={sendMessage}>
               {sendMessage ? 'Заявка оформлена' : 'Оформить заявку'}
             </button>
           </div>

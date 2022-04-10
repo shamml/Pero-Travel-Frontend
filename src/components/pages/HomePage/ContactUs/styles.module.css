@@ -45,7 +45,7 @@
   border: none;
   border-bottom: 1px solid white;
   outline: none;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .buttonApplicationContactUs button {
