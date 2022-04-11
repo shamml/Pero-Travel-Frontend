@@ -55,6 +55,7 @@ export const fetchReview = () => {
     }
   };
 };
+
 export const fetchByIdReview = (id) => {
   return async (dispatch) => {
     dispatch({ type: 'review/fetchById/pending' });
@@ -67,3 +68,29 @@ export const fetchByIdReview = (id) => {
     }
   };
 };
+
+export function addReviewBooking(idTour, text) {
+  console.log(typeof text);
+  return function (dispatch, getState) {
+    const state = getState();
+    dispatch({ type: 'review/addreview/pending' });
+    fetch(`http://localhost:3030/reviews/${idTour}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${state.application.token}`,
+      },
+      body: JSON.stringify({ text }),
+    })
+      .then((responce) => responce.json())
+      .then((json) => {
+        dispatch({ type: 'review/addreview/fulfilled', payload: json });
+      })
+      .catch((error) => {
+        dispatch({
+          type: 'review/addreview/rejected',
+          payload: error.toString(),
+        });
+      });
+  };
+}
