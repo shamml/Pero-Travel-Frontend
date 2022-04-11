@@ -8,14 +8,27 @@ const ContactUs = () => {
 
   const [sendMessage, setSendMessage] = useState(false);
   const [email, setEmail] = useState('');
+  const [text, setText] = useState('');
+  const [phone, setPhone] = useState('');
 
   const handleChangeEmail = (e) => {
     setEmail(e.target.value);
   };
 
+  const handleChangeText = (e) => {
+    setText(e.target.value);
+  };
+
+  const handleChangePhone = (e) => {
+    setPhone(e.target.value);
+  };
+
   const handleClickAddClaims = () => {
-    dispatch(addClaims(email));
+    dispatch(addClaims(email, text, phone));
     setSendMessage(!sendMessage);
+    setEmail('');
+    setText('');
+    setPhone('');
   };
   return (
     <div className={styles.contactUsContent}>
@@ -26,19 +39,31 @@ const ContactUs = () => {
             Оставь заявку и мы ответим
           </div>
           <div className={styles.inputsContactUs}>
-            {/* <div className={styles.inputTypeContactUs}>
-              <input type="text" name="name" placeholder="Имя" />
+            <div className={styles.inputTypeContactUs}>
+              <input
+                value={text}
+                onChange={handleChangeText}
+                type="text"
+                name="name"
+                placeholder="Оставьте ваш вопрос.."
+              />
             </div>
             <div className={styles.inputTypeContactUs}>
-              <input type="text" name="number" placeholder="Телефон" />
-            </div> */}
+              <input
+                value={phone}
+                onChange={handleChangePhone}
+                type="text"
+                name="number"
+                placeholder="Оставьте ваш номер.."
+              />
+            </div>
             <div className={styles.inputTypeContactUs}>
               <input
                 value={email}
                 onChange={handleChangeEmail}
                 type="text"
                 name="email"
-                placeholder="Почта"
+                placeholder="Оставьте вашу почту.."
               />
             </div>
           </div>

@@ -29,7 +29,7 @@ export const claims = (state = initialState, action) => {
   }
 };
 
-export const addClaims = (email) => {
+export const addClaims = (email, text, phone) => {
   return async (dispatch, getState) => {
     const state = getState();
     dispatch({ type: 'add/claims/pending' });
@@ -40,7 +40,7 @@ export const addClaims = (email) => {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${state.application.token}`,
         },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, text, phone }),
       });
       const json = await res.json();
       console.log(json);

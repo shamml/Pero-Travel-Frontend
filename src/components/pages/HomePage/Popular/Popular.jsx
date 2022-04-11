@@ -23,7 +23,7 @@ const Popular = () => {
           return (
             <div className={styles.carouselItem} key={item._id}>
               <div className={styles.cardBg}>
-                <img src={`http://localhost:3030/${item.bgImage}`} alt="pic" />
+                <img src={`http://localhost:3030/${item.vcImage}`} alt="pic" />
               </div>
               <div className={styles.cardInfo}>
                 <div className={styles.typeOf}>{item.typeTour}</div>
