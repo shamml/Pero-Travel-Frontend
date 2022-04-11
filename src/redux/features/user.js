@@ -1,11 +1,30 @@
 const initialState = {
   data: [],
+  users: [],
   loading: false,
   error: null,
 };
 
 export default function user(state = initialState, action) {
   switch (action.type) {
+    case 'user/fetchAllUser/pending':
+      return {
+        ...state,
+        loading: true,
+        error: null,
+      };
+    case 'user/fetchAllUser/fulfilled':
+      return {
+        ...state,
+        loading: false,
+        users: action.payload,
+      };
+    case 'user/fetchAllUser/rejected':
+      return {
+        ...state,
+        loading: false,
+        error: action.error,
+      };
     case 'user/fetchuser/pending':
       return {
         ...state,
@@ -63,6 +82,20 @@ export default function user(state = initialState, action) {
     default:
       return state;
   }
+}
+
+export function fetchAllUser() {
+  return function (dispatch) {
+    dispatch({ type: 'user/fetchAllUser/pending' });
+    fetch('http://localhost:3030/users')
+      .then((responce) => responce.json())
+      .then((json) => {
+        dispatch({ type: 'user/fetchAllUser/fulfilled', payload: json });
+      })
+      .catch((error) => {
+        dispatch({ type: 'user/fetchAllUser/rejected', error: error.toString() });
+      });
+  };
 }
 
 export function fetchIdUser() {

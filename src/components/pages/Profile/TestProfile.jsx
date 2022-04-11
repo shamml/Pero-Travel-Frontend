@@ -18,8 +18,10 @@ const TestProfile = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    window.scrollTo({ top: 0 });
     dispatch(fetchIdUser());
   }, [dispatch]);
+
 
   useEffect(() => {
     dispatch(fetchTours());
@@ -35,7 +37,15 @@ const TestProfile = () => {
 
   const role = useSelector((state) => state.application.role);
 
+
   const dataUser = useSelector((state) => state.user.data);
+  const id = useSelector((state) => state.application.id);
+  const tours = useSelector((state) => state.tours.tours[0]);
+
+  const currentUser = dataUser.length
+    ? dataUser.find((item) => item._id === id)
+    : {};
+
 
   if (role === 'admin') {
     return <Admin />;

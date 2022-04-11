@@ -12,6 +12,10 @@ import Footer from './Footer';
 import './styles.css';
 import { useSelector } from 'react-redux';
 import './transition.css';
+import AddTour from './pages/AdminPage/AddTour/AddTour';
+import FetchTour from './pages/AdminPage/FetchTour/FetchTour';
+import Bookings from './pages/AdminPage/Bookings/Bookings';
+import AdminSide from './pages/AdminPage/AdminDesk/AdminSide';
 
 const App = () => {
   const items = [
@@ -63,6 +67,10 @@ const App = () => {
         <Route path="/excursions" element={<Excursions items={items} />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/adminDesk" element={<AdminSide />} />
+        <Route path="/profile/addTour" element={<AddTour />} />
+        <Route path="/profile/fetchTour" element={<FetchTour />} />
+        <Route path="/profile/booking" element={<Bookings />} />
       </Routes>
       <Footer />
     </div>
