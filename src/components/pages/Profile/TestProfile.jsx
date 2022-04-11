@@ -1,32 +1,41 @@
 import React, { useEffect, useState } from 'react';
-import styles from './styles.module.css';
 import exitLogo from '../../../assets/another/exit.png';
 import ex from '../../../assets/ex.png';
 import { useDispatch, useSelector } from 'react-redux';
 import Admin from '../AdminPage';
 import { exit } from '../../../redux/features/application';
 import { Link } from 'react-router-dom';
-import { editAvatar, fetchIdUser } from '../../../redux/features/user';
-import { deleteTour } from '../../../redux/features/tours';
+import {
+  deleteAvatar,
+  editAvatar,
+  fetchIdUser,
+} from '../../../redux/features/user';
+import { deleteTour, fetchTours } from '../../../redux/features/tours';
+import { fetchBookingUser } from '../../../redux/features/booking';
+import { Button } from '@mui/material';
 
 const TestProfile = () => {
   const dispatch = useDispatch();
-
-  const [image, setImage] = useState('');
 
   useEffect(() => {
     dispatch(fetchIdUser());
   }, [dispatch]);
 
-  const dataUser = useSelector(state => state.user.data)
-  const id = useSelector((state) => state.application.id);
+  useEffect(() => {
+    dispatch(fetchTours());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(fetchBookingUser());
+  }, [dispatch]);
+
+  const [modalEditImage, setModalEditImage] = useState(false);
+  const [image, setImage] = useState('');
+  const [drag, setDrag] = useState(false);
+
   const role = useSelector((state) => state.application.role);
-  const tours = useSelector((state) => state.tours.tours[0]);
 
-
-  const currentUser = dataUser.length ? dataUser.find((item) => item._id === id) : {};
-
-
+  const dataUser = useSelector((state) => state.user.data);
 
   if (role === 'admin') {
     return <Admin />;
@@ -36,111 +45,162 @@ const TestProfile = () => {
     dispatch(exit());
   };
 
-  function handleClickEditAvatar() {
-    dispatch(editAvatar(image));
+  function handleModalEditAvatar() {
+    setModalEditImage(!modalEditImage);
   }
 
-  const handleClickDeleteTour = () => {
-    dispatch(deleteTour(id));
-  };
+  function handleClickEditAvatar() {
+    dispatch(editAvatar(image));
+    setModalEditImage(false);
+  }
+
+  function handleClickDeleteAvatar() {
+    dispatch(deleteAvatar());
+    setModalEditImage(false);
+  }
+
+  function dragStartHandler(e) {
+    e.preventDefault();
+    setDrag(true);
+  }
+
+  function dragLeaveHandler(e) {
+    e.preventDefault();
+    setDrag(false);
+  }
+
+  function onDropHandler(e) {
+    e.preventDefault();
+    const file = e.dataTransfer.files[0];
+    setImage(file);
+  }
 
   return (
-    <>
-      <div className={styles.profileUser}>
-        <div className={styles.profileBlock}>
-          <div className={styles.profileDesk}>
-            <div className={styles.profileMain}>
-              <div className={styles.avatarImg}>
-                <img
-                  src={`http://localhost:3030/${currentUser.image}`}
-                  alt=""
-                />{' '}
-              </div>
-              <div className={styles.choose}>
-                <div>
-                  <input
-                    onChange={(e) => setImage(e.target.files[0])}
-                    type="file"
-                    title=""
-                  />
-                </div>
-                <div>
-                  <button disabled={!image} onClick={handleClickEditAvatar}>
-                    add
-                  </button>
-                </div>
-              </div>
-              <div className={styles.profileId}>
-                <div className={styles.profileName}>
-                  Имя: {currentUser.firstName}
-                </div>
-                <div className={styles.profileLastName}>
-                  Фамилия: {currentUser.lastName}
-                </div>
-                <div className={styles.profileAge}>
-                  Возраст: {currentUser.age}{' '}
-                </div>
-              </div>
-            </div>
-            <div className={styles.profileOrder}>
-              <div className={styles.profileOrderBlock}>
-                <div className={styles.profileDatas}>
-                  <div className={styles.orderImg}>
-                    <img
-                      src={`http://localhost:3030/${tours.bgImage}`}
-                      alt=""
-                    />
-                  </div>
-                  <div className={styles.orderDesk}>
-                    <div className={styles.orderWrap}>
-                      <div className={styles.typeTour}>
-                        <h4>Категоря тура</h4>
-                        {tours.typeTour}
-                      </div>
-                      <div className={styles.tourTitle}>
-                        <h4>Название тура</h4>
-                        {tours.title}
-                      </div>
-                      <div className={styles.peopleAndPrice}>
-                        <div className={styles.tourCount}>
-                          <h4>Всего людей</h4>5
-                        </div>
-
-                        <div className={styles.tourCount}>
-                          <h4>Итого</h4>
-                          {tours.price + tours.priceForChild} P.
-                        </div>
-                      </div>
-                      <div className={styles.carouselButton}>
-                        <button style={{ cursor: 'pointer' }}>
-                          Оставить отзыв
-                        </button>
-                      </div>
-                      <div
-                        onClick={handleClickDeleteTour}
-                        className={styles.deleteTour}
-                      >
-                        <img src={ex} alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div className="col-4">
+      <div>
+        <div
+          className="shadow-sm p-3 mb-5 bg-body rounded"
+          style={{
+            width: '330px',
+            height: '300px',
+            margin: 'auto',
+          }}
+        >
+          <img
+            src={`http://localhost:3030/${dataUser.image}`}
+            onClick={handleModalEditAvatar}
+            alt=""
+            style={{
+              width: '100%',
+              height: '100%',
+              borderRadius: '2px',
+              cursor: 'pointer',
+            }}
+          />
         </div>
+        <div className="mb-3">
+          {modalEditImage ? (
+            <>
+              {drag ? (
+                <div
+                  onDragStart={(e) => dragStartHandler(e)}
+                  onDragLeave={(e) => dragLeaveHandler(e)}
+                  onDragOver={(e) => dragStartHandler(e)}
+                  onDrop={(e) => onDropHandler(e)}
+                  style={{
+                    margin: '0 45px 0',
+                    width: '320px',
+                    height: '250px',
+                    border: '5px dashed black',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                >
+                  Отпустите файл, чтобы загрузить
+                </div>
+              ) : (
+                <div
+                  style={{
+                    margin: '0 45px 0',
+                    width: '320px',
+                    height: '250px',
+                    border: '5px dashed black',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                  onDragStart={(e) => dragStartHandler(e)}
+                  onDragLeave={(e) => dragLeaveHandler(e)}
+                  onDragOver={(e) => dragStartHandler(e)}
+                >
+                  Перетащите файл, чтобы загрузить
+                </div>
+              )}
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'space-around',
+                  margin: '5px 0 0',
+                }}
+              >
+                <Button
+                  disabled={!image}
+                  onClick={handleClickEditAvatar}
+                  type="primary"
+                  style={{ color: 'black' }}
+                >
+                  Загрузить
+                </Button>
+                <Button
+                  onClick={handleClickDeleteAvatar}
+                  style={{ color: 'black' }}
+                  type="primary"
+                >
+                  Удалить
+                </Button>
+              </div>
+            </>
+          ) : null}
+
+          {/* <label
+            for="formFileDisabled"
+            className="form-label"
+            style={{ marginLeft: '60px' }}
+          >
+            Изменить аватарку
+          </label> */}
+          {/* <input
+            onChange={(e) => setImage(e.target.files[0])}
+            className="form-control"
+            type="file"
+            id="formFileDisabled"
+          /> */}
+        </div>
+        <p className="shadow-sm p-3 mb-5 bg-body rounded">
+          Имя: {dataUser.firstName}
+        </p>
+        <p className="shadow-sm p-3 mb-5 bg-body rounded">
+          Фамилия: {dataUser.lastName}
+        </p>
+        <p className="shadow-sm p-3 mb-5 bg-body rounded">
+          Возраст: {dataUser.age}
+        </p>
       </div>
-      );
       <Link to="/">
         <div
-          style={{ cursor: 'pointer' }}
+          style={{
+            cursor: 'pointer',
+            width: '35px',
+            height: '35px',
+            margin: '0 350px 0',
+          }}
           onClick={exitUser}
-          className={styles.exit}
         >
-          <img src={exitLogo} alt="" />
+          <img src={exitLogo} alt="" style={{ width: '100%' }} />
         </div>
       </Link>
-    </>
+    </div>
   );
 };
 

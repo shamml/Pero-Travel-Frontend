@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css';
 import rocks from '../../../assets/Tours/rocks.png';
 import reserve from '../../../assets/Tours/reserve.png';
@@ -13,6 +13,7 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Typography from '@mui/material/Typography';
+import { fetchTours } from '../../../redux/features/tours';
 
 const BookingTour = () => {
   const dispatch = useDispatch();
@@ -38,8 +39,7 @@ const BookingTour = () => {
   const { id } = useParams();
 
   const [child, setChild] = useState('');
-  const [day, setDay] = useState('');
-  const [people, setPeople] = useState('');
+  const [adult, setAdult] = useState('');
 
   const [dataValue, setDataValue] = useState('');
   const [openCalendar, setOpenCalendar] = useState(false);
@@ -62,11 +62,52 @@ const BookingTour = () => {
     setOpenCalendar(false);
   };
 
-  //ДОРАБОТАТЬ
+  // { ========== ************ Бронирование ************ ========== } //
+
+  useEffect(() => {
+    dispatch(fetchTours());
+  }, [dispatch]);
+
+  const toursBooking = useSelector((state) => state.tours.tours);
+  const desiredTour = toursBooking.find((tour) => tour._id === id);
+
+  function handleChangeChild(e) {
+    setChild(e.target.value);
+  }
+
+  function handleChangeAdult(e) {
+    setAdult(e.target.value);
+  }
+
   const handleBookingAdd = () => {
-    dispatch(addBooking(id, day, people + child));
+    if (!id || !dataValue || !adult || !child) {
+      return alert('Неверно введены данные');
+    }
+
+    if (desiredTour.tickets >= Number(adult) + Number(child)) {
+      const reCount =
+        Number(adult) * desiredTour.price +
+        Number(child) * desiredTour.priceForChild;
+      const total = reCount.toString();
+      const recalculation = Number(adult) + Number(child);
+      const people = String(recalculation);
+      const day = dataValue.getDate().toString();
+      const timeInformation = new Date().toString();
+      dispatch(addBooking(id, day, timeInformation, people, total));
+      alert('Забронировано');
+      setDataValue('');
+      setAdult('');
+      setChild('');
+      return;
+    }
+    return alert(`Ограниченное число билетов: ${desiredTour.tickets}`);
   };
 
+  // const data = new Date()
+  // console.log(data.getDate())
+  // console.log(dataValue.getDate());
+  // console.log(`Adult: ${adult}`);
+  // console.log(`Child: ${child}`);
 
   return (
     <div className={styles.mainReserve}>
@@ -101,12 +142,12 @@ const BookingTour = () => {
                 <img onClick={handleOpenSelectAdults} src={two} alt="#" />
                 {openSelectAdults ? (
                   <div className={styles.selectComponent}>
-                    <select>
-                      <option>5</option>
-                      <option>4</option>
-                      <option>3</option>
-                      <option>2</option>
-                      <option>1</option>
+                    <select value={adult} onChange={handleChangeAdult}>
+                      <option value={5}>5</option>
+                      <option value={4}>4</option>
+                      <option value={3}>3</option>
+                      <option value={2}>2</option>
+                      <option value={1}>1</option>
                     </select>
                   </div>
                 ) : (
@@ -120,12 +161,12 @@ const BookingTour = () => {
                 <img onClick={handleOpenSelectKids} src={two} alt="#" />
                 {openSelectKids ? (
                   <div className={styles.selectComponent}>
-                    <select>
-                      <option>5</option>
-                      <option>4</option>
-                      <option>3</option>
-                      <option>2</option>
-                      <option>1</option>
+                    <select value={child} onChange={handleChangeChild}>
+                      <option value={5}>5</option>
+                      <option value={4}>4</option>
+                      <option value={3}>3</option>
+                      <option value={2}>2</option>
+                      <option value={1}>1</option>
                     </select>
                   </div>
                 ) : (

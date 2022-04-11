@@ -16,7 +16,7 @@ export default function user(state = initialState, action) {
       return {
         ...state,
         loading: false,
-        data: [action.payload],
+        data: action.payload,
       };
     case 'user/fetchuser/rejected':
       return {
@@ -34,16 +34,27 @@ export default function user(state = initialState, action) {
       return {
         ...state,
         loading: false,
-        data: state.data.map((item) => {
-          console.log(item);
-          console.log(action.payload);
-          if (item._id === action.payload._id) {
-            item.image = action.payload.image;
-          }
-          return item;
-        }),
+        data: { ...state.data, image: action.payload.image },
       };
     case 'user/editavatar/rejected':
+      return {
+        ...state,
+        loading: false,
+        error: action.error,
+      };
+    case 'user/deleteavatar/pending':
+      return {
+        ...state,
+        loading: true,
+        error: null,
+      };
+    case 'user/deleteavatar/fulfilled':
+      return {
+        ...state,
+        loading: false,
+        data: { ...state.data, image: action.payload.image },
+      };
+    case 'user/deleteavatar/rejected':
       return {
         ...state,
         loading: false,
@@ -64,8 +75,8 @@ export function fetchIdUser() {
       },
     })
       .then((responce) => responce.json())
-      .then((info) => {
-        dispatch({ type: 'user/fetchuser/fulfilled', payload: info });
+      .then((user) => {
+        dispatch({ type: 'user/fetchuser/fulfilled', payload: user });
       })
       .catch((error) => {
         dispatch({ type: 'user/fetchuser/rejected', error: error.toString() });
@@ -77,7 +88,6 @@ export function editAvatar(image) {
   return function (dispatch, getState) {
     const state = getState();
     const data = new FormData();
-
     data.append('image', image);
     dispatch({ type: 'user/editavatar/pending' });
     fetch('http://localhost:3030/users/image', {
@@ -93,6 +103,29 @@ export function editAvatar(image) {
       })
       .catch((error) => {
         dispatch({ type: 'user/editavatar/rejected', error: error.toString() });
+      });
+  };
+}
+
+export function deleteAvatar() {
+  return function (dispatch, getState) {
+    const state = getState();
+    dispatch({ type: 'user/deleteavatar/pending' });
+    fetch('http://localhost:3030/users/profile/photo', {
+      method: 'PATCH',
+      headers: {
+        Authorization: `Bearer ${state.application.token}`,
+      },
+    })
+      .then((responce) => responce.json())
+      .then((user) => {
+        dispatch({ type: 'user/deleteavatar/fulfilled', payload: user });
+      })
+      .catch((error) => {
+        dispatch({
+          type: 'user/deleteavatar/rejected',
+          error: error.toString(),
+        });
       });
   };
 }
