@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import AdminProfile from './AdminProfile';
+import AdminProfile from '../Profile/AdminProfile';
 import { fetchIdUser } from '../../../redux/features/user';
 import UserProfile from './UserProfile';
 

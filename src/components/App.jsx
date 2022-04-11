@@ -9,7 +9,7 @@ import SigninPage from './pages/SigninPage';
 import SignupPage from './pages/SignupPage';
 import Excursions from './pages/Excursions';
 import Tours from './pages/Tours';
-import Profile from './pages/Profile';
+import Profile from './pages/AdminPage';
 import AddTour from './pages/Profile/AdminProfile/AdminWorking/AddTour';
 import FetchTour from './pages/Profile/AdminProfile/AdminWorking/FetchTour';
 import Bookings from './pages/Profile/AdminProfile/AdminWorking/Bookings';
