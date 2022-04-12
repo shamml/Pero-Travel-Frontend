@@ -79,6 +79,29 @@ export default function user(state = initialState, action) {
         loading: false,
         error: action.error,
       };
+    case 'user/editprofile/pending':
+      return {
+        ...state,
+        loading: true,
+        error: null,
+      };
+    case 'user/editprofile/fulfilled':
+      return {
+        ...state,
+        loading: false,
+        data: {
+          ...state.data,
+          firstName: action.payload.firstName,
+          lastName: action.payload.lastName,
+          age: action.payload.age,
+        },
+      };
+    case 'user/editprofile/rejected':
+      return {
+        ...state,
+        loading: false,
+        error: action.error,
+      };
     default:
       return state;
   }
@@ -93,7 +116,10 @@ export function fetchAllUser() {
         dispatch({ type: 'user/fetchAllUser/fulfilled', payload: json });
       })
       .catch((error) => {
-        dispatch({ type: 'user/fetchAllUser/rejected', error: error.toString() });
+        dispatch({
+          type: 'user/fetchAllUser/rejected',
+          error: error.toString(),
+        });
       });
   };
 }
@@ -157,6 +183,35 @@ export function deleteAvatar() {
       .catch((error) => {
         dispatch({
           type: 'user/deleteavatar/rejected',
+          error: error.toString(),
+        });
+      });
+  };
+}
+
+export function editProfile(firstName, lastName, age) {
+  return function (dispatch, getState) {
+    const state = getState();
+    dispatch({ type: 'user/editprofile/pending' });
+    fetch('http://localhost:3030/users/profile/edit', {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${state.application.token}`,
+      },
+      body: JSON.stringify({
+        firstName,
+        lastName,
+        age,
+      }),
+    })
+      .then((responce) => responce.json())
+      .then((user) => {
+        dispatch({ type: 'user/editprofile/fulfilled', payload: user });
+      })
+      .catch((error) => {
+        dispatch({
+          type: 'user/editprofile/rejected',
           error: error.toString(),
         });
       });
