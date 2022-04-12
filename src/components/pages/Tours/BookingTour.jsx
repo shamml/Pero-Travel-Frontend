@@ -81,33 +81,36 @@ const BookingTour = () => {
 
   const handleBookingAdd = () => {
     if (!id || !dataValue || !adult || !child) {
-      return alert('Неверно введены данные');
+      return alert('Пожалуйста, заполните все поля');
     }
-
-    if (desiredTour.tickets >= Number(adult) + Number(child)) {
-      const reCount =
-        Number(adult) * desiredTour.price +
-        Number(child) * desiredTour.priceForChild;
-      const total = reCount.toString();
-      const recalculation = Number(adult) + Number(child);
-      const people = String(recalculation);
-      const day = dataValue.getDate().toString();
-      const timeInformation = new Date().toString();
-      dispatch(addBooking(id, day, timeInformation, people, total));
-      alert('Забронировано');
-      setDataValue('');
-      setAdult('');
-      setChild('');
-      return;
+    const error = desiredTour.days.find(
+      (day) => day === dataValue.getDate().toString(),
+    );
+    if (!error) {
+      if (desiredTour.tickets >= Number(adult) + Number(child)) {
+        const reCount =
+          Number(adult) * desiredTour.price +
+          Number(child) * desiredTour.priceForChild;
+        const total = reCount.toString();
+        const recalculation = Number(adult) + Number(child);
+        const people = String(recalculation);
+        const day = dataValue.getDate().toString();
+        const timeInformation = new Date().toString();
+        dispatch(addBooking(id, day, timeInformation, people, total));
+        alert(`Данный тур '${desiredTour.title}', успешно забронирован!`);
+        setDataValue('');
+        setAdult('');
+        setChild('');
+        return;
+      }
+      return alert(`Ограниченное число билетов.
+Билетов осталось: ${desiredTour.tickets}`);
     }
-    return alert(`Ограниченное число билетов: ${desiredTour.tickets}`);
+    return alert(
+      `Дату которую вы ввели уже забронировали, пожалуйста выберите другую дату. 
+Зарезервированные дни: ${desiredTour.days}.`,
+    );
   };
-
-  // const data = new Date()
-  // console.log(data.getDate())
-  // console.log(dataValue.getDate());
-  // console.log(`Adult: ${adult}`);
-  // console.log(`Child: ${child}`);
 
   return (
     <div className={styles.mainReserve}>

@@ -157,6 +157,7 @@ function CardBooking() {
                           src={`http://localhost:3030/${tour.bgImage}`}
                           className="card-img-bottom"
                           alt="..."
+                          style={{ height: '350px' }}
                         ></img>
                       </div>
                     );

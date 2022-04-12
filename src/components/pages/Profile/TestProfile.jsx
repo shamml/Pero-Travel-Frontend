@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import {
   deleteAvatar,
   editAvatar,
+  editProfile,
   fetchIdUser,
 } from '../../../redux/features/user';
 import { deleteTour, fetchTours } from '../../../redux/features/tours';
@@ -22,7 +23,6 @@ const TestProfile = () => {
     dispatch(fetchIdUser());
   }, [dispatch]);
 
-
   useEffect(() => {
     dispatch(fetchTours());
   }, [dispatch]);
@@ -32,20 +32,20 @@ const TestProfile = () => {
   }, [dispatch]);
 
   const [modalEditImage, setModalEditImage] = useState(false);
+  const [modalEditProfile, setModalEditProfile] = useState(false);
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [age, setAge] = useState('');
   const [image, setImage] = useState('');
   const [drag, setDrag] = useState(false);
 
   const role = useSelector((state) => state.application.role);
-
-
   const dataUser = useSelector((state) => state.user.data);
   const id = useSelector((state) => state.application.id);
-  const tours = useSelector((state) => state.tours.tours[0]);
 
   const currentUser = dataUser.length
     ? dataUser.find((item) => item._id === id)
     : {};
-
 
   if (role === 'admin') {
     return <Admin />;
@@ -83,6 +83,22 @@ const TestProfile = () => {
     e.preventDefault();
     const file = e.dataTransfer.files[0];
     setImage(file);
+  }
+
+  function handleClickEditProfile() {
+    setModalEditProfile(!modalEditProfile);
+  }
+
+  function handleClickCancelEditProfile() {
+    setModalEditProfile(!modalEditProfile);
+  }
+
+  function handleClickEditProfileAdd() {
+    dispatch(editProfile(firstName, lastName, age));
+    setFirstName('');
+    setLastName('');
+    setAge('');
+    setModalEditProfile(!modalEditProfile);
   }
 
   return (
@@ -186,24 +202,97 @@ const TestProfile = () => {
             type="file"
             id="formFileDisabled"
           /> */}
+          {modalEditProfile ? (
+            <form>
+              <div className="form-row">
+                <div className="col">
+                  <input
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    style={{ border: 'none' }}
+                    type="text"
+                    className="form-control shadow-sm p-3 mb-5 bg-body rounded"
+                    placeholder="First name"
+                  />
+                </div>
+                <div className="col">
+                  <input
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    style={{ border: 'none' }}
+                    type="text"
+                    className="form-control shadow-sm p-3 mb-5 bg-body rounded"
+                    placeholder="Last name"
+                  />
+                </div>
+                <div className="col">
+                  <input
+                    value={age}
+                    onChange={(e) => setAge(e.target.value)}
+                    style={{ border: 'none' }}
+                    type="text"
+                    className="form-control shadow-sm p-3 mb-5 bg-body rounded"
+                    placeholder="Age"
+                  />
+                </div>
+                <div
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    margin: '1px 0 0',
+                  }}
+                >
+                  <Button
+                    onClick={handleClickEditProfileAdd}
+                    style={{ color: 'black' }}
+                  >
+                    Сохранить
+                  </Button>
+                  <Button
+                    onClick={handleClickCancelEditProfile}
+                    style={{ color: 'black' }}
+                  >
+                    Отменить
+                  </Button>
+                </div>
+              </div>
+            </form>
+          ) : (
+            <>
+              <p
+                onClick={handleClickEditProfile}
+                className="shadow-sm p-3 mb-5 bg-body rounded"
+                style={{ cursor: 'pointer' }}
+              >
+                Имя: {dataUser.firstName}
+              </p>
+              <p
+                onClick={handleClickEditProfile}
+                className="shadow-sm p-3 mb-5 bg-body rounded"
+                style={{ cursor: 'pointer' }}
+              >
+                Фамилия: {dataUser.lastName}
+              </p>
+              <p
+                onClick={handleClickEditProfile}
+                className="shadow-sm p-3 mb-5 bg-body rounded"
+                style={{ cursor: 'pointer' }}
+              >
+                Возраст: {dataUser.age}
+              </p>
+            </>
+          )}
         </div>
-        <p className="shadow-sm p-3 mb-5 bg-body rounded">
-          Имя: {dataUser.firstName}
-        </p>
-        <p className="shadow-sm p-3 mb-5 bg-body rounded">
-          Фамилия: {dataUser.lastName}
-        </p>
-        <p className="shadow-sm p-3 mb-5 bg-body rounded">
-          Возраст: {dataUser.age}
-        </p>
       </div>
+
       <Link to="/">
         <div
           style={{
             cursor: 'pointer',
             width: '35px',
-            height: '35px',
-            margin: '0 350px 0',
+            position: 'fixed',
+            bottom: '30px',
+            right: '50px'
           }}
           onClick={exitUser}
         >
