@@ -1,0 +1,59 @@
+.userProfilePage {
+  background: url('../../../assets/excursions/Rectangle1.jpg') no-repeat;
+  background-size: 100%;
+}
+
+.myProfile {
+  width: 1200px;
+  margin: auto;
+  font-size: 60px;
+  font-weight: 700;
+  color: white;
+  padding: 150px 0;
+}
+
+.userProfileContent {
+  width: 1200px;
+  margin: auto;
+  /* background-color: rgb(197, 178, 178); */
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+.userInfoBlock {
+  width: 30%;
+  /* background-color: rgb(214, 133, 133); */
+  padding: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.userAvatar {
+  /* background-color: rgb(131, 208, 203); */
+  text-align: center;
+}
+
+.userAvatar img {
+  width: 100%;
+}
+
+.unknownOne {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px 0 0;
+  /* background-color: rgb(125, 110, 110); */
+}
+
+.unknownTwo {
+  /* background-color: rgb(86, 77, 77); */
+}
+
+.bookingInfo {
+  width: 68%;
+}
+
+.nameInfo {
+  margin-top: 10px;
+  font-size: 30px;
+}

@@ -14,6 +14,7 @@ import {
 import { deleteTour, fetchTours } from '../../../redux/features/tours';
 import { fetchBookingUser } from '../../../redux/features/booking';
 import { Button } from '@mui/material';
+import styles from './styles.module.css';
 
 const UserInfo = () => {
   const dispatch = useDispatch();
@@ -102,29 +103,16 @@ const UserInfo = () => {
   }
 
   return (
-    <div className="col-4">
+    <div className={styles.userInfoBlock}>
       <div>
-        <div
-          className="shadow-sm p-3 mb-5 bg-body rounded"
-          style={{
-            width: '330px',
-            height: '300px',
-            margin: 'auto',
-          }}
-        >
+        <div className={styles.userAvatar}>
           <img
             src={`http://localhost:3030/${dataUser.image}`}
             onClick={handleModalEditAvatar}
-            alt=""
-            style={{
-              width: '100%',
-              height: '100%',
-              borderRadius: '2px',
-              cursor: 'pointer',
-            }}
+            alt="pic"
           />
         </div>
-        <div className="mb-3">
+        <div className={styles.unknownTwo}>
           {modalEditImage ? (
             <>
               {drag ? (
@@ -135,12 +123,13 @@ const UserInfo = () => {
                   onDrop={(e) => onDropHandler(e)}
                   style={{
                     margin: '0 45px 0',
-                    width: '320px',
-                    height: '250px',
-                    border: '5px dashed black',
+                    width: '250px',
+                    height: '100px',
+                    border: '2px dashed black',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
+                    textAlign: "center",
                   }}
                 >
                   Отпустите файл, чтобы загрузить
@@ -149,12 +138,13 @@ const UserInfo = () => {
                 <div
                   style={{
                     margin: '0 45px 0',
-                    width: '320px',
-                    height: '250px',
-                    border: '5px dashed black',
+                    width: '250px',
+                    height: '100px',
+                    border: '2px dashed black',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
+                    textAlign: "center",
                   }}
                   onDragStart={(e) => dragStartHandler(e)}
                   onDragLeave={(e) => dragLeaveHandler(e)}
@@ -164,11 +154,7 @@ const UserInfo = () => {
                 </div>
               )}
               <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-around',
-                  margin: '5px 0 0',
-                }}
+                className={styles.unknownOne}
               >
                 <Button
                   disabled={!image}
@@ -259,27 +245,8 @@ const UserInfo = () => {
             </form>
           ) : (
             <>
-              <p
-                onClick={handleClickEditProfile}
-                className="shadow-sm p-3 mb-5 bg-body rounded"
-                style={{ cursor: 'pointer' }}
-              >
-                Имя: {dataUser.firstName}
-              </p>
-              <p
-                onClick={handleClickEditProfile}
-                className="shadow-sm p-3 mb-5 bg-body rounded"
-                style={{ cursor: 'pointer' }}
-              >
-                Фамилия: {dataUser.lastName}
-              </p>
-              <p
-                onClick={handleClickEditProfile}
-                className="shadow-sm p-3 mb-5 bg-body rounded"
-                style={{ cursor: 'pointer' }}
-              >
-                Возраст: {dataUser.age}
-              </p>
+              <div className={styles.nameInfo} onClick={handleClickEditProfile}>{dataUser.firstName} {dataUser.lastName}</div>
+              <div style={{fontSize: "20px", color: "#0499DD"}}><b>{dataUser.age} лет</b></div>
             </>
           )}
         </div>
@@ -296,7 +263,7 @@ const UserInfo = () => {
           }}
           onClick={exitUser}
         >
-          <img src={exitLogo} alt="" style={{ width: '100%' }} />
+          <img src={exitLogo} alt="" style={{ width: '50px' }} />
         </div>
       </Link>
     </div>

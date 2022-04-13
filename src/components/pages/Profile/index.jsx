@@ -1,12 +1,18 @@
 import React from 'react';
 import UserInfo from './UserInfo';
 import BookingInfo from './BookingInfo';
+import styles from './styles.module.css';
 
 const Profile = () => {
   return (
-    <div className="row" style={{ width: '1300px', margin: '150px auto' }}>
-      <UserInfo />
-      <BookingInfo />
+    <div className={styles.userProfilePage}>
+      <div className={styles.myProfile}>
+        ЛИЧНЫЙ КАБИНЕТ
+      </div>
+      <div className={styles.userProfileContent}>
+        <UserInfo />
+        <BookingInfo />
+      </div>
     </div>
   );
 };
