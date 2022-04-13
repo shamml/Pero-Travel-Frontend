@@ -15,7 +15,7 @@ import { deleteTour, fetchTours } from '../../../redux/features/tours';
 import { fetchBookingUser } from '../../../redux/features/booking';
 import { Button } from '@mui/material';
 
-const TestProfile = () => {
+const UserInfo = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -292,7 +292,7 @@ const TestProfile = () => {
             width: '35px',
             position: 'fixed',
             bottom: '30px',
-            right: '50px'
+            right: '50px',
           }}
           onClick={exitUser}
         >
@@ -303,4 +303,4 @@ const TestProfile = () => {
   );
 };
 
-export default TestProfile;
+export default UserInfo;
