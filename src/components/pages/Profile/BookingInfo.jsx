@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { cancelBooking } from '../../../redux/features/booking';
 import { addReviewBooking } from '../../../redux/features/review';
 
-function CardBooking() {
+function BookingInfo() {
   const dispatch = useDispatch();
 
   const [reviewModalWindow, setReviewModalWindow] = useState(false);
@@ -172,4 +172,4 @@ function CardBooking() {
   );
 }
 
-export default CardBooking;
+export default BookingInfo;
