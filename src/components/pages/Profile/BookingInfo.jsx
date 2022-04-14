@@ -14,6 +14,7 @@ function BookingInfo() {
 
   const bookings = useSelector((state) => state.booking.booking);
   const tours = useSelector((state) => state.tours.tours);
+  const role = useSelector(state => state.application.role)
 
   function handleClickCancelBooking(id) {
     dispatch(cancelBooking(id));
@@ -80,7 +81,7 @@ function BookingInfo() {
         </>
       ) : (
         <>
-          {!bookings.length ? (
+          {!bookings.length && role === 'user' ? (
             <div
               className="alert alert-info "
               role="alert"
