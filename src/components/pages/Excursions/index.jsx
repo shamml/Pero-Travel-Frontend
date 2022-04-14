@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import styles from './styles.module.css';
-import data from '../../../assets/excursions/data.png';
 import plus from '../../../assets/excursions/plus.svg';
 import minus from '../../../assets/excursions/minus.svg';
 import Slider from '@mui/material/Slider';
@@ -11,7 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchTours } from '../../../redux/features/tours';
 import { CalendarComponent } from '@syncfusion/ej2-react-calendars';
 
-const Excursions = ({ items }) => {
+const Excursions = ( ) => {
   const theme = createTheme({
     status: {
       danger: '#e53e3e',
@@ -31,6 +30,43 @@ const Excursions = ({ items }) => {
       },
     },
   });
+
+  const items = [
+    {
+      text: '1 чел.',
+    },
+    {
+      text: '2 чел.',
+    },
+    {
+      text: '3 чел.',
+    },
+    {
+      text: '4 чел.',
+    },
+    {
+      text: '5 чел.',
+    },
+    {
+      text: '6 чел.',
+    },
+    {
+      text: '7 чел.',
+    },
+    {
+      text: '8 чел.',
+    },
+    {
+      text: '9 чел.',
+    },
+    {
+      text: '10 чел.',
+    },
+    {
+      text: '10+ чел.',
+    },
+  ];
+
 
   const [priceBlock, setPriceBlock] = useState(true);
   const [amountBlock, setAmountBlock] = useState(true);
@@ -114,7 +150,7 @@ const Excursions = ({ items }) => {
           return tour.typeTour === 'Джиппинг';
         })
       : filtered.filter((tour) => {
-          return tour.typeTour === 'Автобусный тур';
+          return tour.typeTour === 'Джиппинг';
         });
     setFiltered(result);
   };
@@ -124,7 +160,7 @@ const Excursions = ({ items }) => {
           return tour.typeTour === 'Яхтинг';
         })
       : filtered.filter((tour) => {
-          return tour.typeTour === 'Автобусный тур';
+          return tour.typeTour === 'Яхтинг';
         });
     setFiltered(result);
   };
@@ -134,7 +170,7 @@ const Excursions = ({ items }) => {
           return tour.typeTour === 'Каньонинг';
         })
       : filtered.filter((tour) => {
-          return tour.typeTour === 'Автобусный тур';
+          return tour.typeTour === 'Каньонинг';
         });
     setFiltered(result);
   };
@@ -166,9 +202,11 @@ const Excursions = ({ items }) => {
           </select>
           <div className={styles.buttonExcursions}>
             <select className={styles.selectCalendar} name="place" id="place">
-              <option value="">
-                <input id="date" type="date" value="2017-06-01" />
-              </option>
+              <option value={1}>15 апреля 2022</option>
+              <option value={2}>16 апреля 2022</option>
+              <option value={3}>17 апреля 2022</option>
+              <option value={4}>18 апреля 2022</option>
+              <option value={5}>19 апреля 2022</option>
             </select>
           </div>
           <select className={styles.selectMansCount} name="place" id="place">

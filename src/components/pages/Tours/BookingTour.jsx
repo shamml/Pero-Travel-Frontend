@@ -123,10 +123,10 @@ const BookingTour = () => {
             <img src={reserve} alt="#" />
           </div>
           <div className={styles.termsMain}>
-            <div className={styles.terms}>
+            <div className={styles.terms} onClick={handleOpenCalendar}>
               <div className={styles.date}>10 ноября 2021</div>
               <div className={styles.calImg}>
-                <img onClick={handleOpenCalendar} src={calImg} alt="#" />
+                <img src={calImg} alt="#" />
                 {openCalendar ? (
                   <div className={styles.calendarComponent}>
                     <CalendarComponent
@@ -140,41 +140,37 @@ const BookingTour = () => {
               </div>
             </div>
             <div className={styles.terms}>
-              <div className={styles.date}>Взрослых</div>
               <div className={styles.calImg}>
-                <img onClick={handleOpenSelectAdults} src={two} alt="#" />
-                {openSelectAdults ? (
-                  <div className={styles.selectComponent}>
-                    <select value={adult} onChange={handleChangeAdult}>
-                      <option value={5}>5</option>
-                      <option value={4}>4</option>
-                      <option value={3}>3</option>
-                      <option value={2}>2</option>
-                      <option value={1}>1</option>
+                  <div>
+                    <select
+                      className={styles.selectComponent}
+                      value={adult}
+                      onChange={handleChangeAdult}
+                    >
+                      <option value={1}>Взрослых: 1</option>
+                      <option value={2}>Взрослых: 2</option>
+                      <option value={3}>Взрослых: 3</option>
+                      <option value={4}>Взрослых: 4</option>
+                      <option value={5}>Взрослых: 5</option>
                     </select>
                   </div>
-                ) : (
-                  ''
-                )}
               </div>
             </div>
             <div className={styles.terms}>
-              <div className={styles.date}>Количество детей</div>
               <div className={styles.calImg}>
-                <img onClick={handleOpenSelectKids} src={two} alt="#" />
-                {openSelectKids ? (
-                  <div className={styles.selectComponent}>
-                    <select value={child} onChange={handleChangeChild}>
-                      <option value={5}>5</option>
-                      <option value={4}>4</option>
-                      <option value={3}>3</option>
-                      <option value={2}>2</option>
-                      <option value={1}>1</option>
-                    </select>
-                  </div>
-                ) : (
-                  ''
-                )}
+                <div>
+                  <select
+                    className={styles.selectComponent}
+                    value={adult}
+                    onChange={handleChangeAdult}
+                  >
+                    <option value={1}>Количество детей: 1</option>
+                    <option value={2}>Количество детей: 2</option>
+                    <option value={3}>Количество детей: 3</option>
+                    <option value={4}>Количество детей: 4</option>
+                    <option value={5}>Количество детей: 5</option>
+                  </select>
+                </div>
               </div>
             </div>
             <div className={styles.carouselButton}>
