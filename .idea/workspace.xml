@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2d5d8684-0521-412c-b859-fbeae4c6f882" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/pages/AdminPage/AdminWorking/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/pages/AdminPage/AdminWorking/styles.module.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../advertising-agency-frontend/.idea/advertising-agency-frontend.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../advertising-agency-frontend/.prettierrc" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../advertising-agency-frontend/src/components/footer/Footer.jsx" afterDir="false" />
@@ -48,29 +46,6 @@
       <change afterPath="$PROJECT_DIR$/../news-site/src/redux/features/application.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site/src/redux/features/comments.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../news-site/src/redux/features/news.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/components/Footer/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/components/Footer/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/components/Header/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/components/Header/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/components/pages/Excursions/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/components/pages/Excursions/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/components/pages/HomePage/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/components/pages/HomePage/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/components/pages/SigninPage/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/components/pages/SigninPage/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/components/pages/SignupPage/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/components/pages/SignupPage/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/components/pages/Tours/AdditionalExpenses.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/components/pages/Tours/BookingTour.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/components/pages/Tours/CalendarPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/components/pages/Tours/CalendarTravel.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/components/pages/Tours/DescriptionTours.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/components/pages/Tours/ReviewsTour.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/components/pages/Tours/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/components/pages/Tours/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/redux/configureStore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pero-travel/src/redux/features/application.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/.idea/react-live-search.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/.prettierrc" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../react-live-search/src/components/cards/Card.jsx" afterDir="false" />
@@ -137,17 +112,9 @@
       <change beforePath="$PROJECT_DIR$/../Gift Finder/work.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/AdminPage/AddTour/AddTour.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/AdminPage/AdminWorking/AddTour/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/AdminPage/AddTour/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/AdminPage/AdminWorking/AddTour/styles.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/AdminPage/AdminDesk/AdminSide.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/AdminPage/AdminDesk/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/AdminPage/AdminDesk/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/AdminPage/AdminDesk/styles.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/AdminPage/Bookings/Bookings.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/AdminPage/AdminWorking/Bookings/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/AdminPage/Bookings/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/AdminPage/AdminWorking/Bookings/styles.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/AdminPage/FetchTour/FetchTour.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/AdminPage/AdminWorking/FetchTour/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/AdminPage/FetchTour/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/AdminPage/AdminWorking/FetchTour/styles.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/AdminPage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/AdminPage/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/AdminPage/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/AdminPage/styles.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Profile/BookingInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Profile/BookingInfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Excursions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Excursions/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/BookingTour.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/BookingTour.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/styles.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Postman.lnk" beforeDir="false" afterPath="$PROJECT_DIR$/../Postman.lnk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Premium/Bitmap-10.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Premium/Bitmap-11.jpg" beforeDir="false" />
@@ -718,7 +685,6 @@
       <change beforePath="$PROJECT_DIR$/../style-guide-airbnb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../test" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Новая папка/Новая папка/Camera/Camera/Новая папка/_aVhSVthHrc.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Новая папка/Новая папка/Camera/Camera/Новая папка/bMIzwOHZQT0.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

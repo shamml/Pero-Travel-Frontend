@@ -16,43 +16,8 @@ import Bookings from './pages/AdminPage/AdminWorking/Bookings';
 import Footer from './Footer';
 
 const App = () => {
-  const items = [
-    {
-      text: '1 чел.',
-    },
-    {
-      text: '2 чел.',
-    },
-    {
-      text: '3 чел.',
-    },
-    {
-      text: '4 чел.',
-    },
-    {
-      text: '5 чел.',
-    },
-    {
-      text: '6 чел.',
-    },
-    {
-      text: '7 чел.',
-    },
-    {
-      text: '8 чел.',
-    },
-    {
-      text: '9 чел.',
-    },
-    {
-      text: '10 чел.',
-    },
-    {
-      text: '10+ чел.',
-    },
-  ];
-
   const token = useSelector((state) => state.application.token);
+
   return token ? (
     <div>
       <Header />
@@ -61,8 +26,8 @@ const App = () => {
         <Route path="/signin" element={<SigninPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/tours/:id" element={<Tours />} />
-        <Route path="/excursions" element={<Excursions items={items} />} />
-        <Route path="/profile/*" element={<Profile />} >
+        <Route path="/excursions" element={<Excursions />} />
+        <Route path="/profile/*" element={<Profile />}>
           <Route path="addTour" element={<AddTour />} />
           <Route path="fetchTour" element={<FetchTour />} />
           <Route path="booking" element={<Bookings />} />
@@ -78,8 +43,7 @@ const App = () => {
         <Route path="/signin" element={<SigninPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/tours/:id" element={<Tours />} />
-        <Route path="/excursions" element={<Excursions items={items} />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/excursions" element={<Excursions />} />
       </Routes>
       <Footer />
     </div>
