@@ -53,11 +53,6 @@ const AdminSide = () => {
           <div className={styles.profileAge}>Возраст: {currentUser.age} </div>
         </div>
       </div>
-      <div className={styles.adminPageMain}>
-        <Link to="/profile/addTour">Add</Link>;
-        <Link to="/profile/fetchTour">Fetch</Link>;
-        <Link to="/profile/booking">Booking</Link>;
-      </div>
     </div>
   );
 };
