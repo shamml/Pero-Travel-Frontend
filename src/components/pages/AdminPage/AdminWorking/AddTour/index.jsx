@@ -100,10 +100,8 @@ const AddTour = () => {
 
   return (
     <div className={styles.addTour}>
-      <div>
-        <h4>Добавление тура</h4>
-      </div>
       <div className={styleAddTour}>
+        <div className={styles.inputField}>Тип тура</div>
         <input
           value={tour}
           onChange={handleChangeTour}
@@ -111,6 +109,7 @@ const AddTour = () => {
           name="Tour"
           placeholder="Enter tour.."
         />
+        <div className={styles.inputField}>Место</div>
         <input
           value={place}
           onChange={handleChangePlace}
@@ -118,6 +117,7 @@ const AddTour = () => {
           name="Place"
           placeholder="Enter place.."
         />
+        <div className={styles.inputField}>Название</div>
         <input
           value={title}
           onChange={handleChangeTitle}
@@ -125,6 +125,7 @@ const AddTour = () => {
           name="Title"
           placeholder="Enter title.."
         />
+        <div className={styles.inputField}>Количество билетов</div>
         <input
           value={tickets}
           onChange={handleChangeTickets}
@@ -132,11 +133,13 @@ const AddTour = () => {
           name="Tickets"
           placeholder="Enter tickets.."
         />
+        <div className={styles.inputField}>Описание</div>
         <textarea
           value={desc}
           onChange={handleChangeDesc}
           placeholder="Enter desc.."
         />
+        <div className={styles.inputField}>Цена для взрослого</div>
         <input
           value={price}
           onChange={handleChangePrice}
@@ -144,6 +147,7 @@ const AddTour = () => {
           name="Price"
           placeholder="Enter price.."
         />
+        <div className={styles.inputField}>Цена для ребенка</div>
         <input
           value={priceForChild}
           onChange={handleChangePriceForChild}
@@ -151,6 +155,7 @@ const AddTour = () => {
           name="Price for child"
           placeholder="Enter price for child.."
         />
+        <div className={styles.inputField}>Длительность</div>
         <input
           value={duration}
           onChange={handleChangeDuration}
@@ -159,16 +164,17 @@ const AddTour = () => {
           placeholder="Enter duration.."
         />
         <div className={styles.backgroundImage}>
-          <div>
+          <div className={styles.inputField}>
             Добавление фонового рисунка
             <input onChange={handleChangeBgImage} type="file" />
           </div>
-          <div className={styles.carouselButton}>
+          
+        </div>
+        <div className={styles.carouselButton}>
             <button disabled={!bgImage} onClick={handleClickAddTour}>
               Добавить тур
             </button>
           </div>
-        </div>
       </div>
     </div>
   );

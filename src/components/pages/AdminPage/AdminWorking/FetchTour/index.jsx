@@ -13,7 +13,6 @@ const FetchTour = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    window.scrollTo({ top: 0 });
     dispatch(fetchTours());
   }, [dispatch]);
 
@@ -144,48 +143,20 @@ const FetchTour = () => {
     setModalOptionalWindowToChange(false);
   }
 
-  /* // { *===================== Добавление фоток в Gallery =========================* } // */
-
-  const [galleryModal, setGalleryModal] = useState(false);
-  const [drag, setDrag] = useState(false);
-  const [idEditTour, setIdEditTour] = useState('');
-  const [gallery, setGallery] = useState('');
-
-  function handleGalleryModal(id) {
-    setGalleryModal(!galleryModal);
-    setIdEditTour(id);
-  }
-
-  function dragStartHandler(e) {
-    e.preventDefault();
-    setDrag(true);
-  }
-
-  function dragLeaveHandler(e) {
-    e.preventDefault();
-    setDrag(false);
-  }
-
-  function onDropHandler(e) {
-    e.preventDefault();
-    let array = [...e.dataTransfer.files];
-    setGallery(array);
-  }
-
-  function handleClickSendGallery() {
-    dispatch(editTourGallery(idEditTour, gallery));
-    setIdEditTour('');
-    setGallery('');
-    setGalleryModal(false);
-  }
+  const handleCloseEditWindow = () => {
+    setModalEditWindowToChange(false);
+  };
+  
+  const handleCloseOptionalWindow = () => {
+    setModalOptionalWindowToChange(false);
+  };
 
   return (
     <>
       {/* -------------------------------------OPTIONALS- */}
       {modalOptionalWindowToChange && (
         <div className={styles.modalOptional}>
-          <h1>ADD OPTIONALS</h1>
-          <div>Ввести название</div>
+          <div className={styles.inputField}>Название места</div>
           <input
             value={optionalTitle}
             onChange={handleChangeOptionalTitle}
@@ -193,7 +164,7 @@ const FetchTour = () => {
             name=""
             id=""
           />
-          <div>Ввести цену</div>
+          <div className={styles.inputField}>Цена</div>
           <input
             value={optionalPrice}
             onChange={handleChangeOptionalPrice}
@@ -202,42 +173,21 @@ const FetchTour = () => {
             id=""
           />
           <div className={styles.carouselButtonGreen}>
-            <button onClick={handleClickOpenAddOptionalToTour}>ADD</button>
+            <button onClick={handleClickOpenAddOptionalToTour}>Добавить</button>
           </div>
-        </div>
-      )}
-      {/* -------------------------------------//GALLERY */}
-      {galleryModal && (
-        <div className={styles.gallery}>
-          <h1>ADD GALLERY</h1>
-          {drag ? (
-            <div
-              className={styles.dropArea}
-              onDragStart={(e) => dragStartHandler(e)}
-              onDragLeave={(e) => dragLeaveHandler(e)}
-              onDragOver={(e) => dragStartHandler(e)}
-              onDrop={(e) => onDropHandler(e)}
-            >
-              Отпустите файлы, чтобы загрузить их
-            </div>
-          ) : (
-            <div
-              className={styles.dropArea}
-              onDragStart={(e) => dragStartHandler(e)}
-              onDragLeave={(e) => dragLeaveHandler(e)}
-              onDragOver={(e) => dragStartHandler(e)}
-            >
-              Перетащите файлы, чтобы загрузить их
-            </div>
-          )}
-          <button onClick={handleClickSendGallery}>SEND GALLERY</button>
+          <div
+            className={styles.closeOptionalWindow}
+            onClick={handleCloseOptionalWindow}
+          >
+            ✖
+          </div>
         </div>
       )}
 
       {/* -------------------------//EDIT--------------------------------- */}
       {modalEditWindowToChange && (
         <div className={styles.modalWindowEdit}>
-          <h1>EDIT TOUR</h1>
+          <div className={styles.inputField}>Тип тура</div>
           <input
             value={tourEdit}
             onChange={handleChangeTourEdit}
@@ -245,6 +195,7 @@ const FetchTour = () => {
             name="Tour"
             placeholder="Enter tour.."
           />
+          <div className={styles.inputField}>Место</div>
           <input
             value={placeEdit}
             onChange={handleChangePlaceEdit}
@@ -252,6 +203,7 @@ const FetchTour = () => {
             name="Place"
             placeholder="Enter place.."
           />
+          <div className={styles.inputField}>Название</div>
           <input
             value={titleEdit}
             onChange={handleChangeTitleEdit}
@@ -259,12 +211,13 @@ const FetchTour = () => {
             name="Title"
             placeholder="Enter title.."
           />
+          <div className={styles.inputField}>Описание</div>
           <textarea
-            style={{ width: '500px', height: '250px' }}
             value={descEdit}
             onChange={handleChangeDescEdit}
             placeholder="Enter desc.."
           ></textarea>
+          <div className={styles.inputField}>Цена для взрослого</div>
           <input
             value={priceEdit}
             onChange={handleChangePriceEdit}
@@ -272,6 +225,7 @@ const FetchTour = () => {
             name="Price"
             placeholder="Enter price.."
           />
+          <div className={styles.inputField}>Цена для ребенка</div>
           <input
             value={priceForChildEdit}
             onChange={handleChangePriceForChildEdit}
@@ -279,6 +233,7 @@ const FetchTour = () => {
             name="Price for child"
             placeholder="Enter price for child.."
           />
+          <div className={styles.inputField}>Длительность</div>
           <input
             value={durationEdit}
             onChange={handleChangeDurationEdit}
@@ -287,14 +242,21 @@ const FetchTour = () => {
             placeholder="Enter duration.."
           />
           <div className={styles.backgroundImage}>
-            <div>
+            <div className={styles.inputField}>
               Изменение фонового рисунка
               <input onChange={handleChangeBgImageEdit} type="file" />
             </div>
 
-            <div className={styles.carouselButton}>
-              <button onClick={handleClickEditTour}>Save Tour Change</button>
+            
+          </div>
+          <div className={styles.carouselButton}>
+              <button onClick={handleClickEditTour}>Сохранить изменения</button>
             </div>
+          <div
+            className={styles.closeEditWindow}
+            onClick={handleCloseEditWindow}
+          >
+            ✖
           </div>
         </div>
       )}
@@ -347,11 +309,6 @@ const FetchTour = () => {
                   <div className={styles.carouselButtonGreen}>
                     <button onClick={handleClickOpenAddOptionalToTour}>
                       Optionals
-                    </button>
-                  </div>
-                  <div className={styles.carouselButtonBrownGallery}>
-                    <button onClick={(e) => handleGalleryModal(tour._id)}>
-                      ADD GALLERY
                     </button>
                   </div>
                 </div>

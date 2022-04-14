@@ -16,7 +16,6 @@ function Admin() {
 
   return (
     <div className={styles.adminPage}>
-      <h1>ПРОФИЛЬ АДМИНА</h1>
       <div className={styles.adminProfile}>
         <div className={styles.adminSide}>
           <AdminSide />
