@@ -1,25 +1,28 @@
 .adminPage {
-  /* Created with https://www.css-gradient.com */
-  background: #fff;
-  background: -webkit-linear-gradient(bottom, #ffffff, #049add);
-  background: -moz-linear-gradient(bottom, #ffffff, #049add);
-  background: linear-gradient(to top, #ffffff, #049add);
-  margin: 20px 0 0 0;
+  display: flex;
+  justify-content: space-between;
 }
+
 .adminPage h1 {
   text-align: center;
 }
 .adminProfile {
-  width: 1400px;
+  width: 1200px;
   margin: auto;
   display: flex;
   justify-content: space-between;
 }
 .adminSide {
-  width: 400px;
+  width: 30%;
+  height: 425px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 .adminWorking {
-  width: 900px;
+  width: 68%;
+  /* background-color: rgb(105, 76, 76); */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .adminka {

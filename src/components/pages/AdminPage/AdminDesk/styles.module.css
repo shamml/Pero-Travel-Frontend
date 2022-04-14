@@ -1,4 +1,4 @@
-.profileUser {
+/* .profileUser {
   background: #ffffff;
   background: -webkit-linear-gradient(bottom, #ffffff, #049add);
   background: -moz-linear-gradient(bottom, #ffffff, #049add);
@@ -10,27 +10,20 @@
   width: 1200px;
   margin: auto;
   padding-top: 150px;
-}
+} */
 .profileDesk {
   margin: auto;
   display: flex;
   justify-content: space-between;
+  /* background-color: rgb(182, 141, 141); */
 }
 .profileMain {
-  padding: 13px;
+  padding: 10px;
   border-radius: 10px;
   background-color: white;
 }
-
-.profileUser img {
-  width: 100%;
-}
-
-.avatarImg {
-  width: 300px;
-}
 .avatarImg img {
-  border-radius: 10px;
+  width: 100%;
 }
 input[type='file'] {
   color: transparent;
@@ -49,9 +42,8 @@ input[type='file'] {
   font-size: 20px;
   margin-top: 10px;
 }
-.profileName {
-  border-bottom: 2px solid rgb(47, 49, 122);
-}
-.profileLastName {
-  border-bottom: 2px solid rgb(10, 13, 157);
+
+.nameInfo {
+  margin-top: 10px;
+  font-size: 30px;
 }
