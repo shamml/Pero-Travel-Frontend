@@ -85,7 +85,7 @@ const App = () => {
         <Route path="/excursions" element={<Excursions items={items} />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };

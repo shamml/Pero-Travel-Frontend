@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { cancelBooking } from '../../../redux/features/booking';
 import { addReviewBooking } from '../../../redux/features/review';
+import styles from './styles.module.css';
 
 function BookingInfo() {
   const dispatch = useDispatch();
@@ -37,7 +38,7 @@ function BookingInfo() {
   }
 
   return (
-    <div className="col-8">
+    <div className={styles.bookingInfo}>
       {reviewModalWindow ? (
         <>
           <form>
@@ -83,7 +84,7 @@ function BookingInfo() {
             <div
               className="alert alert-info "
               role="alert"
-              style={{ textAlign: 'center', margin: '270px 0 0' }}
+              style={{ textAlign: 'center', margin: '200px 0 0' }}
             >
               У вас нет забронированных туров
             </div>
