@@ -80,7 +80,7 @@ const BookingTour = () => {
   }
 
   const handleBookingAdd = () => {
-    if (!id || !dataValue || !adult || !child) {
+    if (!id || !dataValue || !adult) {
       return alert('Пожалуйста, заполните все поля');
     }
     const error = desiredTour.days.find(
