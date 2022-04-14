@@ -1,6 +1,7 @@
 const initialState = {
   data: [],
   users: [],
+  orders: [],
   loading: false,
   error: null,
 };
@@ -97,6 +98,25 @@ export default function user(state = initialState, action) {
         },
       };
     case 'user/editprofile/rejected':
+      return {
+        ...state,
+        loading: false,
+        error: action.error,
+      };
+    case 'user/fetchorders/pending':
+      return {
+        ...state,
+        loading: true,
+        error: null,
+      };
+    case 'user/fetchorders/fulfilled':
+      return {
+        ...state,
+        loading: false,
+        orders: action.payload,
+      };
+
+    case 'user/fetchorders/rejected':
       return {
         ...state,
         loading: false,
@@ -212,6 +232,28 @@ export function editProfile(firstName, lastName, age) {
       .catch((error) => {
         dispatch({
           type: 'user/editprofile/rejected',
+          error: error.toString(),
+        });
+      });
+  };
+}
+
+export function fetchUsersOrders() {
+  return function (dispatch, getState) {
+    const state = getState();
+    dispatch({ type: 'user/fetchorders/pending' });
+    fetch('http://localhost:3030/orders', {
+      headers: {
+        Authorization: `Bearer ${state.application.token}`,
+      },
+    })
+      .then((responce) => responce.json())
+      .then((orders) => {
+        dispatch({ type: 'user/fetchorders/fulfilled', payload: orders });
+      })
+      .catch((error) => {
+        dispatch({
+          type: 'user/fetchorders/rejected',
           error: error.toString(),
         });
       });

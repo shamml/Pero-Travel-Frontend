@@ -10,13 +10,14 @@ import {
   editAvatar,
   editProfile,
   fetchIdUser,
+  fetchUsersOrders,
 } from '../../../redux/features/user';
 import { deleteTour, fetchTours } from '../../../redux/features/tours';
 import { fetchBookingUser } from '../../../redux/features/booking';
 import { Button } from '@mui/material';
 import styles from './styles.module.css';
 
-const UserInfo = () => {
+const UserInfo = ({ setModalHistoryBroning }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -30,6 +31,10 @@ const UserInfo = () => {
 
   useEffect(() => {
     dispatch(fetchBookingUser());
+  }, [dispatch]);
+
+  useEffect(() => {
+    dispatch(fetchUsersOrders());
   }, [dispatch]);
 
   const [modalEditImage, setModalEditImage] = useState(false);
@@ -102,14 +107,19 @@ const UserInfo = () => {
     setModalEditProfile(!modalEditProfile);
   }
 
+  function handleClickOpenHistoryBroning() {
+    setModalHistoryBroning(true);
+  }
+
   return (
-    <div className={styles.userInfoBlock}>
+    <div className={styles.userInfoBlock} style={{ height: '100%' }}>
       <div>
         <div className={styles.userAvatar}>
           <img
             src={`http://localhost:3030/${dataUser.image}`}
             onClick={handleModalEditAvatar}
             alt="pic"
+            style={{ cursor: 'pointer' }}
           />
         </div>
         <div className={styles.unknownTwo}>
@@ -122,14 +132,14 @@ const UserInfo = () => {
                   onDragOver={(e) => dragStartHandler(e)}
                   onDrop={(e) => onDropHandler(e)}
                   style={{
-                    margin: '0 45px 0',
-                    width: '250px',
-                    height: '100px',
+                    margin: '15px 0 0',
+                    width: '340px',
+                    height: '340px',
                     border: '2px dashed black',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    textAlign: "center",
+                    textAlign: 'center',
                   }}
                 >
                   Отпустите файл, чтобы загрузить
@@ -137,14 +147,14 @@ const UserInfo = () => {
               ) : (
                 <div
                   style={{
-                    margin: '0 45px 0',
-                    width: '250px',
-                    height: '100px',
+                    margin: '15px 0 0',
+                    width: '340px',
+                    height: '340px',
                     border: '2px dashed black',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    textAlign: "center",
+                    textAlign: 'center',
                   }}
                   onDragStart={(e) => dragStartHandler(e)}
                   onDragLeave={(e) => dragLeaveHandler(e)}
@@ -153,9 +163,7 @@ const UserInfo = () => {
                   Перетащите файл, чтобы загрузить
                 </div>
               )}
-              <div
-                className={styles.unknownOne}
-              >
+              <div className={styles.unknownOne}>
                 <Button
                   disabled={!image}
                   onClick={handleClickEditAvatar}
@@ -245,8 +253,18 @@ const UserInfo = () => {
             </form>
           ) : (
             <>
-              <div className={styles.nameInfo} onClick={handleClickEditProfile}>{dataUser.firstName} {dataUser.lastName}</div>
-              <div style={{fontSize: "20px", color: "#0499DD"}}><b>{dataUser.age} лет</b></div>
+              <div className={styles.nameInfo} onClick={handleClickEditProfile}>
+                {dataUser.firstName} {dataUser.lastName}
+              </div>
+              <div
+                style={{
+                  fontSize: '20px',
+                  color: '#0499DD',
+                  margin: '0 0 10px',
+                }}
+              >
+                <b>{dataUser.age} лет</b>
+              </div>
             </>
           )}
         </div>
@@ -266,6 +284,7 @@ const UserInfo = () => {
           <img src={exitLogo} alt="" style={{ width: '50px' }} />
         </div>
       </Link>
+      
     </div>
   );
 };
