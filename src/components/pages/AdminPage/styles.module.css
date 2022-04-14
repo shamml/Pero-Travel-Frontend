@@ -1,10 +1,25 @@
 .adminPage {
   /* Created with https://www.css-gradient.com */
-  background: #ffffff;
+  background: #fff;
   background: -webkit-linear-gradient(bottom, #ffffff, #049add);
   background: -moz-linear-gradient(bottom, #ffffff, #049add);
   background: linear-gradient(to top, #ffffff, #049add);
-  /* height: 100%; */
+  margin: 20px 0 0 0;
+}
+.adminPage h1 {
+  text-align: center;
+}
+.adminProfile {
+  width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.adminSide {
+  width: 400px;
+}
+.adminWorking {
+  width: 900px;
 }
 
 .adminka {

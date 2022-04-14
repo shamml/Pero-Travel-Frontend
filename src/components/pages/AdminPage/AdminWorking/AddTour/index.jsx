@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import styles from './styles.module.css';
-import { addTour } from '../../../../redux/features/admin';
+import { addTour } from '../../../../../redux/features/admin';
 
 const AddTour = () => {
   const dispatch = useDispatch();
@@ -136,7 +136,7 @@ const AddTour = () => {
           value={desc}
           onChange={handleChangeDesc}
           placeholder="Enter desc.."
-        ></textarea>
+        />
         <input
           value={price}
           onChange={handleChangePrice}

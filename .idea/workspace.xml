@@ -110,6 +110,11 @@
       <change beforePath="$PROJECT_DIR$/../Gift Finder/vector4.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gift Finder/vector5.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Gift Finder/work.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Excursions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Excursions/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/BookingTour.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/BookingTour.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/styles.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Postman.lnk" beforeDir="false" afterPath="$PROJECT_DIR$/../Postman.lnk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Premium/Bitmap-10.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Premium/Bitmap-11.jpg" beforeDir="false" />
@@ -552,10 +557,6 @@
       <change beforePath="$PROJECT_DIR$/../news" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ntro-dom/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ntro-dom/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/HomePage/Reviews/Reviews.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/HomePage/Reviews/Reviews.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/Reviews/Reviews.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/Reviews/Reviews.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/features/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/features/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/controllers/categories.controller.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../pharmacy-backend/controllers/clients.controllers.js" beforeDir="false" />
@@ -737,11 +738,11 @@
       <recent name="C:\Users\Admin\Desktop\pero-travel\src\components\pages\Tours" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\Pero-Travel-Fontend\src\components\pages\AdminPage\AdminWorking" />
       <recent name="C:\Users\Admin\Desktop\pero-travel\src\components\pages\Tours" />
       <recent name="C:\Users\Admin\Desktop\pero-travel\src\assets\excursions" />
       <recent name="C:\Users\Admin\Desktop\pero-travel\src\components\pages\HomePage" />
       <recent name="C:\Users\Admin\Desktop\pero-travel\src\components" />
-      <recent name="C:\Users\Admin\Desktop\pero-travel\src" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -799,7 +800,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/pages/AdminPage/index.jsx</url>
-          <line>24</line>
+          <line>19</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

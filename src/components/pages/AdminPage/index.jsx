@@ -1,13 +1,11 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import exitLogo from '../../../assets/another/exit.png';
 import styles from './styles.module.css';
 import { exit } from '../../../redux/features/application';
-import AddTour from './AddTour/AddTour';
-import FetchTour from './FetchTour/FetchTour';
-import Bookings from './Bookings/Bookings';
-import AdminSide from './AdminDesk/AdminSide';
+import AdminSide from './AdminDesk';
+import AdminWorking from './AdminWorking';
 
 function Admin() {
   const dispatch = useDispatch();
@@ -18,18 +16,14 @@ function Admin() {
 
   return (
     <div className={styles.adminPage}>
-      <div style={{ marginTop: '120px' }} className={styles.adminProfile}>
-        ПРОФИЛЬ АДМИНА
-      </div>
-
-      <div>
-        <AdminSide />
-
-        <Routes>
-          <Route path="/profile/addTour" element={<AddTour />} />
-          <Route path="/profile/fetchTour" element={<FetchTour />} />
-          <Route path="/profile/booking" element={<Bookings />} />
-        </Routes>
+      <h1>ПРОФИЛЬ АДМИНА</h1>
+      <div className={styles.adminProfile}>
+        <div className={styles.adminSide}>
+          <AdminSide />
+        </div>
+        <div className={styles.adminWorking}>
+          <AdminWorking />
+        </div>
       </div>
 
       <Link to="/">

@@ -1,62 +1,24 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import './styles.css';
+import './transition.css';
 import Header from './Header';
 import HomePage from './pages/HomePage';
 import SigninPage from './pages/SigninPage';
 import SignupPage from './pages/SignupPage';
 import Excursions from './pages/Excursions';
-import Admin from './pages/AdminPage';
 import Tours from './pages/Tours';
 import Profile from './pages/Profile';
+import AddTour from './pages/AdminPage/AdminWorking/AddTour';
+import FetchTour from './pages/AdminPage/AdminWorking/FetchTour';
+import Bookings from './pages/AdminPage/AdminWorking/Bookings';
 import Footer from './Footer';
-import './styles.css';
-import { useSelector } from 'react-redux';
-import './transition.css';
-import AddTour from './pages/AdminPage/AddTour/AddTour';
-import FetchTour from './pages/AdminPage/FetchTour/FetchTour';
-import Bookings from './pages/AdminPage/Bookings/Bookings';
-import AdminSide from './pages/AdminPage/AdminDesk/AdminSide';
 
 const App = () => {
-  const items = [
-    {
-      text: '1 чел.',
-    },
-    {
-      text: '2 чел.',
-    },
-    {
-      text: '3 чел.',
-    },
-    {
-      text: '4 чел.',
-    },
-    {
-      text: '5 чел.',
-    },
-    {
-      text: '6 чел.',
-    },
-    {
-      text: '7 чел.',
-    },
-    {
-      text: '8 чел.',
-    },
-    {
-      text: '9 чел.',
-    },
-    {
-      text: '10 чел.',
-    },
-    {
-      text: '10+ чел.',
-    },
-  ];
-
   const token = useSelector((state) => state.application.token);
-  const role = useSelector((state) => state.application.role);
-  return token && role === 'admin' ? (
+
+  return token ? (
     <div>
       <Header />
       <Routes>
@@ -64,13 +26,12 @@ const App = () => {
         <Route path="/signin" element={<SigninPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/tours/:id" element={<Tours />} />
-        <Route path="/excursions" element={<Excursions items={items} />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/adminDesk" element={<AdminSide />} />
-        <Route path="/profile/addTour" element={<AddTour />} />
-        <Route path="/profile/fetchTour" element={<FetchTour />} />
-        <Route path="/profile/booking" element={<Bookings />} />
+        <Route path="/excursions" element={<Excursions />} />
+        <Route path="/profile/*" element={<Profile />}>
+          <Route path="addTour" element={<AddTour />} />
+          <Route path="fetchTour" element={<FetchTour />} />
+          <Route path="booking" element={<Bookings />} />
+        </Route>
       </Routes>
       <Footer />
     </div>
@@ -82,8 +43,7 @@ const App = () => {
         <Route path="/signin" element={<SigninPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/tours/:id" element={<Tours />} />
-        <Route path="/excursions" element={<Excursions items={items} />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/excursions" element={<Excursions />} />
       </Routes>
       <Footer />
     </div>
