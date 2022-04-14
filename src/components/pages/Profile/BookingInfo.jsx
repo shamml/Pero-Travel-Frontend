@@ -19,7 +19,7 @@ function BookingInfo({
   const bookings = useSelector((state) => state.booking.booking);
   const tours = useSelector((state) => state.tours.tours);
   const orders = useSelector((state) => state.user.orders);
-  const role = useSelector(state => state.application.role)
+  const role = useSelector((state) => state.application.role);
 
   function handleClickCancelBooking(id) {
     dispatch(cancelBooking(id));
@@ -55,13 +55,6 @@ function BookingInfo({
             <div class="alert alert-info" style={{ margin: '200px 0' }}>
               <strong>Info!</strong> На данный момент ваша история бронирования
               чиста.
-          {!bookings.length && role === 'user' ? (
-            <div
-              className="alert alert-info "
-              role="alert"
-              style={{ textAlign: 'center', margin: '200px 0 0' }}
-            >
-              У вас нет забронированных туров
             </div>
           ) : (
             <>
@@ -76,7 +69,7 @@ function BookingInfo({
                             maxWidth: '100%',
                             height: '250px',
                             overflow: 'hidden',
-                            opacity: '0.9',
+                            opacity: '0.8',
                           }}
                         >
                           <div class="row g-0">
@@ -89,7 +82,7 @@ function BookingInfo({
                               }}
                             >
                               <img
-                                src={`http://localhost:3030/${tour.vcImage}`}
+                                src={`http://localhost:3030/${tour.bgImage}`}
                                 class="img-fluid rounded-start"
                                 alt="..."
                                 style={{ height: '100%', width: '100%' }}
