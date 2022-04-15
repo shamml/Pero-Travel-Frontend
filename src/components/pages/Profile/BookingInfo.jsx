@@ -5,6 +5,11 @@ import { cancelBooking } from '../../../redux/features/booking';
 import { addReviewBooking } from '../../../redux/features/review';
 import styles from './styles.module.css';
 
+import peopleIcon from '../../../assets/another/people.png';
+import dayIcon from '../../../assets/excursions/data.svg';
+import priceIcon from '../../../assets/excursions/price.svg';
+import { motion } from 'framer-motion';
+
 function BookingInfo({
   modalHistoryBroning,
   setModalHistoryBroning,
@@ -18,6 +23,7 @@ function BookingInfo({
 
   const bookings = useSelector((state) => state.booking.booking);
   const tours = useSelector((state) => state.tours.tours);
+  const users = useSelector((state) => state.user.users);
   const orders = useSelector((state) => state.user.orders);
   const role = useSelector((state) => state.application.role);
 
@@ -47,100 +53,20 @@ function BookingInfo({
     setModalHistoryBroning(false);
   }
 
+  const toursVariants = {
+    visible: (i) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: i * 0.3,
+      },
+    }),
+    hidden: { opacity: 0, x: 400 },
+  };
+
   return (
     <div className={styles.bookingInfo}>
-      {modalHistoryBroning ? (
-        <>
-          {!orders.length ? (
-            <div class="alert alert-info" style={{ margin: '200px 0' }}>
-              <strong>Info!</strong> На данный момент ваша история бронирования
-              чиста.
-            </div>
-          ) : (
-            <>
-              {orders.map((order, index) => {
-                return tours.map((tour) => {
-                  if (order.tour === tour._id) {
-                    return (
-                      <div key={index}>
-                        <div
-                          class="card mb-3"
-                          style={{
-                            maxWidth: '100%',
-                            height: '250px',
-                            overflow: 'hidden',
-                            opacity: '0.8',
-                          }}
-                        >
-                          <div class="row g-0">
-                            <div
-                              class="col-md-4"
-                              style={{
-                                maxWidth: '100%',
-                                height: '250px',
-                                overflow: 'hidden',
-                              }}
-                            >
-                              <img
-                                src={`http://localhost:3030/${tour.bgImage}`}
-                                class="img-fluid rounded-start"
-                                alt="..."
-                                style={{ height: '100%', width: '100%' }}
-                              />
-                            </div>
-                            <div class="col-md-8">
-                              <div class="card-body">
-                                <h5 class="card-title">{tour.title}</h5>
-                                <p
-                                  style={{ fontSize: '14px' }}
-                                  class="card-text"
-                                >
-                                  {tour.desc}
-                                </p>
-                                <p
-                                  style={{ fontSize: '13px' }}
-                                  class="card-text"
-                                >
-                                  <small class="text-muted">
-                                    {order.сompletionTime}
-                                  </small>
-                                  <small
-                                    class="text-muted"
-                                    style={{
-                                      display: 'block',
-                                      margin: '10px 0 0',
-                                    }}
-                                  >
-                                    На сумму {order.total}Р
-                                  </small>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  }
-                });
-              })}
-            </>
-          )}
-          <div
-            onClick={handleClickCloseModalOrders}
-            style={{
-              position: 'absolute',
-              right: '260px',
-              bottom: '340px',
-              cursor: 'pointer',
-              fontWeight: 'bold',
-              color: '#0499DD',
-              fontSize: '15px',
-            }}
-          >
-            X
-          </div>
-        </>
-      ) : (
+      {
         <>
           {reviewModalWindow ? (
             <>
@@ -150,19 +76,16 @@ function BookingInfo({
                   <textarea
                     value={text}
                     onChange={handleChangeText}
-                    className="form-control"
+                    className={styles.area}
                     id="exampleFormControlTextarea1"
                     rows="3"
                     placeholder="Введите текст.."
+                    style={{
+                      width: "600px"
+                    }}
                   ></textarea>
                 </div>
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    margin: '10px 0 0 ',
-                  }}
-                >
+                <div className={styles.buttons}>
                   <button
                     type="submit"
                     className="btn btn-primary mb-2"
@@ -185,17 +108,13 @@ function BookingInfo({
             <>
               {!bookings.length && role === 'user' ? (
                 <>
-                  <div
-                    class="alert alert-info"
-                    style={{ margin: '200px 0 5px' }}
-                  >
+                  <div>
                     <strong>Info!</strong> На данный момент у вас нет
                     забронированных туров.
                   </div>{' '}
                   <small
                     onClick={handleClickOpenHistoryBroning}
                     style={{ cursor: 'pointer' }}
-                    className="text-muted"
                   >
                     История моих бронирований
                   </small>
@@ -203,79 +122,112 @@ function BookingInfo({
               ) : (
                 <div>
                   {bookings.map((booking, index) => {
-                    return tours.map((tour) => {
-                      if (booking.tour === tour._id) {
-                        return (
-                          <div
-                            key={index}
-                            className="card"
-                            style={{ margin: '0 0 10px' }}
-                          >
-                            <div className="card-body">
-                              <h5 className="card-title">{tour.title}</h5>
-                              <p className="card-text">{tour.desc}</p>
-                              <p className="card-text">{tour.place}</p>
-                              <p className="card-text">
-                                <small className="text-muted">
-                                  {booking.timeInformation}
-                                </small>
-                              </p>
-                              <p
-                                className="card-text"
-                                style={{
-                                  display: 'flex',
-                                  justifyContent: 'space-between',
-                                }}
-                              >
-                                <small className="text-muted">
-                                  Количество человек {booking.people}
-                                </small>
-                                <small
-                                  className="text-muted"
-                                  style={{ cursor: 'pointer' }}
-                                  onClick={(e) =>
-                                    handleClickOpenReviewBooking(tour._id)
+                    return (
+                      <div>
+                        {users.map((user) => {
+                          if (booking.user === user._id) {
+                            return (
+                              <div>
+                                {tours.map((tour) => {
+                                  if (booking.tour === tour._id) {
+                                    return (
+                                      <motion.div
+                                        className={styles.bookingBlock}
+                                        variants={toursVariants}
+                                        initial="hidden"
+                                        animate="visible"
+                                        custom={index}
+                                      >
+                                        <div className={styles.tourBG}>
+                                          <img
+                                            src={`http://localhost:3030/${tour.bgImage}`}
+                                            alt="bg"
+                                          />
+                                        </div>
+                                        <div className={styles.positionBlock}>
+                                          <div className={styles.userAvatar}>
+                                            <img
+                                              src={`http://localhost:3030/${user.image}`}
+                                              alt="avatar"
+                                            />
+                                          </div>
+                                        </div>
+
+                                        <div className={styles.bookingDesc}>
+                                          <div className={styles.userInfo}>
+                                            <div className={styles.userName}>
+                                              {user.firstName} {user.lastName}
+                                            </div>
+                                            <div className={styles.userAge}>
+                                              {user.age} лет
+                                            </div>
+                                          </div>
+
+                                          <div className={styles.tourInfo}>
+                                            <div className={styles.typeTour}>
+                                              {tour.typeTour}
+                                            </div>
+                                            <div className={styles.titleTour}>
+                                              {tour.title} ({tour.place})
+                                            </div>
+                                          </div>
+
+                                          <div className={styles.bookingInfo}>
+                                            <div className={styles.peopleCount}>
+                                              <img
+                                                src={peopleIcon}
+                                                alt="people"
+                                              />
+                                              <div className={styles.count}>
+                                                {booking.people} чел.
+                                              </div>
+                                            </div>
+
+                                            <div className={styles.day}>
+                                              <img
+                                                className={styles.dayIcon}
+                                                src={dayIcon}
+                                                alt="days"
+                                              />
+                                              <div className={styles.count}>
+                                                {booking.day} Apr
+                                              </div>
+                                            </div>
+
+                                            <div className={styles.price}>
+                                              <img
+                                                src={priceIcon}
+                                                alt="people"
+                                              />
+                                              <div className={styles.count}>
+                                                {booking.total} ₽
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <div className={styles.bookingTime}>
+                                            {booking.timeInformation}
+                                          </div>
+                                        </div>
+
+                                        <div className={styles.archiveButton}>
+                                          <div 
+                                            className={styles.textBtn}
+                                            onClick={handleClickCancelReviewBooking}
+                                          >
+                                            Оставить отзыв
+                                          </div>
+                                        </div>
+                                      </motion.div>
+                                    );
                                   }
-                                >
-                                  Оставить отзыв
-                                </small>
-                              </p>
-                              <p
-                                className="card-text"
-                                style={{
-                                  display: 'flex',
-                                  justifyContent: 'space-between',
-                                }}
-                              >
-                                <small className="text-muted">
-                                  Итого {booking.total}Р
-                                </small>
-                                <small
-                                  onClick={(e) =>
-                                    handleClickCancelBooking(booking._id)
-                                  }
-                                  className="text-muted"
-                                  style={{ cursor: 'pointer' }}
-                                >
-                                  Отменить бронирование
-                                </small>
-                              </p>
-                              {/* <p class="card-text">
-                        <small class="text-muted">
-                          На какой день забронирован {booking.day}
-                        </small>
-                      </p> */}
-                            </div>
-                            <img
-                              src={`http://localhost:3030/${tour.bgImage}`}
-                              className="card-img-bottom"
-                              alt="..."
-                              style={{ height: '300px' }}
-                            ></img>
-                          </div>
-                        );
-                      }
-                    });
+                                })}
+                              </div>
+                            );
+                          }
+                        })}
+                      </div>
+                    );
                   })}
                   {role === 'user' ? (
                     <small
@@ -293,7 +245,7 @@ function BookingInfo({
             </>
           )}
         </>
-      )}
+      }
     </div>
   );
 }
