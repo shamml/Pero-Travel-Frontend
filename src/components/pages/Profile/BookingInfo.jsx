@@ -81,7 +81,7 @@ function BookingInfo({
                     rows="3"
                     placeholder="Введите текст.."
                     style={{
-                      width: "600px"
+                      width: '600px',
                     }}
                   ></textarea>
                 </div>
@@ -144,31 +144,20 @@ function BookingInfo({
                                             alt="bg"
                                           />
                                         </div>
-                                        <div className={styles.positionBlock}>
-                                          <div className={styles.userAvatar}>
-                                            <img
-                                              src={`http://localhost:3030/${user.image}`}
-                                              alt="avatar"
-                                            />
-                                          </div>
-                                        </div>
 
                                         <div className={styles.bookingDesc}>
-                                          <div className={styles.userInfo}>
-                                            <div className={styles.userName}>
-                                              {user.firstName} {user.lastName}
-                                            </div>
-                                            <div className={styles.userAge}>
-                                              {user.age} лет
-                                            </div>
-                                          </div>
-
                                           <div className={styles.tourInfo}>
                                             <div className={styles.typeTour}>
                                               {tour.typeTour}
                                             </div>
                                             <div className={styles.titleTour}>
                                               {tour.title} ({tour.place})
+                                            </div>
+                                          </div>
+
+                                          <div className={styles.userInfo}>
+                                            <div className={styles.verticalLine}>
+                                              {tour.desc.substr(0, 170) + "..."}
                                             </div>
                                           </div>
 
@@ -211,9 +200,11 @@ function BookingInfo({
                                         </div>
 
                                         <div className={styles.archiveButton}>
-                                          <div 
+                                          <div
                                             className={styles.textBtn}
-                                            onClick={handleClickCancelReviewBooking}
+                                            onClick={
+                                              handleClickCancelReviewBooking
+                                            }
                                           >
                                             Оставить отзыв
                                           </div>
