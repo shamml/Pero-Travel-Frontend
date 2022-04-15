@@ -183,7 +183,7 @@ function BookingInfo({
             </>
           ) : (
             <>
-              {!bookings.length ? (
+              {!bookings.length && role === 'user' ? (
                 <>
                   <div
                     class="alert alert-info"
@@ -277,13 +277,17 @@ function BookingInfo({
                       }
                     });
                   })}
-                  <small
-                    onClick={handleClickOpenHistoryBroning}
-                    style={{ cursor: 'pointer' }}
-                    className="text-muted"
-                  >
-                    История моих бронирований
-                  </small>
+                  {role === 'user' ? (
+                    <small
+                      onClick={handleClickOpenHistoryBroning}
+                      style={{ cursor: 'pointer' }}
+                      className="text-muted"
+                    >
+                      История моих бронирований
+                    </small>
+                  ) : (
+                    ''
+                  )}
                 </div>
               )}
             </>

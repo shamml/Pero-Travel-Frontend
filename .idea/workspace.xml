@@ -112,9 +112,11 @@
       <change beforePath="$PROJECT_DIR$/../Gift Finder/work.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Excursions/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Excursions/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/AdminPage/AdminWorking/Bookings/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/AdminPage/AdminWorking/Bookings/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/AdminPage/AdminWorking/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/AdminPage/AdminWorking/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/Profile/BookingInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Profile/BookingInfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/SignupPage/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/SignupPage/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/BookingTour.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/BookingTour.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/Tours/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/Tours/styles.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Postman.lnk" beforeDir="false" afterPath="$PROJECT_DIR$/../Postman.lnk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Premium/Bitmap-10.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Premium/Bitmap-11.jpg" beforeDir="false" />
