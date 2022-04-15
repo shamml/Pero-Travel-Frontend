@@ -6,7 +6,7 @@ const AdminWorking = () => {
   return (
     <div className={styles.working}>
       <div className={styles.workingNav}>
-        <Link to="/profile/addTour">Добавить</Link>
+        <Link to="/profile">Добавить</Link>
         <Link to="/profile/fetchTour">Туры</Link>
         <Link to="/profile/booking">Брони</Link>
       </div>

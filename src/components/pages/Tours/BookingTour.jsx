@@ -161,8 +161,8 @@ const BookingTour = () => {
                 <div>
                   <select
                     className={styles.selectComponent}
-                    value={adult}
-                    onChange={handleChangeAdult}
+                    value={child}
+                    onChange={handleChangeChild}
                   >
                     <option value={1}>Количество детей: 1</option>
                     <option value={2}>Количество детей: 2</option>

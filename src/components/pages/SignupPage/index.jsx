@@ -16,7 +16,7 @@ const SignupPage = () => {
     'Имя не может быть пустым',
   );
   const [lastNameError, setLastNameError] = useState(
-    'Имя не может быть пустым',
+    'Фамилия не может быть пустым',
   );
 
   const [firstNameDirty, setFirstNameDirty] = useState(false);
@@ -92,6 +92,15 @@ const SignupPage = () => {
       case 'password':
         setPasswordDirty(true);
         break;
+        case "firstName":
+        setFirstNameDirty(true)
+        break;
+      case "lastName":
+        setLastNameDirty(true)
+        break;
+      case "age":
+        setAgeDirty(true)
+        break;
     }
   };
 
@@ -107,13 +116,14 @@ const SignupPage = () => {
       loginError ||
       passwordError ||
       firstNameError ||
-      lastNameError
+      lastNameError ||
+      age
     ) {
       setFormValid(true);
     } else {
       setFormValid(false);
     }
-  }, [loginError, passwordError, firstNameError, lastNameError]);
+  }, [loginError, passwordError, firstNameError, lastNameError, age]);
 
   return (
     <div>
