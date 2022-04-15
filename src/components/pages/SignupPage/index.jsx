@@ -189,7 +189,7 @@ const SignupPage = () => {
             <Link to="/signin">
               <button
                 onClick={handleClickRegistration}
-                disabled={formValid}
+                disabled={!formValid}
                 type="submit"
               >
                 Регистрация
