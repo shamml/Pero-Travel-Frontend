@@ -114,7 +114,7 @@ const UserInfo = ({ setModalHistoryBroning }) => {
   return (
     <div className={styles.userInfoBlock} style={{ height: '100%' }}>
       <div>
-        <div className={styles.userAvatar}>
+        <div className={styles.userAvatarProfile}>
           <img
             src={`http://localhost:3030/${dataUser.image}`}
             onClick={handleModalEditAvatar}
