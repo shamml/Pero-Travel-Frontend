@@ -17,11 +17,10 @@
   height: 425px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  margin-top: 45px;
 }
 .adminWorking {
   width: 68%;
-  /* background-color: rgb(105, 76, 76); */
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
 

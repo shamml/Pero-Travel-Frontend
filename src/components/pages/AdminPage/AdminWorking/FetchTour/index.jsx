@@ -8,12 +8,18 @@ import {
   fetchTours,
 } from '../../../../../redux/features/admin';
 import styles from './styles.module.css';
+import priceIcon from '../../../../../assets/excursions/price.svg';
+import timeIcon from '../../../../../assets/excursions/time.svg';
+import ticketIcon from '../../../../../assets/excursions/ticket.png';
+import { motion } from "framer-motion";
+
 
 const FetchTour = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchTours());
+    console.log(8888888888);
   }, [dispatch]);
 
   const tours = useSelector((state) => state.admin.tours);
@@ -146,16 +152,38 @@ const FetchTour = () => {
   const handleCloseEditWindow = () => {
     setModalEditWindowToChange(false);
   };
-  
+
   const handleCloseOptionalWindow = () => {
     setModalOptionalWindowToChange(false);
+  };
+
+  const toursVariants = {
+    visible: i => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: i * 0.3,
+      }
+    }),
+    hidden: {opacity: 0, x: 400}
   };
 
   return (
     <>
       {/* -------------------------------------OPTIONALS- */}
       {modalOptionalWindowToChange && (
-        <div className={styles.modalOptional}>
+        <motion.div 
+        className={styles.modalOptional}
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1
+        }}
+        transition={{
+          duration: 0.7,
+        }}
+        >
           <div className={styles.inputField}>Название места</div>
           <input
             value={optionalTitle}
@@ -181,12 +209,23 @@ const FetchTour = () => {
           >
             ✖
           </div>
-        </div>
+        </motion.div>
       )}
 
       {/* -------------------------//EDIT--------------------------------- */}
       {modalEditWindowToChange && (
-        <div className={styles.modalWindowEdit}>
+        <motion.div 
+        className={styles.modalWindowEdit}
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1
+        }}
+        transition={{
+          duration: 0.7,
+        }}
+        >
           <div className={styles.inputField}>Тип тура</div>
           <input
             value={tourEdit}
@@ -246,75 +285,101 @@ const FetchTour = () => {
               Изменение фонового рисунка
               <input onChange={handleChangeBgImageEdit} type="file" />
             </div>
-
-            
           </div>
           <div className={styles.carouselButton}>
-              <button onClick={handleClickEditTour}>Сохранить изменения</button>
-            </div>
+            <button onClick={handleClickEditTour}>Сохранить изменения</button>
+          </div>
           <div
             className={styles.closeEditWindow}
             onClick={handleCloseEditWindow}
           >
             ✖
           </div>
-        </div>
+        </motion.div>
       )}
 
       {/* --------------------------------------------FETCH TOURS */}
-      {tours.map((tour) => {
+      {tours.map((tour, i) => {
         return (
-          <div key={tour._id} className={styles.tourContainer}>
+          <motion.div 
+          key={tour._id} 
+          className={styles.tourContainer}
+          variants={toursVariants}
+          initial="hidden"
+          animate="visible"
+          custom={i}
+          >
             <div className={styles.tourBlock}>
               <div className={styles.adminImage}>
                 <img src={`http://localhost:3030/${tour.bgImage}`} alt="" />
               </div>
-              <div className={styles.tourDeskr}>
-                <div>
-                  <b>Категория тура:</b> {tour.typeTour}
+              <div className={styles.tourDesc}>
+                <div className={styles.typeTour}>{tour.typeTour}</div>
+                <div className={styles.titleTour}>{tour.title} ({tour.place})</div>
+
+                <div className={styles.tripTourExcursion}>
+                  <div className={styles.tripPrice}>
+                    <div className={styles.onePriceTrip}>
+                      <img src={priceIcon} alt="no" />
+                      <div className={styles.priceBiletTour}>{tour.price}₽</div>
+                    </div>
+                    <div className={styles.ageBilet}>Взрослый билет</div>
+                  </div>
+
+                  <div className={styles.tripPrice}>
+                    <div className={styles.onePriceTrip}>
+                      <img src={priceIcon} alt="no" />
+                      <div className={styles.priceBiletTour}>
+                        {tour.priceForChild}₽
+                      </div>
+                    </div>
+                    <div className={styles.ageBilet}>Детский билет</div>
+                  </div>
+
+                  <div className={styles.tripPrice}>
+                    <div className={styles.onePriceTrip}>
+                      <img className={styles.ticketsIcon} src={ticketIcon} alt="no" />
+                      <div className={styles.priceBiletTour}>
+                        {tour.tickets}
+                      </div>
+                    </div>
+                    <div className={styles.ageBilet}>Билеты</div>
+                  </div>
+
+                  <div className={styles.timeTourExcursion}>
+                    <div className={styles.onePriceTrip}>
+                      <img src={timeIcon} alt="no" />
+                      <div className={styles.timeDescriptionTour}>
+                        {tour.duration} часов
+                      </div>
+                    </div>
+                    <div className={styles.ageBilet}>Длительность</div>
+                  </div>
                 </div>
-                <div>
-                  <b>Местонахождение:</b> {tour.place}
-                </div>
-                <div>
-                  <b>Название:</b> {tour.title}
-                </div>
-                <div>
-                  <b>Описание:</b> {tour.desc}
-                </div>
-                <div>
-                  <b>Всего билетов::</b> {tour.tickets}
-                </div>
-                <div>
-                  <b>Цена:</b> {tour.price}
-                </div>
-                <div>
-                  <b>Цена для ребенком:</b> {tour.priceForChild}₽
-                </div>
-                <div>
-                  <b>Длительность тура:</b> {tour.duration} Д
+                <div className={styles.verticalLine}>
+                  <div>{tour.desc.substr(0, 200) + '...'}</div>
                 </div>
                 <div className={styles.tourButtons}>
                   <div className={styles.carouselButtonRed}>
                     <button onClick={(e) => handleClickDeleteTour(tour._id)}>
-                      DEL
+                      Удалить
                     </button>
                   </div>
                   <div className={styles.carouselButtonBlue}>
                     <button onClick={(e) => handleClickOpenEditTour(tour._id)}>
-                      EDIT
+                    Изменить
                     </button>
                   </div>
 
                   <div className={styles.carouselButtonGreen}>
                     <button onClick={handleClickOpenAddOptionalToTour}>
-                      Optionals
+                      Доп. расходы
                     </button>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         );
       })}
     </>

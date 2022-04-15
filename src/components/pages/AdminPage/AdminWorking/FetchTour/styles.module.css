@@ -48,8 +48,9 @@ textarea {
   border: none;
 }
 
-.tourDeskr {
+.tourDesc {
   padding: 8px;
+  width: 560px;
 }
 
 .inputField {
@@ -66,7 +67,7 @@ textarea {
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
 
@@ -75,7 +76,6 @@ textarea {
   position: absolute;
   top: -8px;
   right: -8px;
-  background-color: #049add;
   width: 30px;
   height: 30px;
   text-align: center;
@@ -85,6 +85,7 @@ textarea {
   border-radius: 10px;
   font-size: 12px;
   cursor: pointer;
+  background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
 }
 
 .modalWindowEdit button {
@@ -94,7 +95,6 @@ textarea {
 
 .modalWindowEdit input {
   width: 100%;
-  /* margin: 5px 0; */
   font-size: 18px;
   background-color: #e2f6ff;
   outline: none;
@@ -109,7 +109,7 @@ textarea {
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   width: 400px;
 }
@@ -127,15 +127,6 @@ textarea {
   border: none;
   padding-left: 5px;
 }
-.adminImage {
-  width: 497px;
-}
-.adminImage img {
-  width: 100%;
-  height: 100%;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-}
 
 .backgroundImage {
   width: 500px;
@@ -144,18 +135,14 @@ textarea {
 }
 .tourButtons {
   margin-top: 10px;
-  width: 480px;
+  width: 470px;
   display: flex;
   justify-content: space-between;
 }
 
 .tourContainer {
-  border: 2px solid silver;
-  border-radius: 15px;
-  padding-bottom: 15px;
-  width: 100%;
-  margin: 0 auto 35px;
-  background-color: white;
+  /* border: 2px solid silver; */
+  margin-bottom: 20px;
 }
 
 .dropArea {
@@ -169,10 +156,88 @@ textarea {
   padding: 45% 0;
 }
 
-.gallery {
-  position: fixed;
-  top: 0px;
-  right: 0px;
+.tourBlock {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.adminImage {
+  position: relative;
+  overflow: hidden;
+  width: 238px;
+  height: 303px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  z-index: -10;
+}
+
+.adminImage img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 238px;
+  height: 303px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  z-index: -10;
+}
+
+.typeTour {
+  color: #ffc700;
+  font-size: 14px;
+}
+
+.titleTour {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.tripTourExcursion {
+  width: 450px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tripTourExcursion img {
+  margin-right: 5px;
+}
+
+.onePriceTrip {
+  display: flex;
+}
+
+.ageBilet {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.priceBiletTour {
+  color: #0499dd;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.timeDescriptionTour {
+  color: #0499dd;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ticketsIcon {
+  width: 20px;
+  height: 17px;
+  margin-top: 5px;
+}
+
+.verticalLine {
+  border-left: 3px solid #0499dd;
+  padding-left: 10px;
+  margin: 15px 0;
 }
 
 .carouselButton button {
@@ -184,8 +249,8 @@ textarea {
   line-height: 17px;
   color: #ffffff;
   width: 200px;
-  height: 50px;
-  background-color: #049add;
+  height: 40px;
+  background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
   border-radius: 10px;
   margin-top: 10px;
 }
@@ -196,11 +261,19 @@ textarea {
   font-weight: 700;
   font-size: 14px;
   color: #ffffff;
-  width: 100px;
-  background-color: red;
-  border-radius: 60px;
+  width: 150px;
+  height: 40px;
+  background-color: rgb(255, 109, 109);
+  border-radius: 10px;
   padding: 10px;
 }
+
+.carouselButtonRed button:hover {
+  border: 1px solid rgb(255, 109, 109);
+  background-color: #fff;
+  color: rgb(255, 109, 109);
+}
+
 .carouselButtonBlue button {
   border: none;
   font-family: 'Montserrat';
@@ -208,9 +281,10 @@ textarea {
   font-weight: 700;
   font-size: 14px;
   color: #ffffff;
-  width: 100px;
+  width: 150px;
+  height: 40px;
   background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
-  border-radius: 60px;
+  border-radius: 10px;
   padding: 10px;
 }
 .carouselButtonGreen button {
@@ -220,8 +294,9 @@ textarea {
   font-weight: 700;
   font-size: 14px;
   color: #ffffff;
-  width: 100px;
-  background-color: #049add;
+  width: 150px;
+  height: 40px;
+  background: linear-gradient(92.71deg, #0499dd 0%, #17c1bc 100%);
   border-radius: 10px;
   /* margin-top: 10px; */
   padding: 10px;
