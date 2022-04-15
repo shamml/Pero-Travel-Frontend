@@ -15,6 +15,7 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
+  /* margin-top: 30px; */
   /* background-color: rgb(182, 141, 141); */
 }
 .profileMain {
