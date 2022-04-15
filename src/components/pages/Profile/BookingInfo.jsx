@@ -65,7 +65,7 @@ function BookingInfo({
   };
 
   return (
-    <div className={styles.bookingInfo}>
+    <div className={styles.bookingInfoMain}>
       {
         <>
           {reviewModalWindow ? (
@@ -108,16 +108,16 @@ function BookingInfo({
             <>
               {!bookings.length && role === 'user' ? (
                 <>
-                  <div>
+                  <div style={{margin: '200px 0 0'}}>
                     <strong>Info!</strong> На данный момент у вас нет
                     забронированных туров.
                   </div>{' '}
-                  <small
-                    onClick={handleClickOpenHistoryBroning}
-                    style={{ cursor: 'pointer' }}
-                  >
-                    История моих бронирований
-                  </small>
+                  {/*<small*/}
+                  {/*  onClick={handleClickOpenHistoryBroning}*/}
+                  {/*  style={{ cursor: 'pointer' }}*/}
+                  {/*>*/}
+                  {/*  История моих бронирований*/}
+                  {/*</small>*/}
                 </>
               ) : (
                 <div>
