@@ -65,6 +65,7 @@ export const booking = (state = initialState, action) => {
         loading: false,
         error: action.error,
       };
+    
     default:
       return state;
   }
@@ -147,3 +148,5 @@ export function cancelBooking(id) {
       });
   };
 }
+
+

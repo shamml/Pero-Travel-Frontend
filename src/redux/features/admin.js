@@ -5,6 +5,7 @@ const initialState = {
   loadingFetch: false,
   loadingDelete: false,
   loadingFetchBookings: false,
+  loadingClearArchive: false,
   error: null,
 };
 
@@ -117,6 +118,29 @@ export default function admin(state = initialState, action) {
       return {
         ...state,
         loadingFetchBookings: false,
+        error: action.error,
+      };
+    //////// ************ В архив ************ //////// {*}
+    case 'admin/cleararchive/pending':
+      return {
+        ...state,
+        loadingClearArchive: true,
+        error: null,
+      };
+    case 'admin/cleararchive/fulfilled':
+      return {
+        ...state,
+        loadingClearArchive: false,
+        bookings: [
+          ...state.bookings.filter(
+            (booking) => booking._id !== action.payload._id,
+          ),
+        ],
+      };
+    case 'admin/cleararchive/rejected':
+      return {
+        ...state,
+        loadingClearArchive: false,
         error: action.error,
       };
     default:
@@ -305,6 +329,27 @@ export function editTourGallery(id, gallery) {
       .catch((error) => {
         dispatch({
           type: 'admin/editgallery/rejected',
+          error: error.toString(),
+        });
+      });
+  };
+}
+
+//////// ************ В архив ************ //////// {*}
+
+export function clearArchive(id) {
+  return function (dispatch) {
+    dispatch({ type: 'admin/cleararchive/pending' });
+    fetch(`http://localhost:3030/bookings/archive/${id}`, {
+      method: 'DELETE',
+    })
+      .then((responce) => responce.json())
+      .then((booking) => {
+        dispatch({ type: 'admin/cleararchive/fulfilled', payload: booking });
+      })
+      .catch((error) => {
+        dispatch({
+          type: 'admin/cleararchive/rejected',
           error: error.toString(),
         });
       });

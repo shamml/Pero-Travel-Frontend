@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchBookings, fetchTours } from '../../../../../redux/features/admin';
+import { clearArchive, fetchBookings, fetchTours } from '../../../../../redux/features/admin';
 import styles from './styles.module.css';
 import { fetchAllUser } from '../../../../../redux/features/user';
 import peopleIcon from '../../../../../assets/another/people.png';
@@ -14,9 +14,6 @@ const Bookings = () => {
   const tours = useSelector((state) => state.admin.tours);
   const bookings = useSelector((state) => state.admin.bookings);
   const users = useSelector((state) => state.user.users);
-  console.log('tours', tours);
-  console.log('users', users);
-  console.log('bookings', bookings);
 
   useEffect(() => {
     dispatch(fetchTours());
@@ -45,12 +42,16 @@ const Bookings = () => {
     return <div>Забронированных туров нет</div>;
   }
 
+  function handleClickArchive(id) {
+    dispatch(clearArchive(id));
+  }
+
   return (
     <div className={styles.bookingsPage}>
       {bookings.map((booking, index) => {
         return (
           <div>
-            {users.map(user => {
+            {users.map((user) => {
               if (booking.user === user._id) {
                 return (
                   <div>
@@ -131,21 +132,24 @@ const Bookings = () => {
                             </div>
 
                             <div className={styles.archiveButton}>
-                              <div className={styles.textBtn}>В архив</div>
+                              <div
+                                onClick={(e) => handleClickArchive(booking._id)}
+                                className={styles.textBtn}
+                              >
+                                В архив
+                              </div>
                             </div>
                           </motion.div>
-                        )
+                        );
                       }
                     })}
                   </div>
-                )
+                );
               }
             })}
           </div>
-        )
+        );
       })}
-
-
     </div>
   );
 };
