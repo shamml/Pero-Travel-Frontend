@@ -11,15 +11,13 @@ import styles from './styles.module.css';
 import priceIcon from '../../../../../assets/excursions/price.svg';
 import timeIcon from '../../../../../assets/excursions/time.svg';
 import ticketIcon from '../../../../../assets/excursions/ticket.png';
-import { motion } from "framer-motion";
-
+import { motion } from 'framer-motion';
 
 const FetchTour = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchTours());
-    console.log(8888888888);
   }, [dispatch]);
 
   const tours = useSelector((state) => state.admin.tours);
@@ -158,31 +156,31 @@ const FetchTour = () => {
   };
 
   const toursVariants = {
-    visible: i => ({
+    visible: (i) => ({
       opacity: 1,
       x: 0,
       transition: {
         delay: i * 0.3,
-      }
+      },
     }),
-    hidden: {opacity: 0, x: 400}
+    hidden: { opacity: 0, x: 400 },
   };
 
   return (
     <>
       {/* -------------------------------------OPTIONALS- */}
       {modalOptionalWindowToChange && (
-        <motion.div 
-        className={styles.modalOptional}
-        initial={{
-          opacity: 0,
-        }}
-        animate={{
-          opacity: 1
-        }}
-        transition={{
-          duration: 0.7,
-        }}
+        <motion.div
+          className={styles.modalOptional}
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
         >
           <div className={styles.inputField}>Название места</div>
           <input
@@ -214,17 +212,17 @@ const FetchTour = () => {
 
       {/* -------------------------//EDIT--------------------------------- */}
       {modalEditWindowToChange && (
-        <motion.div 
-        className={styles.modalWindowEdit}
-        initial={{
-          opacity: 0,
-        }}
-        animate={{
-          opacity: 1
-        }}
-        transition={{
-          duration: 0.7,
-        }}
+        <motion.div
+          className={styles.modalWindowEdit}
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
         >
           <div className={styles.inputField}>Тип тура</div>
           <input
@@ -287,7 +285,9 @@ const FetchTour = () => {
             </div>
           </div>
           <div className={styles.carouselButton}>
-            <button onClick={handleClickEditTour}>Сохранить изменения</button>
+            <button disabled={!bgImageEdit} onClick={handleClickEditTour}>
+              Сохранить изменения
+            </button>
           </div>
           <div
             className={styles.closeEditWindow}
@@ -301,13 +301,13 @@ const FetchTour = () => {
       {/* --------------------------------------------FETCH TOURS */}
       {tours.map((tour, i) => {
         return (
-          <motion.div 
-          key={tour._id} 
-          className={styles.tourContainer}
-          variants={toursVariants}
-          initial="hidden"
-          animate="visible"
-          custom={i}
+          <motion.div
+            key={tour._id}
+            className={styles.tourContainer}
+            variants={toursVariants}
+            initial="hidden"
+            animate="visible"
+            custom={i}
           >
             <div className={styles.tourBlock}>
               <div className={styles.adminImage}>
@@ -315,7 +315,9 @@ const FetchTour = () => {
               </div>
               <div className={styles.tourDesc}>
                 <div className={styles.typeTour}>{tour.typeTour}</div>
-                <div className={styles.titleTour}>{tour.title} ({tour.place})</div>
+                <div className={styles.titleTour}>
+                  {tour.title} ({tour.place})
+                </div>
 
                 <div className={styles.tripTourExcursion}>
                   <div className={styles.tripPrice}>
@@ -338,7 +340,11 @@ const FetchTour = () => {
 
                   <div className={styles.tripPrice}>
                     <div className={styles.onePriceTrip}>
-                      <img className={styles.ticketsIcon} src={ticketIcon} alt="no" />
+                      <img
+                        className={styles.ticketsIcon}
+                        src={ticketIcon}
+                        alt="no"
+                      />
                       <div className={styles.priceBiletTour}>
                         {tour.tickets}
                       </div>
@@ -367,7 +373,7 @@ const FetchTour = () => {
                   </div>
                   <div className={styles.carouselButtonBlue}>
                     <button onClick={(e) => handleClickOpenEditTour(tour._id)}>
-                    Изменить
+                      Изменить
                     </button>
                   </div>
 
