@@ -2,6 +2,15 @@
 
 ---
 
+#### Описание
+
+```
+Созданный нами сайт позволяет размещать подробную информацию о деятельности туристической компании и о предоставляемых турах с публикацией всей необходимой информации.
+Дизайн сайта современный и простой, яркость сайту придает качественные фотографии туров, что играет огромную роль в привлечении внимания клиентов.
+```
+
+---
+
 ## Функционал сайта
 
 ##### Админка
@@ -31,7 +40,9 @@
  ➤ Просмотр всех отзывов
 ```
 
-![gif](https://s7.gifyu.com/images/ezgif.com-gif-maker-6f1979e3883d847fb.gif)
+![gif](https://s7.gifyu.com/images/ezgif.com-gif-maker-585dc6a3f7bc24dc0.gif)
+
+---
 
 ## Запуск проекта
 
@@ -46,6 +57,8 @@ npm i
 ```javascript
 npm start
 ```
+
+---
 
 ### Для выполнения поставленных задач я использовал следующие библиотеки:
 
@@ -69,3 +82,29 @@ npm start
   <img alt="JavaScript" src="https://img.shields.io/badge/-JavaScript-yellow?style=for-the-badge&logo=JavaScript&logoColor=white" />
   <img alt="Bootstrap" src="https://img.shields.io/badge/-Bootstrap-430098?style=for-the-badge&logo=bootstrap&logoColor=white" />
 </p>
+
+---
+
+<h3>
+  <a href="https://github.com/Khalimov-Z">
+    <img alt="Khalimov" src="https://img.shields.io/badge/-Zubayra_Khalimov-black?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</h3>
+
+<h3>
+  <a href="https://github.com/KasumovW">
+    <img alt="Kasumov" src="https://img.shields.io/badge/-Zubayra_Kasumov-black?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</h3>
+
+<h3>
+  <a href="https://github.com/Kharsaeva">
+    <img alt="Kharsaeva" src="https://img.shields.io/badge/-Aisha_Kharsaeva-black?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</h3>
+
+<h3>
+  <a href="https://github.com/mrMovsar">
+    <img alt="Movsar" src="https://img.shields.io/badge/-Movsar-black?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</h3>
