@@ -9,6 +9,7 @@ import {
   deleteAvatar,
   editAvatar,
   editProfile,
+  fetchAllUser,
   fetchIdUser,
   fetchUsersOrders,
 } from '../../../redux/features/user';
@@ -37,6 +38,10 @@ const UserInfo = ({ setModalHistoryBroning }) => {
     dispatch(fetchUsersOrders());
   }, [dispatch]);
 
+  useEffect(() => {
+    dispatch(fetchAllUser());
+  });
+
   const [modalEditImage, setModalEditImage] = useState(false);
   const [modalEditProfile, setModalEditProfile] = useState(false);
   const [firstName, setFirstName] = useState('');
@@ -49,9 +54,9 @@ const UserInfo = ({ setModalHistoryBroning }) => {
   const dataUser = useSelector((state) => state.user.data);
   const id = useSelector((state) => state.application.id);
 
-  const currentUser = dataUser.length
-    ? dataUser.find((item) => item._id === id)
-    : {};
+  // const currentUser = dataUser.length
+  //   ? dataUser.find((item) => item._id === id)
+  //   : {};
 
   if (role === 'admin') {
     return <Admin />;
@@ -284,7 +289,6 @@ const UserInfo = ({ setModalHistoryBroning }) => {
           <img src={exitLogo} alt="" style={{ width: '50px' }} />
         </div>
       </Link>
-      
     </div>
   );
 };

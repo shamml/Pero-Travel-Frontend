@@ -262,7 +262,6 @@ export function addOptionalToTour(
   optionalPrice,
 ) {
   return function (dispatch) {
-    console.log(idTourOptional, optionalTitle, optionalPrice);
     dispatch({ type: 'admin/addoptional/pending' });
     fetch('http://localhost:3030/admin/optionals', {
       method: 'POST',

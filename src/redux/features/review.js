@@ -70,7 +70,6 @@ export const fetchByIdReview = (id) => {
 };
 
 export function addReviewBooking(idTour, text) {
-  console.log(typeof text);
   return function (dispatch, getState) {
     const state = getState();
     dispatch({ type: 'review/addreview/pending' });
