@@ -39,6 +39,7 @@
  ➤ Просмотр всех отзывов
 ```
 
+![gif](https://github.com/Kharsaeva/project-recipes/blob/Aisha/IMG_1338.gif)
 ![gif](https://s7.gifyu.com/images/ezgif.com-gif-maker-585dc6a3f7bc24dc0.gif)
 
 ## Запуск проекта
