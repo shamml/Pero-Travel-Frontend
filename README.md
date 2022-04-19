@@ -1,7 +1,5 @@
 # Сайт туристического агенства <br> Путешествуй вместе с Pero Travel ⛱
 
----
-
 #### Описание
 
 ```
@@ -9,7 +7,6 @@
 Дизайн сайта современный и простой, яркость сайту придает качественные фотографии туров, что играет огромную роль в привлечении внимания клиентов.
 ```
 
----
 
 ## Функционал сайта
 
@@ -42,8 +39,6 @@
 
 ![gif](https://s7.gifyu.com/images/ezgif.com-gif-maker-585dc6a3f7bc24dc0.gif)
 
----
-
 ## Запуск проекта
 
 Для запуска проекта вам необходимо набрать команду в терминале:
@@ -57,8 +52,6 @@ npm i
 ```javascript
 npm start
 ```
-
----
 
 ### Для выполнения поставленных задач я использовал следующие библиотеки:
 
@@ -82,8 +75,6 @@ npm start
   <img alt="JavaScript" src="https://img.shields.io/badge/-JavaScript-yellow?style=for-the-badge&logo=JavaScript&logoColor=white" />
   <img alt="Bootstrap" src="https://img.shields.io/badge/-Bootstrap-430098?style=for-the-badge&logo=bootstrap&logoColor=white" />
 </p>
-
----
 
 <h3>
   <a href="https://github.com/Khalimov-Z">
