@@ -16,7 +16,7 @@
  ➤ Добавление брони в архив
 ```
 
-![gif](https://s7.gifyu.com/images/ezgif.com-gif-maker-6f1979e3883d847fb.gif)
+[gif](https://s7.gifyu.com/images/ezgif.com-gif-maker-6f1979e3883d847fb.gif)
 
 ##### Пользователь
 
@@ -31,7 +31,7 @@
  ➤ Просмотр всех отзывов
 ```
 
-![gif](https://s7.gifyu.com/images/ezgif.com-gif-maker-6f1979e3883d847fb.gif)
+[gif](https://s7.gifyu.com/images/ezgif.com-gif-maker-6f1979e3883d847fb.gif)
 
 ## Запуск проекта
 
