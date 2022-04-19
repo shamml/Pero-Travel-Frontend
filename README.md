@@ -1,6 +1,6 @@
 # Сайт туристического агенства <br> Путешествуй вместе с Pero Travel ⛱
 
-#### Описание
+## Описание
 
 ```
 Созданный нами сайт позволяет размещать подробную информацию о деятельности туристической компании и о предоставляемых турах с публикацией всей необходимой информации.
@@ -76,6 +76,8 @@ npm start
   <img alt="Bootstrap" src="https://img.shields.io/badge/-Bootstrap-430098?style=for-the-badge&logo=bootstrap&logoColor=white" />
 </p>
 
+
+## Команда 
 <h3>
   <a href="https://github.com/Khalimov-Z">
     <img alt="Khalimov" src="https://img.shields.io/badge/-Zubayra_Khalimov-black?style=for-the-badge&logo=github&logoColor=white" />
