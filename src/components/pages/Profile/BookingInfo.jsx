@@ -27,9 +27,9 @@ function BookingInfo({
   const orders = useSelector((state) => state.user.orders);
   const role = useSelector((state) => state.application.role);
 
-  function handleClickCancelBooking(id) {
-    dispatch(cancelBooking(id));
-  }
+  // function handleClickCancelBooking(id) {
+  //   dispatch(cancelBooking(id));
+  // }
 
   function handleClickOpenReviewBooking(id) {
     setReviewModalWindow(!reviewModalWindow);
@@ -66,12 +66,47 @@ function BookingInfo({
 
   return (
     <div className={styles.bookingInfoMain}>
-      {
+      {modalHistoryBroning ? (
+        <div>
+          {orders.map((order) => {
+            return tours.map((tour) => {
+              if (order.tour === tour._id) {
+                return (
+                  <div className="row" style={{ margin: '0 0 15px 0' }}>
+                    <div className="col">
+                      <div className="card">
+                        <div className="card-body">
+                          <h5 className="card-title">{tour.title}</h5>
+                          <h6 className="card-title">{tour.typeTour}</h6>
+                          <p className="card-text">{tour.desc}</p>
+                          <p className="card-text">На цену {order.total}Р</p>
+                        </div>
+                      </div>
+                      <div className="card-footer">
+                        <small className="text-muted">
+                          {order.сompletionTime}
+                        </small>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+            });
+          })}
+          <div className={styles.historyBroning}>
+            {role === 'user' ? (
+              <small onClick={handleClickCloseModalOrders}>
+                Вернуться назад
+              </small>
+            ) : null}
+          </div>
+        </div>
+      ) : (
         <>
           {reviewModalWindow ? (
             <>
-              <form>
-                <div className="form-group">
+              <form style={{ padding: '110px 0 0' }}>
+                <div className="form-group" style={{ textAlign: 'center' }}>
                   <label for="exampleFormControlTextarea1" />
                   <textarea
                     value={text}
@@ -108,7 +143,7 @@ function BookingInfo({
             <>
               {!bookings.length && role === 'user' ? (
                 <>
-                  <div style={{margin: '200px 0 0'}}>
+                  <div style={{ margin: '200px 0 0' }}>
                     <strong>Info!</strong> На данный момент у вас нет
                     забронированных туров.
                   </div>{' '}
@@ -123,11 +158,11 @@ function BookingInfo({
                 <div>
                   {bookings.map((booking, index) => {
                     return (
-                      <div>
-                        {users.map((user) => {
+                      <div key={index}>
+                        {users.map((user, index) => {
                           if (booking.user === user._id) {
                             return (
-                              <div>
+                              <div key={index}>
                                 {tours.map((tour) => {
                                   if (booking.tour === tour._id) {
                                     return (
@@ -156,8 +191,10 @@ function BookingInfo({
                                           </div>
 
                                           <div className={styles.userInfo}>
-                                            <div className={styles.verticalLine}>
-                                              {tour.desc.substr(0, 170) + "..."}
+                                            <div
+                                              className={styles.verticalLine}
+                                            >
+                                              {tour.desc.substr(0, 170) + '...'}
                                             </div>
                                           </div>
 
@@ -202,8 +239,10 @@ function BookingInfo({
                                         <div className={styles.archiveButton}>
                                           <div
                                             className={styles.textBtn}
-                                            onClick={
-                                              handleClickCancelReviewBooking
+                                            onClick={(e) =>
+                                              handleClickOpenReviewBooking(
+                                                tour._id,
+                                              )
                                             }
                                           >
                                             Оставить отзыв
@@ -220,23 +259,20 @@ function BookingInfo({
                       </div>
                     );
                   })}
-                  {role === 'user' ? (
-                    <small
-                      onClick={handleClickOpenHistoryBroning}
-                      style={{ cursor: 'pointer' }}
-                      className="text-muted"
-                    >
-                      История моих бронирований
-                    </small>
-                  ) : (
-                    ''
-                  )}
                 </div>
               )}
             </>
           )}
+
+          <div className={styles.historyBroning}>
+            {role === 'user' ? (
+              <small onClick={handleClickOpenHistoryBroning}>
+                История бронирований
+              </small>
+            ) : null}
+          </div>
         </>
-      }
+      )}
     </div>
   );
 }

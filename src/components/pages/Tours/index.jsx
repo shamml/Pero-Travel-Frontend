@@ -36,7 +36,7 @@ const Tours = () => {
             <DescriptionTours tour={item} />
             <CalendarTravel />
             <RouteDescription />
-            <AdditionalExpenses />
+            <AdditionalExpenses tour={item} />
             <Gallery />
             <ReviewsTour />
             <BookingTour />
