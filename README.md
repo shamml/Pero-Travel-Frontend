@@ -88,19 +88,19 @@ npm start
 
 <h3>
   <a href="https://github.com/disspatchh">
-    <img alt="Rakhmaev" src="https://img.shields.io/badge/-Mark-Rakhmaev-black?style=for-the-badge&logo=github&logoColor=white" />
+    <img alt="Rakhmaev" src="https://img.shields.io/badge/-Mark_Rakhmaev-black?style=for-the-badge&logo=github&logoColor=white" />
   </a>
 </h3>
 
 <h3>
   <a href="https://github.com/Arsadidas">
-    <img alt="Arsadidas" src="https://img.shields.io/badge/-Akbulat-Akhmadov-black?style=for-the-badge&logo=github&logoColor=white" />
+    <img alt="Arsadidas" src="https://img.shields.io/badge/-Akbulat_Akhmadov-black?style=for-the-badge&logo=github&logoColor=white" />
   </a>
 </h3>
 
 <h3>
   <a href="https://github.com/a1one1">
-    <img alt="Turpal" src="https://img.shields.io/badge/-Turpal-Gataev-black?style=for-the-badge&logo=github&logoColor=white" />
+    <img alt="Turpal" src="https://img.shields.io/badge/-Turpal_Gataev-black?style=for-the-badge&logo=github&logoColor=white" />
   </a>
 </h3>
 <h3>
