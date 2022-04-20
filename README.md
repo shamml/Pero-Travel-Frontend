@@ -24,7 +24,7 @@
  ➤ Добавление брони в архив
 ```
 
-![gif](https://s7.gifyu.com/images/ezgif.com-gif-maker-6f1979e3883d847fb.gif)
+![gif](https://github.com/shamml/Pero-Travel-Frontend/blob/main/Admin.gif)
 
 ##### Пользователь
 
@@ -39,8 +39,7 @@
  ➤ Просмотр всех отзывов
 ```
 
-![gif](https://github.com/Kharsaeva/project-recipes/blob/Aisha/IMG_1338.gif)
-![gif](https://s7.gifyu.com/images/ezgif.com-gif-maker-585dc6a3f7bc24dc0.gif)
+![gif](https://github.com/shamml/Pero-Travel-Frontend/blob/main/User.gif)
 
 ## Запуск проекта
 
@@ -82,8 +81,8 @@ npm start
 
 ## Команда 
 <h3>
-  <a href="https://github.com/Khalimov-Z">
-    <img alt="Khalimov" src="https://img.shields.io/badge/-Zubayra_Khalimov-black?style=for-the-badge&logo=github&logoColor=white" />
+  <a href="https://github.com/shamml">
+    <img alt="shamml" src="https://img.shields.io/badge/-Shamil_Gachaev-black?style=for-the-badge&logo=github&logoColor=white" />
   </a>
 </h3>
 
