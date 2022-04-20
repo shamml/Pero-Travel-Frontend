@@ -87,19 +87,24 @@ npm start
 </h3>
 
 <h3>
-  <a href="https://github.com/KasumovW">
-    <img alt="Kasumov" src="https://img.shields.io/badge/-Zubayra_Kasumov-black?style=for-the-badge&logo=github&logoColor=white" />
+  <a href="https://github.com/disspatchh">
+    <img alt="Rakhmaev" src="https://img.shields.io/badge/-Mark-Rakhmaev-black?style=for-the-badge&logo=github&logoColor=white" />
   </a>
 </h3>
 
 <h3>
-  <a href="https://github.com/Kharsaeva">
-    <img alt="Kharsaeva" src="https://img.shields.io/badge/-Aisha_Kharsaeva-black?style=for-the-badge&logo=github&logoColor=white" />
+  <a href="https://github.com/Arsadidas">
+    <img alt="Arsadidas" src="https://img.shields.io/badge/-Akbulat-Akhmadov-black?style=for-the-badge&logo=github&logoColor=white" />
   </a>
 </h3>
 
 <h3>
-  <a href="https://github.com/mrMovsar">
-    <img alt="Movsar" src="https://img.shields.io/badge/-Movsar-black?style=for-the-badge&logo=github&logoColor=white" />
+  <a href="https://github.com/a1one1">
+    <img alt="Turpal" src="https://img.shields.io/badge/-Turpal-Gataev-black?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</h3>
+<h3>
+  <a href="https://github.com/zarksas">
+    <img alt="Turkho" src="https://img.shields.io/badge/-Turkho-black?style=for-the-badge&logo=github&logoColor=white" />
   </a>
 </h3>
