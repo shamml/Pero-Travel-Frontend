@@ -184,16 +184,17 @@
 }
 
 .day img {
-    width: 30px;
+  width: 30px;
 }
 
 .price img {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 .buttons {
   margin-top: 10px;
+  margin-left: 110px;
   width: 600px;
   display: flex;
   justify-content: space-between;
@@ -209,4 +210,9 @@
 .verticalLine {
   border-left: 3px solid #0499dd;
   padding-left: 10px;
+}
+
+.historyBroning {
+  cursor: pointer;
+  text-align: right;
 }

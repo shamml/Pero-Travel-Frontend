@@ -144,6 +144,7 @@ const FetchTour = () => {
     dispatch(addOptionalToTour(idTourOptional, optionalTitle, optionalPrice));
     setOptionalTitle('');
     setOptionalPrice('');
+    setIdTourOptional('');
     setModalOptionalWindowToChange(false);
   }
 
@@ -153,6 +154,7 @@ const FetchTour = () => {
 
   const handleCloseOptionalWindow = () => {
     setModalOptionalWindowToChange(false);
+    setIdTourOptional('');
   };
 
   const toursVariants = {
@@ -199,7 +201,7 @@ const FetchTour = () => {
             id=""
           />
           <div className={styles.carouselButtonGreen}>
-            <button onClick={handleClickOpenAddOptionalToTour}>Добавить</button>
+            <button onClick={handleClickAddOptionalToTour}>Добавить</button>
           </div>
           <div
             className={styles.closeOptionalWindow}
@@ -378,7 +380,11 @@ const FetchTour = () => {
                   </div>
 
                   <div className={styles.carouselButtonGreen}>
-                    <button onClick={handleClickOpenAddOptionalToTour}>
+                    <button
+                      onClick={(e) =>
+                        handleClickOpenAddOptionalToTour(tour._id)
+                      }
+                    >
                       Доп. расходы
                     </button>
                   </div>
