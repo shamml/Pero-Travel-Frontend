@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# Сайт туристического агенства <br> Путешествуй вместе с Pero Travel ⛱
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Описание
 
-## Available Scripts
+```
+Созданный нами сайт позволяет размещать подробную информацию о деятельности туристической компании и о предоставляемых 
+турах с публикацией всей необходимой информации.
+Дизайн сайта современный и простой, яркость сайту придает качественные фотографии туров, 
+что играет огромную роль в привлечении внимания клиентов.
+```
 
-In the project directory, you can run:
 
-### `npm start`
+## Функционал сайта
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##### Админка
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+ ➤ Просмотр всех туров
+ ➤ Добавление тура
+ ➤ Изменение тура
+ ➤ Удаление тура
+ ➤ Добавление дополнительных расходов к туру
+ ➤ Просмотр всех бронирований
+ ➤ Добавление брони в архив
+```
 
-### `npm test`
+![gif](https://s7.gifyu.com/images/ezgif.com-gif-maker-6f1979e3883d847fb.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##### Пользователь
 
-### `npm run build`
+```
+ ➤ Регистрация
+ ➤ Авторизация
+ ➤ Поиск тура по фильтру(цена, место, кол-во человек, длительность, дата)
+ ➤ Забронировать тур
+ ➤ Вывод забронированных туров в личном кабинете
+ ➤ Реализация обратной связи(отправка письма на почту)
+ ➤ Оставления отзыва
+ ➤ Просмотр всех отзывов
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![gif](https://github.com/Kharsaeva/project-recipes/blob/Aisha/IMG_1338.gif)
+![gif](https://s7.gifyu.com/images/ezgif.com-gif-maker-585dc6a3f7bc24dc0.gif)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Запуск проекта
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Для запуска проекта вам необходимо набрать команду в терминале:
 
-### `npm run eject`
+```javascript
+npm i
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+После набрать команду:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```javascript
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Для выполнения поставленных задач я использовал следующие библиотеки:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+➤ redux, redux-thunk - чтобы создавать асинхронные экшены
+➤ react-router-dom - для роутинга
+➤ еще react-bootstrap, react-icons, json-server, css transition, material ui
+```
 
-## Learn More
+<p>
+  <img alt="React" src="https://img.shields.io/badge/-React-45b8d8?style=for-the-badge&logo=react&logoColor=white" />
+  <img alt="Github" src="https://img.shields.io/badge/-Github-black?style=for-the-badge&logo=github&logoColor=white" />
+  <img alt="Redux" src="https://img.shields.io/badge/-Redux-430098?style=for-the-badge&logo=redux&logoColor=white" />
+  <img alt="Redux-Thunk" src="https://img.shields.io/badge/-Redux_Thunk-white?style=for-the-badge&logo=Redux&logoColor=430098" />
+  <img alt="Redux-Logger" src="https://img.shields.io/badge/-Redux_Logger-430098?style=for-the-badge&logo=Redux&logoColor=white" />
+  <img alt="JSON-Server" src="https://img.shields.io/badge/-JSON_Server-white?style=for-the-badge&logo=JSON&logoColor=black" />
+  <img alt="React-Router" src="https://img.shields.io/badge/-React_Router-black?style=for-the-badge&logo=react-router&logoColor=orange" />
+  <img alt="Prettier" src="https://img.shields.io/badge/-Prettier-grey?style=for-the-badge&logo=Prettier&logoColor=orange" />
+  <img alt="git" src="https://img.shields.io/badge/-Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+  <img alt="Nodejs" src="https://img.shields.io/badge/-Nodejs-43853d?style=for-the-badge&logo=Node.js&logoColor=white" />
+  <img alt="JavaScript" src="https://img.shields.io/badge/-JavaScript-yellow?style=for-the-badge&logo=JavaScript&logoColor=white" />
+  <img alt="Bootstrap" src="https://img.shields.io/badge/-Bootstrap-430098?style=for-the-badge&logo=bootstrap&logoColor=white" />
+</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Команда 
+<h3>
+  <a href="https://github.com/Khalimov-Z">
+    <img alt="Khalimov" src="https://img.shields.io/badge/-Zubayra_Khalimov-black?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</h3>
 
-### Code Splitting
+<h3>
+  <a href="https://github.com/KasumovW">
+    <img alt="Kasumov" src="https://img.shields.io/badge/-Zubayra_Kasumov-black?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</h3>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<h3>
+  <a href="https://github.com/Kharsaeva">
+    <img alt="Kharsaeva" src="https://img.shields.io/badge/-Aisha_Kharsaeva-black?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</h3>
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<h3>
+  <a href="https://github.com/mrMovsar">
+    <img alt="Movsar" src="https://img.shields.io/badge/-Movsar-black?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</h3>
